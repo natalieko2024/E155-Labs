@@ -1,0 +1,177 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/lab_nk
+vlab1_nk
+Z2 2C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/oscillator.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_top_tb.sv
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z4 !s110 1788586007
+!i10b 1
+!s100 f>z_hOWCRXQkGFDWWE04h2
+ImKAAiC@akceBWoEKRVjkN3
+S1
+R1
+w1788557026
+8C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk.sv
+FC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk.sv
+!i122 0
+L0 4 23
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z7 !s108 1788586007.000000
+Z8 !s107 C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_top_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/oscillator.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/oscillator.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv|C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_top_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
+!i113 0
+Z10 o-L work -sv -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0 defaultOptions 1085333592
+vlab1_nk_oscillator_tb
+R2
+R3
+R4
+!i10b 1
+!s100 UR^XH5EYEK<P9cB2;4nXo3
+Il1BJU>BH:8F;h<n0GE5E^0
+S1
+R1
+w1788585968
+8C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv
+FC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv
+!i122 0
+L0 3 59
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vlab1_nk_switch7seg_tb
+R2
+R3
+R4
+!i10b 1
+!s100 2NO;0@BSDn3ZUWz2U`cRk1
+IlViYH95m:UaIiCH[5fa[i2
+S1
+R1
+w1788577754
+8C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv
+FC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv
+!i122 0
+L0 3 140
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vlab1_nk_top_tb
+R2
+R3
+R4
+!i10b 1
+!s100 Td`IYWgIJ9bTakdcCBNEe1
+IE34NAZPjme3cGRG:G3Sdm0
+S1
+R1
+w1788561423
+8C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_top_tb.sv
+FC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_top_tb.sv
+!i122 0
+L0 3 14
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+voscillator
+R2
+R3
+R4
+!i10b 1
+!s100 GWaIQXcV@b]IbZCg^hXHo3
+Iac4c@19dJ0NTSQ;=4jijB2
+S1
+R1
+w1788569932
+8C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/oscillator.sv
+FC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/oscillator.sv
+!i122 0
+L0 4 30
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Tqrun_opt
+!i145 1
+!i144 0
+!s110 1788586008
+V<]kPQgQ@fHh@WP`eJBa`<2
+04 21 4 work lab1_nk_oscillator_tb fast 0
+R0
+!s12f OEM25U2 
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-suppress vopt-7033 -L work +acc +noacc+pmi_work.* +noacc+ovi_ice40up.* -L pmi_work -L ovi_ice40up -work qrun.out/work
+tCvgOpt 0 defaultOptions 1107585188
+nqrun_opt
+OL;O;2025.2;82
+vswitch_7seg
+R2
+R3
+R4
+!i10b 1
+!s100 3z?1dfXl]4nk_33QC`m1N1
+IOGli3GA=NB03j^_]afm:63
+S1
+R1
+w1788570465
+8C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/switch_7seg.sv
+FC:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/switch_7seg.sv
+!i122 0
+L0 4 27
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11

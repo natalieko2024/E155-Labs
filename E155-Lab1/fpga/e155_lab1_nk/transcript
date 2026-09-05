@@ -1,0 +1,148 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vsim -gui work.lab1_nk work.oscillator work.switch_7seg iCE40UP.HSOSC iCE40UP.HSOSC1P8V iCE40UP.HSOSC_CORE iCE40UP.HSOSC_CORE_SUB iCE40UP.HSOSC_SUB
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -gui work.lab1_nk work.oscillator work.switch_7seg iCE40UP.HSOSC iCE40UP.HSOSC1P8V iCE40UP.HSOSC_CORE iCE40UP.HSOSC_CORE_SUB iCE40UP.HSOSC_SUB 
+# Start time: 23:42:10 on Sep 02,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Loading sv_std.std
+# Loading work.lab1_nk(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.oscillator(fast)
+# Loading work.switch_7seg(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading iCE40UP.HSOSC1P8V(fast)
+# Loading iCE40UP.HSOSC_CORE(fast)
+# Loading iCE40UP.HSOSC_CORE_SUB(fast)
+# Loading iCE40UP.HSOSC_SUB(fast)
+add wave -position end  sim:/lab1_nk/clk
+add wave -position end  sim:/lab1_nk/s
+add wave -position end  sim:/lab1_nk/led
+add wave -position end  sim:/lab1_nk/seg
+force s 0000
+run 100
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.lab1_nk(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.oscillator(fast)
+# Loading work.switch_7seg(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading iCE40UP.HSOSC1P8V(fast)
+# Loading iCE40UP.HSOSC_CORE(fast)
+# Loading iCE40UP.HSOSC_CORE_SUB(fast)
+# Loading iCE40UP.HSOSC_SUB(fast)
+force s 0001
+run 100
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.lab1_nk(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.oscillator(fast)
+# Loading work.switch_7seg(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading iCE40UP.HSOSC1P8V(fast)
+# Loading iCE40UP.HSOSC_CORE(fast)
+# Loading iCE40UP.HSOSC_CORE_SUB(fast)
+# Loading iCE40UP.HSOSC_SUB(fast)
+force s 0010
+run 100
+force s 4'b0010
+run 100
+force s 4'b0011
+run 100
+force s 4'b0100
+run 100
+force s 4'b0101
+run 100
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.lab1_nk(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.oscillator(fast)
+# Loading work.switch_7seg(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading iCE40UP.HSOSC1P8V(fast)
+# Loading iCE40UP.HSOSC_CORE(fast)
+# Loading iCE40UP.HSOSC_CORE_SUB(fast)
+# Loading iCE40UP.HSOSC_SUB(fast)
+force s 4'b0000
+run 100
+force s 4'b0001
+run 100
+force s 4'b0010
+run 100
+force s 4'b0011
+run 100
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.lab1_nk(fast)
+# Loading iCE40UP.HSOSC(fast__1)
+# Loading work.oscillator(fast)
+# Loading work.switch_7seg(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading iCE40UP.HSOSC1P8V(fast)
+# Loading iCE40UP.HSOSC_CORE(fast)
+# Loading iCE40UP.HSOSC_CORE_SUB(fast)
+# Loading iCE40UP.HSOSC_SUB(fast)
+# End time: 00:14:19 on Sep 03,2026, Elapsed time: 0:32:09
+# Errors: 0, Warnings: 0
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //

@@ -1,0 +1,25 @@
+C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/switch_7seg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/switch_7seg.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/my_designs/e155_lab1_nk/lab1_nk_questa.mpf' is used as the ini file.
+-- Compiling module switch_7seg
+
+Top level modules:
+	switch_7seg
+
+} {} {}} C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/my_designs/e155_lab1_nk/lab1_nk_questa.mpf' is used as the ini file.
+-- Compiling module oscillator
+
+Top level modules:
+	oscillator
+
+} {} {}} C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/lab1_nk.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/lab1_nk.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/my_designs/e155_lab1_nk/lab1_nk_questa.mpf' is used as the ini file.
+-- Compiling module lab1_nk
+
+Top level modules:
+	lab1_nk
+
+} {} {}}
