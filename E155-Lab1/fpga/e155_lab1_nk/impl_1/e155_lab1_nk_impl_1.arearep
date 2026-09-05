@@ -1,0 +1,32 @@
+----------------------------------------------------------------------
+Report for cell lab1_nk.TECH
+Register bits:  24 of 5280 (0.455%)
+I/O cells:      15
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        12          100.0
+                            FD1P3XZ        24          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         5          100.0
+                               LUT4        20          100.0
+                                 OB        10          100.0
+SUB MODULES
+                         oscillator         1
+                        switch_7seg         1
+                              TOTAL        74
+----------------------------------------------------------------------
+Report for cell oscillator.v1
+Instance Path : oscillator_module
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        12          100.0
+                            FD1P3XZ        24          100.0
+                               LUT4        11           55.0
+                              TOTAL        47
+----------------------------------------------------------------------
+Report for cell switch_7seg.v1
+Instance Path : switch_7seg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         8           40.0
+                              TOTAL         8

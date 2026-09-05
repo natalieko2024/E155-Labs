@@ -1,0 +1,30 @@
+---------------------------------------------------
+Report for cell lab1_nk
+   Instance path: lab1_nk
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         45        100.0
+                               LUTGATE	         21        100.0
+                                LUTCCU	         24        100.0
+                                 IOBUF	         15        100.0
+                                PFUREG	         24        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                            oscillator	          1        75.6
+                           switch_7seg	          1        17.8
+---------------------------------------------------
+Report for cell oscillator
+   Instance path: lab1_nk/oscillator_module
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34        75.6
+                               LUTGATE	         10        47.6
+                                LUTCCU	         24        100.0
+                                PFUREG	         24        100.0
+---------------------------------------------------
+Report for cell switch_7seg
+   Instance path: lab1_nk/switch_7seg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8        17.8
+                               LUTGATE	          8        38.1
