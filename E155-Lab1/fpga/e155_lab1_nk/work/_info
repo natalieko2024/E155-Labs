@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e vcom 2025.2 2025.05, May 31 2025
 !s12c _opt1
 Z0 !s99 nomlopt
 Z1 !s12c _opt
@@ -64,10 +65,13 @@ R11
 R12
 n@_opt1
 R13
+R2
 vlab1_nk
-2C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/lab1_nk.sv
 Z14 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
 Z15 !s110 1788416768
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
 !i10b 1
 !s100 4mz5Z6W=z>U8Q4ml>Af;=1
 IoK_@2mQ9C?iF56Uk3^TUD0
@@ -78,10 +82,7 @@ w1788416720
 FC:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/lab1_nk.sv
 !i122 15
 L0 4 16
-Z16 VDg1SIo80bB@j0V0VzS_@n1
 Z17 OL;L;2025.2;82
-r1
-!s85 0
 31
 Z18 !s108 1788416768.000000
 !s107 C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/lab1_nk.sv|
@@ -90,9 +91,12 @@ Z18 !s108 1788416768.000000
 Z19 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z20 tCvgOpt 0 defaultOptions 1085333592
 voscillator
-2C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv
 R14
 R15
+R16
+r1
+!s85 0
+2C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv
 !i10b 1
 !s100 Yfjk91<U0inDOXFa30ALo0
 IfB2YCn?9=C6X0bO0]C25g1
@@ -103,10 +107,7 @@ w1788416257
 FC:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv
 !i122 16
 L0 4 23
-R16
 R17
-r1
-!s85 0
 31
 R18
 !s107 C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv|
@@ -115,9 +116,12 @@ R18
 R19
 R20
 vswitch_7seg
-2C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/switch_7seg.sv
 R14
 R15
+R16
+r1
+!s85 0
+2C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/switch_7seg.sv
 !i10b 1
 !s100 IjFh7Q:5T08LMeQS@gW2Q1
 IS>OI=ncEW;DHG<ldUD4dK1
@@ -128,10 +132,7 @@ w1788416385
 FC:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/switch_7seg.sv
 !i122 17
 L0 4 27
-R16
 R17
-r1
-!s85 0
 31
 R18
 !s107 C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/switch_7seg.sv|

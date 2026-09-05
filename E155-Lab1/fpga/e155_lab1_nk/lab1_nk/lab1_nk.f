@@ -3,12 +3,15 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk.sv" 
-"C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/oscillator.sv" 
-"C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/switch_7seg.sv" 
-"C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv" 
-"C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv" 
-"C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/source/impl_1/lab1_nk_top_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/oscillator.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topled_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_toposcillator_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_top7seg_tb.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -19,7 +22,7 @@
 -end
 
 -gui
--top lab1_nk_top_tb
+-top lab1_nk_switch7seg_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end

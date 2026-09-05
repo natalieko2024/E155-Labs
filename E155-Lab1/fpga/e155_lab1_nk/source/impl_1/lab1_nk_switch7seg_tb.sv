@@ -68,7 +68,7 @@ module lab1_nk_switch7seg_tb();
 		// test 8 - testing switches set to 0111
 		s = 4'b0111;
 		#10;
-		assert (seg == 7'b0000000)
+		assert (seg == 7'b0001111)
 			$display("PASS, 7 segment output correct for switches %b", s);
 		else
 			$display("FAIL, switch to 7 segment not mapped correctly for switches %b", s);
@@ -76,7 +76,7 @@ module lab1_nk_switch7seg_tb();
 		// test 9 - testing switches set to 1000
 		s = 4'b1000;
 		#10;
-		assert (seg == 7'b0001100)
+		assert (seg == 7'b0000000)
 			$display("PASS, 7 segment output correct for switches %b", s);
 		else
 			$display("FAIL, switch to 7 segment not mapped correctly for switches %b", s);
@@ -84,7 +84,7 @@ module lab1_nk_switch7seg_tb();
 		// test 10 - testing switches set to 1001
 		s = 4'b1001;
 		#10;
-		assert (seg == 7'b0001000)
+		assert (seg == 7'b0001100)
 			$display("PASS, 7 segment output correct for switches %b", s);
 		else
 			$display("FAIL, switch to 7 segment not mapped correctly for switches %b", s);
@@ -92,7 +92,7 @@ module lab1_nk_switch7seg_tb();
 		// test 11 - testing switches set to 1010
 		s = 4'b1010;
 		#10;
-		assert (seg == 7'b1100000)
+		assert (seg == 7'b0001000)
 			$display("PASS, 7 segment output correct for switches %b", s);
 		else
 			$display("FAIL, switch to 7 segment not mapped correctly for switches %b", s);
@@ -100,7 +100,7 @@ module lab1_nk_switch7seg_tb();
 		// test 12 - testing switches set to 1011
 		s = 4'b1011;
 		#10;
-		assert (seg == 7'b0110001)
+		assert (seg == 7'b1100000)
 			$display("PASS, 7 segment output correct for switches %b", s);
 		else
 			$display("FAIL, switch to 7 segment not mapped correctly for switches %b", s);

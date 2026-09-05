@@ -8,16 +8,16 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2026.1.0.37.0
-Mapped on: Fri Sep  4 16:40:10 2026
+Mapped on: Sat Sep  5 15:59:20 2026
 
 Design Information
 ------------------
 
-Command line:   map -pdc
-     C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/e155_lab1_nk.pdc
-     -i e155_lab1_nk_impl_1_syn.udb -o e155_lab1_nk_impl_1_map.udb -mp
-     e155_lab1_nk_impl_1.mrp -hierrpt -gui -msgset
-     C:/Users/nko/my_designs/RadiantLatticeGitHub/e155_lab1_nk/promote.xml
+Command line:   map -pdc C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/
+     e155_lab1_nk/e155_lab1_nk.pdc -i e155_lab1_nk_impl_1_syn.udb -o
+     e155_lab1_nk_impl_1_map.udb -mp e155_lab1_nk_impl_1.mrp -hierrpt -gui
+     -msgset C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk
+     /promote.xml
 
 Design Summary
 --------------
@@ -27,15 +27,15 @@ Design Summary
    Number of LUT4s:            45 out of  5280 (1%)
       Number of logic LUT4s:              21
       Number of ripple logic:             12 (24 LUT4s)
-   Number of IO sites used:   15 out of 39 (38%)
-      Number of IO sites used for general PIO: 15
+   Number of IO sites used:   16 out of 39 (41%)
+      Number of IO sites used for general PIO: 16
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 15 out of 36 (42%)
+      Number of IO sites used for PIO+I3C: 16 out of 36 (44%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 15 out of 39 (38%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 16 out of 39 (41%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  1 out of 1 (100%)
@@ -49,7 +49,7 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk: 13 loads, 13 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+      Net clk_c: 13 loads, 13 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
    Number of Clock Enables:  1
       Net VCC_net: 1 loads, 0 SLICEs
    Number of LSRs:  2
@@ -126,13 +126,17 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-
+| clk                 | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
 
 
 
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
 -------------
@@ -146,7 +150,7 @@ OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            hf_osc
   Power UP:                            NODE     VCC_net
   Enable Signal:                       NODE     VCC_net
-  OSC Output:                          NODE     clk
+  OSC Output:                          PIN,NODE clk_c
   DIV Setting:                                  01
 
 ASIC Components
@@ -167,11 +171,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 66 MB
-Checksum -- map: 20ee9b67366a8840c3da94182aaa380e7a295614
-
-
-
-
+Checksum -- map: 564ca374f7a3ca36a3f24e1876e456f5ef842171
 
 
 

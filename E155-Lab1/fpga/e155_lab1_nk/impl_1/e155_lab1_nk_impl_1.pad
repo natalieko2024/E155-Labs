@@ -6,12 +6,13 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Fri Sep  4 16:40:16 2026
+Sat Sep  5 15:59:36 2026
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties                               |
 +-----------+----------+--------------+-------+------------------------------------------+
+| clk       | 14/1     | LVCMOS33_OUT | PL24A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[0]    | 42/0     | LVCMOS33_OUT | PR9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[1]    | 38/0     | LVCMOS33_OUT | PR9B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[2]    | 28/0     | LVCMOS33_OUT | PR18A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
@@ -51,7 +52,7 @@ Pinout by Pin Number:
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
 | 12/1     | seg[5]              | LOCATED    | LVCMOS33_OUT | PL19A |                  |
 | 13/1     | seg[4]              | LOCATED    | LVCMOS33_OUT | PL20A |                  |
-| 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
+| 14/1     | clk                 |            | LVCMOS33_OUT | PL24A | SPI_SO           |
 | 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
 | 16/1     |     unused, PULL:UP |            |              | PL25B | SPI_SS           |
 | 17/1     |     unused, PULL:UP |            |              | PL24B | SPI_SI           |
@@ -103,6 +104,7 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
+ldc_set_location -site {14} [ get_ports {clk} ]
 ldc_set_location -site {42} [ get_ports {led[0]} ]
 ldc_set_location -site {38} [ get_ports {led[1]} ]
 ldc_set_location -site {28} [ get_ports {led[2]} ]
@@ -125,5 +127,5 @@ ldc_set_location -site {20} [ get_ports {seg[6]} ]
 
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Fri Sep  4 16:40:16 2026
+Sat Sep  5 15:59:36 2026
 

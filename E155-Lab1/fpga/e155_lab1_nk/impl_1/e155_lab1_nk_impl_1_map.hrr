@@ -6,7 +6,7 @@ Report for cell lab1_nk
                                   LUT4	         45        100.0
                                LUTGATE	         21        100.0
                                 LUTCCU	         24        100.0
-                                 IOBUF	         15        100.0
+                                 IOBUF	         16        100.0
                                 PFUREG	         24        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)

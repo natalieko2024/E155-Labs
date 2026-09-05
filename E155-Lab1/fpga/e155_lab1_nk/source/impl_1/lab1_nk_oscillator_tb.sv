@@ -35,7 +35,7 @@ module lab1_nk_oscillator_tb();
 			$display("FAIL LED is on at time %t", $time);
 		
 		
-		// toggle reset
+		// toggle reset at an irregular interval
 		reset = 0;
 		#40000;
 		reset = 1;

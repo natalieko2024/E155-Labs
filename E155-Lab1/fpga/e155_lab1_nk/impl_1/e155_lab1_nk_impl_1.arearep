@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 Report for cell lab1_nk.TECH
 Register bits:  24 of 5280 (0.455%)
-I/O cells:      15
+I/O cells:      16
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        12          100.0
@@ -9,11 +9,11 @@ I/O cells:      15
                          HSOSC_CORE         1          100.0
                                  IB         5          100.0
                                LUT4        20          100.0
-                                 OB        10          100.0
+                                 OB        11          100.0
 SUB MODULES
                          oscillator         1
                         switch_7seg         1
-                              TOTAL        74
+                              TOTAL        75
 ----------------------------------------------------------------------
 Report for cell oscillator.v1
 Instance Path : oscillator_module
