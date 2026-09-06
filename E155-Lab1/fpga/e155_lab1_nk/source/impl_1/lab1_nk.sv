@@ -7,9 +7,6 @@ module lab1_nk( input logic reset,
 				output logic [6:0] seg,
 				output clk);
 	
-	// Initialize a clock signal for the oscillation
-	logic clk;
-	
 	// Set up the internal HSOSC to provide a 24MHz oscillation frequency output
 	HSOSC #(.CLKHF_DIV(2'b01)) 
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
@@ -20,8 +17,11 @@ module lab1_nk( input logic reset,
 	// AND
 	assign led[1] = s[2] & s[3];
 	
+	logic enable;
+	assign enable = 1;
+	
 	// Calling other modules to set the third LED and the 7 segment display
-	oscillator		oscillator_module(clk, reset, led[2]);
+	oscillator		oscillator_module(clk, reset, enable, led[2]);
 	switch_7seg		switch_7seg(s, seg);
 
 endmodule

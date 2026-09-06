@@ -13,36 +13,15 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-vlog -work C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/work -refresh -force_refresh
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 15:55:31 on Sep 05,2026
-# vlog -reportprogress 300 -work C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/work -refresh -force_refresh 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Refreshing module lab1_nk
-# -- Refreshing module oscillator
-# -- Refreshing module switch_7seg
-# End time: 15:55:31 on Sep 05,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/work -refresh -force_refresh
-# Questa Lattice OEM Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 15:55:33 on Sep 05,2026
-# vcom -reportprogress 300 -work C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/work -refresh -force_refresh 
-# ** Note: (vcom-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Skipping module lab1_nk
-# -- Skipping module oscillator
-# -- Skipping module switch_7seg
-# End time: 15:55:33 on Sep 05,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.lab1_nk
+vsim -voptargs=+acc work.switch_7seg
 # ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# vsim work.lab1_nk 
-# Start time: 15:55:55 on Sep 05,2026
+# vsim -voptargs="+acc" work.switch_7seg 
+# Start time: 16:14:01 on Sep 05,2026
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# ** Error: C:/Users/nko/my_designs/e155_lab1_nk/source/impl_1/oscillator.sv(15): Module 'HSOSC' is not defined.
-#  For instance 'hf_osc' at path 'lab1_nk.oscillator_module'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 15:55:56 on Sep 05,2026, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.switch_7seg(fast)
+# End time: 16:15:05 on Sep 05,2026, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 1
