@@ -14,7 +14,7 @@ SUB MODULES
                            switch_7seg	          1        17.8
 ---------------------------------------------------
 Report for cell oscillator
-   Instance path: lab1_nk/oscillator_module
+   Instance path: lab1_nk/oscillator
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   LUT4	         34        75.6

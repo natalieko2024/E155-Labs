@@ -46,9 +46,8 @@
 -sver "../source/impl_1/lab1_nk_switch7seg_tb.sv"
 -sver "../source/impl_1/lab1_nk_oscillator_tb.sv"
 -sver "../source/impl_1/lab1_nk_topclk_tb.sv"
--sver "../source/impl_1/lab1_nk_topled_tb.sv"
 -sver "../source/impl_1/lab1_nk_toposcillator_tb.sv"
--sver "../source/impl_1/lab1_nk_top7seg_tb.sv"
+-sver "../source/impl_1/lab1_nk_topdiodelogic_tb.sv"
 -path ".."
 -top lab1_nk
 # Output Configuration

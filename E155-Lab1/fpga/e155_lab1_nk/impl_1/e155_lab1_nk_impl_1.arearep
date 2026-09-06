@@ -16,7 +16,7 @@ SUB MODULES
                               TOTAL        75
 ----------------------------------------------------------------------
 Report for cell oscillator.v1
-Instance Path : oscillator_module
+Instance Path : oscillator
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        12          100.0
