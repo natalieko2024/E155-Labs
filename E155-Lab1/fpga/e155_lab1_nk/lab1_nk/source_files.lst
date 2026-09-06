@@ -4,6 +4,5 @@
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv=verilog,work,System Verilog"
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv=verilog,work,System Verilog"
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv=verilog,work,System Verilog"
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topled_tb.sv=verilog,work,System Verilog"
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_toposcillator_tb.sv=verilog,work,System Verilog"
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_top7seg_tb.sv=verilog,work,System Verilog"
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv=verilog,work,System Verilog"

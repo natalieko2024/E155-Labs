@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Sat Sep  5 18:35:50 2026
+// Netlist written on Sat Sep  5 20:40:00 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/nko/documents/github/e155-labs/e155-lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv"
@@ -132,8 +132,8 @@ module lab1_nk (input reset, input [3:0]s, output [2:0]led, output [6:0]seg,
             .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(clk_c));
     defparam hf_osc.CLKHF_DIV = "0b01";
     defparam hf_osc.FABRIC_TRIME = "DISABLE";
-    (* LSE_LINE_FILE_ID=26, LSE_LCOL=15, LSE_RCOL=34, LSE_LLINE=25, LSE_RLINE=25 *) switch_7seg switch_7seg ({s_c}, 
-            {seg_c}, led_c[0]);
+    (* LSE_LINE_FILE_ID=26, LSE_LCOL=15, LSE_RCOL=34, LSE_LLINE=25, LSE_RLINE=25 *) switch_7seg switch_7seg (led_c[0], 
+            {s_c}, {seg_c});
     
 endmodule
 
@@ -143,15 +143,15 @@ endmodule
 
 module oscillator (output \led_c[2] , input clk_c, input reset_c);
     
-    wire [22:0]counter;
     (* is_clock=1 *) wire clk_c;
+    wire [22:0]counter;
     
-    wire GND_net, VCC_net, n188, n104;
+    wire GND_net, VCC_net, n104, n49;
     wire [22:0]n97;
     
-    wire n49, n50, n29, n182, n10, n586, n14, n271, n6, n4, 
-        n598, n194, n589, n5, n190, n272, n592, n196, n595, 
-        n192, n186, n583, n184, n580, n577, n180, n574, n178, 
+    wire n272, n50, n192, n29, n14, n196, n180, n10, n595, 
+        n188, n271, n4, n598, n6, n5, n190, n586, n577, n194, 
+        n592, n589, n186, n583, n184, n580, n182, n574, n178, 
         n571, n176, n568, n565;
     
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_46__i22 (.D(n97[22]), .SP(VCC_net), 
@@ -360,7 +360,7 @@ endmodule
 // Verilog Description of module switch_7seg
 //
 
-module switch_7seg (input [3:0]s_c, output [6:0]seg_c, output \led_c[0] );
+module switch_7seg (output \led_c[0] , input [3:0]s_c, output [6:0]seg_c);
     
     
     (* lut_function="(!(A (B+!(C))+!A (B ((D)+!C)+!B !(C+(D)))))" *) LUT4 seg_c_2__I_0_4_lut (.A(s_c[1]), 

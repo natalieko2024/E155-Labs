@@ -1,4 +1,5 @@
 lab1_nk_switch7seg_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv
 lab1_nk_oscillator_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_oscillator_tb.sv
 lab1_nk_topclk_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv
-lab1_nk_topled_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topled_tb.sv
+lab1_nk_toposcillator_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_toposcillator_tb.sv
+lab1_nk_topdiodelogic_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv
