@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/lab1_aiprototype/source/impl_1/top.sv"
+-path "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/lab1_aiprototype" "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/lab1_aiprototype"
+-top top
+-isTop
+-a "iCE40UP"
+-t "iCE40UP5K"
