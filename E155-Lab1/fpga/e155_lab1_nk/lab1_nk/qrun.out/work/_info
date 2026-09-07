@@ -13,7 +13,7 @@ Z1 dC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk
 vfreqconverter
 Z2 2C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1788770873
+Z4 !s110 1788786917
 !i10b 1
 !s100 TlW>ATJY<PFD_[g>G]P;z0
 IzKakShQ`b9@Xkdf7RTlIU0
@@ -29,7 +29,7 @@ Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1788770872.000000
+Z7 !s108 1788786917.000000
 Z8 !s107 C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv|
 Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
 !i113 0
@@ -40,11 +40,11 @@ R2
 R3
 R4
 !i10b 1
-!s100 I^eQ>?<E7k@To[kD`WE181
-I[=5MC;J0FdJ9G@^aDHKDU0
+!s100 I>cIe5PioKMLY`X]_HNTS0
+I8SZ6ROn7;[iCMOghPC_@X1
 S1
 R1
-w1788768168
+w1788784280
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv
 !i122 0
@@ -65,15 +65,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 b<b2Q;?7MYmIHB4SZ85fk2
-IN9L8hIF@L[JlEDS;LmkU=3
+!s100 QGVkA7KGbKPLV@^W3X0e23
+IS57FFcI6mA9:MC^VcA4OY2
 S1
 R1
-w1788770694
+w1788783953
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv
 !i122 0
-L0 3 100
+L0 8 101
 R5
 R6
 r1
@@ -115,15 +115,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 laabkBMH2dk7a]cWWIiz02
-I4Q4TT?VzZ<@Mj0[:n><X12
+!s100 ^Icb^LJJA8S5S91Dl]laa3
+IfLeXXA^jogPE[VUIBk1FL3
 S1
 R1
-w1788769812
+w1788782165
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv
 !i122 0
-L0 3 30
+L0 8 31
 R5
 R6
 r1
@@ -140,15 +140,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 0iX]JVl?=5oQ>;=QoM@Tj2
-I61HfH1bK1]E5gPcOg2Tim1
+!s100 oEHaNV;BPFXKoz?YB5LYH1
+IMDMM;VlN;MjGKA0aJIA@k3
 S1
 R1
-w1788769262
+w1788781925
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv
 !i122 0
-L0 3 222
+L0 8 222
 R5
 R6
 r1
@@ -165,15 +165,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 5Y[U8JaNS`T43WU1`LIz93
-I@hQ3RHHUcEH2ie=FeMdh_2
+!s100 =;KPHU:=O5<@ZGc`6eCIU3
+IGZ=H?6=XT5lG@[V[C:^Qz1
 S1
 R1
-w1788768162
+w1788786885
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv
 !i122 0
-L0 3 53
+L0 8 54
 R5
 R6
 r1
@@ -189,7 +189,7 @@ Tqrun_opt
 !i145 1
 !i144 0
 R4
-Vck[D2nL[[]z>iE:hO=ciP2
+VR<?5aK7e^mN];VU]DJA^A2
 04 27 4 work lab1_nk_topfreqconverter_tb fast 0
 R0
 !s12f OEM25U4 

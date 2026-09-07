@@ -1,5 +1,9 @@
 `timescale 1 ns/1 ns
 
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 3 Sept 2026
+// The module lab1_nk_switch7seg_tb is a testbench testing the combinational logic of the switch_7seg submodule. 
+// This tests whether the 7-segment outputs align as expected based on the 4 switch inputs.
 module lab1_nk_switch7seg_tb();
 	logic [3:0] s;			// 4-bit input switches
 	logic [6:0] seg;		// 7-segment display output

@@ -1,5 +1,10 @@
+// Defining the delays in terms of ns with a precision of 1ns
 `timescale 1 ns/1 ns
 
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 3 Sept 2026
+// The module lab1_nk_topdiodelogic_tb is a testbench testing the LED combinational logic at the top level and the connection between the top-level module and the 7-segment submodule.
+// This tests whether the output signals of the combinational logic of the LEDs and the 7-segment at the top-level match the expected outputs based on the 4 switch inputs.
 module lab1_nk_topdiodelogic_tb();
 	logic clk;				// System clock
 	logic reset;			// System reset

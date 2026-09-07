@@ -2628,3 +2628,4408 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # Errors: 0, Warnings: 2
 # 
 vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:08:01 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:08:01 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:08:01 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:08:02 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:11:25 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:11:25 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:11:26 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:11:26 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:14:09 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv
+# 
+# -- Skipping C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# End time: 04:14:09 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:14:10 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Incremental compilation check found 8 design-units (out of 9) may be reused.
+# 
+# Optimizing 1 design-unit (inlining 4/9 module instances):
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:14:10 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run 100 ns} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:14:29 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:14:29 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:14:29 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib.qdb".
+# 
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt".
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib1_0.qpg" in read mode
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:14:31 on Sep 07,2026, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 4
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:16:00 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:16:00 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:16:00 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:16:01 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:17:30 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:17:30 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:17:30 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:17:30 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:19:55 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:19:55 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:19:55 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:19:56 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:23:04 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:23:04 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:23:04 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:23:05 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:30:08 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:30:08 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:30:09 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:30:09 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:33:48 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:33:48 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:33:49 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_freqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_freqconverter_tb
+# 
+# -- Loading module freqconverter
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module lab1_nk_freqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:33:49 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:36:19 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:36:19 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:36:19 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_freqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_freqconverter_tb
+# 
+# -- Loading module freqconverter
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module lab1_nk_freqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:36:20 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:41:15 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:41:15 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:41:15 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:41:15 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:42:11 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:42:11 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:42:11 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_freqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_freqconverter_tb
+# 
+# -- Loading module freqconverter
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module lab1_nk_freqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:42:11 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:44:04 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:44:04 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:44:04 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_freqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_freqconverter_tb
+# 
+# -- Loading module freqconverter
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module lab1_nk_freqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:44:05 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:47:12 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:47:12 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:47:12 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_freqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_freqconverter_tb
+# 
+# -- Loading module freqconverter
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module lab1_nk_freqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:47:13 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:50:23 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:50:23 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:50:23 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_freqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_freqconverter_tb
+# 
+# -- Loading module freqconverter
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module lab1_nk_freqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:50:24 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:55:06 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 04:55:06 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:55:07 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:55:07 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:03:12 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:03:12 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:03:12 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:03:13 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:06:06 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:06:06 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:06:06 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:06:07 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:10:50 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:10:50 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:10:50 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib.qdb".
+# 
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt".
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib1_0.qpg" in read mode
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:10:52 on Sep 07,2026, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 4
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:15:49 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:15:49 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:15:50 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:15:50 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:18:41 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:18:41 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:18:41 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:18:42 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:21:35 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:21:35 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:21:35 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:21:36 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:24:30 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:24:30 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:24:30 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib.qdb".
+# 
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt".
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib1_0.qpg" in read mode
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:24:32 on Sep 07,2026, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 4
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:26:58 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:26:58 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:26:58 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib.qdb".
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qdb".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qpg".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qtl".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt".
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:26:59 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 7
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:31:17 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:31:17 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:31:17 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:31:18 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:34:28 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:34:28 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:34:28 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:34:28 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:40:28 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:40:28 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:40:29 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:40:29 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:46:32 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:46:32 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:46:33 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:46:33 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:52:06 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:52:06 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:52:06 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:52:06 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:54:00 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:54:00 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:54:00 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib.qdb".
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qdb".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qpg".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qtl".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt".
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib1_0.qpg" in read mode
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:54:02 on Sep 07,2026, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 7
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 05:58:11 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 05:58:11 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 05:58:12 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 05:58:12 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 06:01:30 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 06:01:30 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 06:01:30 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topclk_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib.qdb".
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qdb".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qpg".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib3_0.qtl".
+# 
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# 
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt".
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topclk_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/qrun.out/work/qrun_opt/_lib1_0.qpg" in read mode
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk_topclk_tb(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 06:01:32 on Sep 07,2026, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 7
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 06:11:36 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 06:11:36 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 06:11:36 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 06:11:37 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/lab1_nk/lab1_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 06:15:17 on Sep 07,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab1_nk
+# 
+# -- Compiling module switch_7seg
+# 
+# -- Compiling module lab1_nk_switch7seg_tb
+# 
+# -- Compiling module lab1_nk_topclk_tb
+# 
+# -- Compiling module lab1_nk_topdiodelogic_tb
+# 
+# -- Compiling module freqconverter
+# 
+# -- Compiling module lab1_nk_freqconverter_tb
+# 
+# -- Compiling module lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_switch7seg_tb
+# 
+# 	lab1_nk_topclk_tb
+# 
+# 	lab1_nk_topdiodelogic_tb
+# 
+# 	lab1_nk_freqconverter_tb
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# End time: 06:15:17 on Sep 07,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 06:15:17 on Sep 07,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab1_nk_topfreqconverter_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab1_nk_topfreqconverter_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab1_nk_topfreqconverter_tb
+# 
+# -- Loading module lab1_nk
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module freqconverter
+# 
+# -- Loading module switch_7seg
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 9 design-units (inlining 4/9 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab1_nk_topfreqconverter_tb(fast)
+# 
+# -- Optimizing module freqconverter(fast)
+# 
+# -- Optimizing module lab1_nk(fast)
+# 
+# -- Optimizing module switch_7seg(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 06:15:18 on Sep 07,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log

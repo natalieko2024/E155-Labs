@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Mon Sep  7 01:02:55 2026
+// Netlist written on Mon Sep  7 05:31:25 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/nko/documents/github/e155-labs/e155-lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv"
@@ -123,8 +123,8 @@ module lab1_nk (input reset, input [3:0]s, output [2:0]led, output [6:0]seg,
     OB \seg_pad[1]  (.I(seg_c[1]), .O(seg[1]));
     OB \seg_pad[0]  (.I(seg_c[0]), .O(seg[0]));
     OB clk_pad (.I(clk_c), .O(clk));
-    (* LSE_LINE_FILE_ID=26, LSE_LCOL=17, LSE_RCOL=53, LSE_LLINE=21, LSE_RLINE=21 *) freqconverter freqconverter (clk_c, 
-            led_c[2], reset_c);
+    (* LSE_LINE_FILE_ID=26, LSE_LCOL=17, LSE_RCOL=56, LSE_LLINE=21, LSE_RLINE=21 *) freqconverter freqconverter (led_c[2], 
+            clk_c, reset_c);
     (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
             .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
             .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
@@ -140,18 +140,18 @@ endmodule
 // Verilog Description of module freqconverter
 //
 
-module freqconverter (input clk_c, output \led_c[2] , input reset_c);
+module freqconverter (output \led_c[2] , input clk_c, input reset_c);
     
-    (* is_clock=1 *) wire clk_c;
     wire [22:0]counter;
+    (* is_clock=1 *) wire clk_c;
     
-    wire GND_net, VCC_net, n104, n6, n49;
+    wire VCC_net, GND_net, n195, n104;
     wire [22:0]n97;
     
-    wire n189, n181, n48, n576, n29, n187, n585, n594, n564, 
-        n10, n270, n579, n177, n14, n5, n183, n4, n570, n193, 
-        n271, n582, n573, n195, n597, n191, n591, n588, n185, 
-        n179, n175, n567;
+    wire n181, n48, n191, n49, n179, n29, n576, n588, n10, 
+        n4, n14, n270, n187, n6, n573, n564, n5, n271, n579, 
+        n585, n189, n597, n193, n594, n591, n185, n582, n183, 
+        n177, n570, n175, n567;
     
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_45__i22 (.D(n97[22]), .SP(VCC_net), 
             .CK(clk_c), .SR(n49), .Q(counter[22]));
@@ -346,9 +346,9 @@ module freqconverter (input clk_c, output \led_c[2] , input reset_c);
     defparam counter_45_add_4_1.INIT1 = "0xc33c";
     (* lut_function="(!(A))" *) LUT4 i43_1_lut (.A(reset_c), .Z(n48));
     defparam i43_1_lut.INIT = "0x5555";
-    VLO i1 (.Z(GND_net));
-    VHI i2 (.Z(VCC_net));
-    (* LSE_LINE_FILE_ID=26, LSE_LCOL=17, LSE_RCOL=53, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ led2 (.D(n104), 
+    VLO i2 (.Z(GND_net));
+    VHI i1 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=26, LSE_LCOL=17, LSE_RCOL=56, LSE_LLINE=21, LSE_RLINE=21 *) FD1P3XZ led2 (.D(n104), 
             .SP(VCC_net), .CK(clk_c), .SR(n48), .Q(\led_c[2] ));
     defparam led2.REGSET = "RESET";
     defparam led2.SRMODE = "CE_OVER_LSR";

@@ -8,7 +8,7 @@ module lab1_nk( input logic reset,
 				output clk);
 	
 	// Set up the internal HSOSC to provide a 24MHz oscillation frequency output
-	HSOSC #(.CLKHF_DIV(2'b01)) 
+	HSOSC #(.CLKHF_DIV("0b01")) 
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 	
 	// Combinational logic to convert switch inputs to LED signals 0 and 1
@@ -18,7 +18,7 @@ module lab1_nk( input logic reset,
 	assign led[1] = s[2] & s[3];
 	
 	// Calling other modules to set the third LED and the 7 segment display
-	freqconverter		freqconverter(clk, reset, 1, led[2]);
+	freqconverter		freqconverter(clk, reset, 1'b1, led[2]);
 	switch_7seg		switch_7seg(s, seg);
 
 endmodule

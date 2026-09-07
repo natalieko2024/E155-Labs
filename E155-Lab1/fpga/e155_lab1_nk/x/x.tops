@@ -1,0 +1,5 @@
+lab1_nk_switch7seg_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_switch7seg_tb.sv
+lab1_nk_topclk_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topclk_tb.sv
+lab1_nk_topdiodelogic_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topdiodelogic_tb.sv
+lab1_nk_freqconverter_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_freqconverter_tb.sv
+lab1_nk_topfreqconverter_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/lab1_nk_topfreqconverter_tb.sv
