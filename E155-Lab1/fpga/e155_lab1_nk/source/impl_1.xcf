@@ -19,7 +19,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/e155_lab1_nk_impl_1.bin</File>
-			<FileTime>09/06/26 00:40:08</FileTime>
+			<FileTime>09/07/26 01:03:17</FileTime>
 			<JedecChecksum>0xF94A</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
@@ -105,5 +105,6 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>UPduino v3.1 Location 0015 Serial </USBID>
 	</CableOptions>
 </ispXCF>

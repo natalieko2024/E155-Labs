@@ -10,11 +10,11 @@ Report for cell lab1_nk
                                 PFUREG	         24        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                            oscillator	          1        75.6
+                         freqconverter	          1        75.6
                            switch_7seg	          1        17.8
 ---------------------------------------------------
-Report for cell oscillator
-   Instance path: lab1_nk/oscillator
+Report for cell freqconverter
+   Instance path: lab1_nk/freqconverter
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   LUT4	         34        75.6

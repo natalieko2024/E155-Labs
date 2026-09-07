@@ -17,11 +17,8 @@ module lab1_nk( input logic reset,
 	// AND
 	assign led[1] = s[2] & s[3];
 	
-	logic enable;
-	assign enable = 1;
-	
 	// Calling other modules to set the third LED and the 7 segment display
-	oscillator		oscillator(clk, reset, enable, led[2]);
+	freqconverter		freqconverter(clk, reset, 1, led[2]);
 	switch_7seg		switch_7seg(s, seg);
 
 endmodule

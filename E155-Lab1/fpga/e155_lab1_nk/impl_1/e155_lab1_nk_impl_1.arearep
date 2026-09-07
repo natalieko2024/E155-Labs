@@ -11,12 +11,12 @@ I/O cells:      16
                                LUT4        20          100.0
                                  OB        11          100.0
 SUB MODULES
-                         oscillator         1
+                      freqconverter         1
                         switch_7seg         1
                               TOTAL        75
 ----------------------------------------------------------------------
-Report for cell oscillator.v1
-Instance Path : oscillator
+Report for cell freqconverter.v1
+Instance Path : freqconverter
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        12          100.0

@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2026.1.0.37.0
 
-Sun Sep  6 00:40:01 2026
+Mon Sep  7 01:03:08 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -75,7 +75,7 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
           Listing 1 End Points          |           Type           
 -------------------------------------------------------------------
-oscillator/led2/SR                      |           No arrival time
+freqconverter/led2/SR                   |           No arrival time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
@@ -153,24 +153,24 @@ Clock Domain Crossing
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-oscillator/counter_46__i0/SR             |   26.915 ns 
-{oscillator/counter_46__i1/SR   oscillator/counter_46__i2/SR}              
+freqconverter/counter_45__i0/SR          |   26.915 ns 
+{freqconverter/counter_45__i1/SR   freqconverter/counter_45__i2/SR}              
                                          |   26.915 ns 
-{oscillator/counter_46__i3/SR   oscillator/counter_46__i4/SR}              
+{freqconverter/counter_45__i3/SR   freqconverter/counter_45__i4/SR}              
                                          |   26.915 ns 
-{oscillator/counter_46__i5/SR   oscillator/counter_46__i6/SR}              
+{freqconverter/counter_45__i5/SR   freqconverter/counter_45__i6/SR}              
                                          |   26.915 ns 
-{oscillator/counter_46__i15/SR   oscillator/counter_46__i16/SR}              
+{freqconverter/counter_45__i15/SR   freqconverter/counter_45__i16/SR}              
                                          |   27.510 ns 
-{oscillator/counter_46__i17/SR   oscillator/counter_46__i18/SR}              
+{freqconverter/counter_45__i17/SR   freqconverter/counter_45__i18/SR}              
                                          |   27.510 ns 
-{oscillator/counter_46__i19/SR   oscillator/counter_46__i20/SR}              
+{freqconverter/counter_45__i19/SR   freqconverter/counter_45__i20/SR}              
                                          |   27.510 ns 
-{oscillator/counter_46__i21/SR   oscillator/counter_46__i22/SR}              
+{freqconverter/counter_45__i21/SR   freqconverter/counter_45__i22/SR}              
                                          |   27.510 ns 
-{oscillator/counter_46__i11/SR   oscillator/counter_46__i12/SR}              
+{freqconverter/counter_45__i11/SR   freqconverter/counter_45__i12/SR}              
                                          |   27.854 ns 
-{oscillator/counter_46__i13/SR   oscillator/counter_46__i14/SR}              
+{freqconverter/counter_45__i13/SR   freqconverter/counter_45__i14/SR}              
                                          |   27.854 ns 
 -------------------------------------------------------
                                          |             
@@ -194,8 +194,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : oscillator/counter_46__i0/SR  (SLICE_R11C29A)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : freqconverter/counter_45__i0/SR  (SLICE_R11C29A)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -209,41 +209,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.785                 19.722  12      
-oscillator/counter_46__i0/SR                                 ENDPOINT            0.000                 19.722  1       
+freqconverter/n49                                            NET DELAY           4.785                 19.722  12      
+freqconverter/counter_45__i0/SR                              ENDPOINT            0.000                 19.722  1       
 
 
 Destination Clock Path
@@ -251,8 +251,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                 47.165  1       
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
@@ -266,8 +266,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i1/SR   oscillator/counter_46__i2/SR}  (SLICE_R11C29B)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i1/SR   freqconverter/counter_45__i2/SR}  (SLICE_R11C29B)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -281,41 +281,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.785                 19.722  12      
-{oscillator/counter_46__i1/SR   oscillator/counter_46__i2/SR}
+freqconverter/n49                                            NET DELAY           4.785                 19.722  12      
+{freqconverter/counter_45__i1/SR   freqconverter/counter_45__i2/SR}
                                                              ENDPOINT            0.000                 19.722  1       
 
 
@@ -324,8 +324,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i1/CK   oscillator/counter_46__i2/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i1/CK   freqconverter/counter_45__i2/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -340,8 +340,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i3/SR   oscillator/counter_46__i4/SR}  (SLICE_R11C29C)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i3/SR   freqconverter/counter_45__i4/SR}  (SLICE_R11C29C)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -355,41 +355,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.785                 19.722  12      
-{oscillator/counter_46__i3/SR   oscillator/counter_46__i4/SR}
+freqconverter/n49                                            NET DELAY           4.785                 19.722  12      
+{freqconverter/counter_45__i3/SR   freqconverter/counter_45__i4/SR}
                                                              ENDPOINT            0.000                 19.722  1       
 
 
@@ -398,8 +398,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i3/CK   oscillator/counter_46__i4/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i3/CK   freqconverter/counter_45__i4/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -414,8 +414,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i5/SR   oscillator/counter_46__i6/SR}  (SLICE_R11C29D)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i5/SR   freqconverter/counter_45__i6/SR}  (SLICE_R11C29D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -429,41 +429,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.785                 19.722  12      
-{oscillator/counter_46__i5/SR   oscillator/counter_46__i6/SR}
+freqconverter/n49                                            NET DELAY           4.785                 19.722  12      
+{freqconverter/counter_45__i5/SR   freqconverter/counter_45__i6/SR}
                                                              ENDPOINT            0.000                 19.722  1       
 
 
@@ -472,8 +472,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i5/CK   oscillator/counter_46__i6/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i5/CK   freqconverter/counter_45__i6/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -488,8 +488,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i15/SR   oscillator/counter_46__i16/SR}  (SLICE_R11C31A)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i15/SR   freqconverter/counter_45__i16/SR}  (SLICE_R11C31A)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -503,41 +503,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.190                 19.127  12      
-{oscillator/counter_46__i15/SR   oscillator/counter_46__i16/SR}
+freqconverter/n49                                            NET DELAY           4.190                 19.127  12      
+{freqconverter/counter_45__i15/SR   freqconverter/counter_45__i16/SR}
                                                              ENDPOINT            0.000                 19.127  1       
 
 
@@ -546,8 +546,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i15/CK   oscillator/counter_46__i16/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i15/CK   freqconverter/counter_45__i16/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -562,8 +562,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i17/SR   oscillator/counter_46__i18/SR}  (SLICE_R11C31B)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i17/SR   freqconverter/counter_45__i18/SR}  (SLICE_R11C31B)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -577,41 +577,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.190                 19.127  12      
-{oscillator/counter_46__i17/SR   oscillator/counter_46__i18/SR}
+freqconverter/n49                                            NET DELAY           4.190                 19.127  12      
+{freqconverter/counter_45__i17/SR   freqconverter/counter_45__i18/SR}
                                                              ENDPOINT            0.000                 19.127  1       
 
 
@@ -620,8 +620,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i17/CK   oscillator/counter_46__i18/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i17/CK   freqconverter/counter_45__i18/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -636,8 +636,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i19/SR   oscillator/counter_46__i20/SR}  (SLICE_R11C31C)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i19/SR   freqconverter/counter_45__i20/SR}  (SLICE_R11C31C)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -651,41 +651,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.190                 19.127  12      
-{oscillator/counter_46__i19/SR   oscillator/counter_46__i20/SR}
+freqconverter/n49                                            NET DELAY           4.190                 19.127  12      
+{freqconverter/counter_45__i19/SR   freqconverter/counter_45__i20/SR}
                                                              ENDPOINT            0.000                 19.127  1       
 
 
@@ -694,8 +694,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i19/CK   oscillator/counter_46__i20/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i19/CK   freqconverter/counter_45__i20/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -710,8 +710,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i21/SR   oscillator/counter_46__i22/SR}  (SLICE_R11C31D)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i21/SR   freqconverter/counter_45__i22/SR}  (SLICE_R11C31D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -725,41 +725,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           4.190                 19.127  12      
-{oscillator/counter_46__i21/SR   oscillator/counter_46__i22/SR}
+freqconverter/n49                                            NET DELAY           4.190                 19.127  12      
+{freqconverter/counter_45__i21/SR   freqconverter/counter_45__i22/SR}
                                                              ENDPOINT            0.000                 19.127  1       
 
 
@@ -768,8 +768,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i21/CK   oscillator/counter_46__i22/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i21/CK   freqconverter/counter_45__i22/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -784,8 +784,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i11/SR   oscillator/counter_46__i12/SR}  (SLICE_R11C30C)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i11/SR   freqconverter/counter_45__i12/SR}  (SLICE_R11C30C)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -799,41 +799,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           3.846                 18.783  12      
-{oscillator/counter_46__i11/SR   oscillator/counter_46__i12/SR}
+freqconverter/n49                                            NET DELAY           3.846                 18.783  12      
+{freqconverter/counter_45__i11/SR   freqconverter/counter_45__i12/SR}
                                                              ENDPOINT            0.000                 18.783  1       
 
 
@@ -842,8 +842,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i11/CK   oscillator/counter_46__i12/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i11/CK   freqconverter/counter_45__i12/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -858,8 +858,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i0/Q  (SLICE_R11C29A)
-Path End         : {oscillator/counter_46__i13/SR   oscillator/counter_46__i14/SR}  (SLICE_R11C30D)
+Path Begin       : freqconverter/counter_45__i0/Q  (SLICE_R11C29A)
+Path End         : {freqconverter/counter_45__i13/SR   freqconverter/counter_45__i14/SR}  (SLICE_R11C30D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 9
@@ -873,41 +873,41 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
-oscillator/clk_c                                             NET DELAY           5.499                  5.499  15      
-oscillator/counter_46__i0/CK                                 CLOCK PIN           0.000                  5.499  1       
+freqconverter/clk_c                                          NET DELAY           5.499                  5.499  15      
+freqconverter/counter_45__i0/CK                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-oscillator/counter_46__i0/CK->oscillator/counter_46__i0/Q
+freqconverter/counter_45__i0/CK->freqconverter/counter_45__i0/Q
                                           SLICE_R11C29A      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-oscillator/counter[0]                                        NET DELAY           2.141                  9.028  2       
-oscillator/i4_4_lut/C->oscillator/i4_4_lut/Z
+freqconverter/counter[0]                                     NET DELAY           2.141                  9.028  2       
+freqconverter/i4_4_lut/C->freqconverter/i4_4_lut/Z
                                           SLICE_R12C30A      A0_TO_F0_DELAY      0.476                  9.504  1       
-oscillator/n10                                               NET DELAY           0.304                  9.808  1       
-oscillator/i42_4_lut/C->oscillator/i42_4_lut/Z
+freqconverter/n10                                            NET DELAY           0.304                  9.808  1       
+freqconverter/i41_4_lut/C->freqconverter/i41_4_lut/Z
                                           SLICE_R12C30A      C1_TO_F1_DELAY      0.476                 10.284  1       
-oscillator/n14                                               NET DELAY           0.304                 10.588  1       
-oscillator/i2_4_lut/C->oscillator/i2_4_lut/Z
+freqconverter/n14                                            NET DELAY           0.304                 10.588  1       
+freqconverter/i2_4_lut/C->freqconverter/i2_4_lut/Z
                                           SLICE_R12C30B      C0_TO_F0_DELAY      0.476                 11.064  1       
-oscillator/n271                                              NET DELAY           0.304                 11.368  1       
-oscillator/i1_4_lut/B->oscillator/i1_4_lut/Z
+freqconverter/n270                                           NET DELAY           0.304                 11.368  1       
+freqconverter/i1_4_lut/B->freqconverter/i1_4_lut/Z
                                           SLICE_R12C30B      C1_TO_F1_DELAY      0.476                 11.844  1       
-oscillator/n4                                                NET DELAY           0.304                 12.148  1       
-oscillator/i1_4_lut_adj_1/D->oscillator/i1_4_lut_adj_1/Z
+freqconverter/n4                                             NET DELAY           0.304                 12.148  1       
+freqconverter/i1_4_lut_adj_1/D->freqconverter/i1_4_lut_adj_1/Z
                                           SLICE_R12C30C      C0_TO_F0_DELAY      0.476                 12.624  1       
-oscillator/n5                                                NET DELAY           0.304                 12.928  1       
-oscillator/i2_4_lut_adj_2/C->oscillator/i2_4_lut_adj_2/Z
+freqconverter/n5                                             NET DELAY           0.304                 12.928  1       
+freqconverter/i2_4_lut_adj_2/C->freqconverter/i2_4_lut_adj_2/Z
                                           SLICE_R12C30C      C1_TO_F1_DELAY      0.476                 13.404  1       
-oscillator/n272                                              NET DELAY           0.304                 13.708  1       
-oscillator/i26_4_lut/D->oscillator/i26_4_lut/Z
+freqconverter/n271                                           NET DELAY           0.304                 13.708  1       
+freqconverter/i25_4_lut/D->freqconverter/i25_4_lut/Z
                                           SLICE_R12C30D      C0_TO_F0_DELAY      0.476                 14.184  2       
-oscillator/n29                                               NET DELAY           0.304                 14.488  2       
-oscillator.i45_2_lut/B->oscillator.i45_2_lut/Z
+freqconverter/n29                                            NET DELAY           0.304                 14.488  2       
+freqconverter.i44_2_lut/B->freqconverter.i44_2_lut/Z
                                           SLICE_R12C30D      C1_TO_F1_DELAY      0.449                 14.937  12      
-oscillator/n50                                               NET DELAY           3.846                 18.783  12      
-{oscillator/counter_46__i13/SR   oscillator/counter_46__i14/SR}
+freqconverter/n49                                            NET DELAY           3.846                 18.783  12      
+{freqconverter/counter_45__i13/SR   freqconverter/counter_45__i14/SR}
                                                              ENDPOINT            0.000                 18.783  1       
 
 
@@ -916,8 +916,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  15      
-oscillator/clk_c                                             NET DELAY           5.499                 47.165  15      
-{oscillator/counter_46__i13/CK   oscillator/counter_46__i14/CK}
+freqconverter/clk_c                                          NET DELAY           5.499                 47.165  15      
+{freqconverter/counter_45__i13/CK   freqconverter/counter_45__i14/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.529)                 46.636  
@@ -947,16 +947,16 @@ Path Slack  (Passed)                                                            
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-oscillator/counter_46__i15/D             |    1.913 ns 
-oscillator/counter_46__i16/D             |    1.913 ns 
-oscillator/counter_46__i17/D             |    1.913 ns 
-oscillator/counter_46__i18/D             |    1.913 ns 
-oscillator/counter_46__i19/D             |    1.913 ns 
-oscillator/counter_46__i20/D             |    1.913 ns 
-oscillator/counter_46__i21/D             |    1.913 ns 
-oscillator/counter_46__i22/D             |    1.913 ns 
-oscillator/counter_46__i13/D             |    1.913 ns 
-oscillator/counter_46__i14/D             |    1.913 ns 
+freqconverter/counter_45__i15/D          |    1.913 ns 
+freqconverter/counter_45__i16/D          |    1.913 ns 
+freqconverter/counter_45__i17/D          |    1.913 ns 
+freqconverter/counter_45__i18/D          |    1.913 ns 
+freqconverter/counter_45__i19/D          |    1.913 ns 
+freqconverter/counter_45__i20/D          |    1.913 ns 
+freqconverter/counter_45__i21/D          |    1.913 ns 
+freqconverter/counter_45__i22/D          |    1.913 ns 
+freqconverter/counter_45__i13/D          |    1.913 ns 
+freqconverter/counter_45__i14/D          |    1.913 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -979,8 +979,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i15/Q  (SLICE_R11C31A)
-Path End         : oscillator/counter_46__i15/D  (SLICE_R11C31A)
+Path Begin       : freqconverter/counter_45__i15/Q  (SLICE_R11C31A)
+Path End         : freqconverter/counter_45__i15/D  (SLICE_R11C31A)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -994,21 +994,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i15/CK   oscillator/counter_46__i16/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i15/CK   freqconverter/counter_45__i16/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i15/CK->oscillator/counter_46__i15/Q
+freqconverter/counter_45__i15/CK->freqconverter/counter_45__i15/Q
                                           SLICE_R11C31A      CLK_TO_Q0_DELAY  0.779                  3.863  2       
-oscillator/counter[15]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_17/C0->oscillator/counter_46_add_4_17/S0
+freqconverter/counter[15]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_17/C0->freqconverter/counter_45_add_4_17/S0
                                           SLICE_R11C31A      C0_TO_F0_DELAY   0.252                  4.997  1       
-oscillator/n97[15]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i15/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[15]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i15/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1016,8 +1016,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i15/CK   oscillator/counter_46__i16/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i15/CK   freqconverter/counter_45__i16/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1032,8 +1032,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i16/Q  (SLICE_R11C31A)
-Path End         : oscillator/counter_46__i16/D  (SLICE_R11C31A)
+Path Begin       : freqconverter/counter_45__i16/Q  (SLICE_R11C31A)
+Path End         : freqconverter/counter_45__i16/D  (SLICE_R11C31A)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1047,21 +1047,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i15/CK   oscillator/counter_46__i16/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i15/CK   freqconverter/counter_45__i16/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i16/CK->oscillator/counter_46__i16/Q
+freqconverter/counter_45__i16/CK->freqconverter/counter_45__i16/Q
                                           SLICE_R11C31A      CLK_TO_Q1_DELAY  0.779                  3.863  2       
-oscillator/counter[16]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_17/C1->oscillator/counter_46_add_4_17/S1
+freqconverter/counter[16]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_17/C1->freqconverter/counter_45_add_4_17/S1
                                           SLICE_R11C31A      C1_TO_F1_DELAY   0.252                  4.997  1       
-oscillator/n97[16]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i16/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[16]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i16/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1069,8 +1069,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i15/CK   oscillator/counter_46__i16/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i15/CK   freqconverter/counter_45__i16/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1085,8 +1085,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i17/Q  (SLICE_R11C31B)
-Path End         : oscillator/counter_46__i17/D  (SLICE_R11C31B)
+Path Begin       : freqconverter/counter_45__i17/Q  (SLICE_R11C31B)
+Path End         : freqconverter/counter_45__i17/D  (SLICE_R11C31B)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1100,21 +1100,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i17/CK   oscillator/counter_46__i18/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i17/CK   freqconverter/counter_45__i18/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i17/CK->oscillator/counter_46__i17/Q
+freqconverter/counter_45__i17/CK->freqconverter/counter_45__i17/Q
                                           SLICE_R11C31B      CLK_TO_Q0_DELAY  0.779                  3.863  2       
-oscillator/counter[17]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_19/C0->oscillator/counter_46_add_4_19/S0
+freqconverter/counter[17]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_19/C0->freqconverter/counter_45_add_4_19/S0
                                           SLICE_R11C31B      C0_TO_F0_DELAY   0.252                  4.997  1       
-oscillator/n97[17]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i17/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[17]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i17/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1122,8 +1122,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i17/CK   oscillator/counter_46__i18/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i17/CK   freqconverter/counter_45__i18/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1138,8 +1138,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i18/Q  (SLICE_R11C31B)
-Path End         : oscillator/counter_46__i18/D  (SLICE_R11C31B)
+Path Begin       : freqconverter/counter_45__i18/Q  (SLICE_R11C31B)
+Path End         : freqconverter/counter_45__i18/D  (SLICE_R11C31B)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1153,21 +1153,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i17/CK   oscillator/counter_46__i18/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i17/CK   freqconverter/counter_45__i18/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i18/CK->oscillator/counter_46__i18/Q
+freqconverter/counter_45__i18/CK->freqconverter/counter_45__i18/Q
                                           SLICE_R11C31B      CLK_TO_Q1_DELAY  0.779                  3.863  2       
-oscillator/counter[18]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_19/C1->oscillator/counter_46_add_4_19/S1
+freqconverter/counter[18]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_19/C1->freqconverter/counter_45_add_4_19/S1
                                           SLICE_R11C31B      C1_TO_F1_DELAY   0.252                  4.997  1       
-oscillator/n97[18]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i18/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[18]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i18/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1175,8 +1175,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i17/CK   oscillator/counter_46__i18/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i17/CK   freqconverter/counter_45__i18/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1191,8 +1191,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i19/Q  (SLICE_R11C31C)
-Path End         : oscillator/counter_46__i19/D  (SLICE_R11C31C)
+Path Begin       : freqconverter/counter_45__i19/Q  (SLICE_R11C31C)
+Path End         : freqconverter/counter_45__i19/D  (SLICE_R11C31C)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1206,21 +1206,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i19/CK   oscillator/counter_46__i20/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i19/CK   freqconverter/counter_45__i20/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i19/CK->oscillator/counter_46__i19/Q
+freqconverter/counter_45__i19/CK->freqconverter/counter_45__i19/Q
                                           SLICE_R11C31C      CLK_TO_Q0_DELAY  0.779                  3.863  2       
-oscillator/counter[19]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_21/C0->oscillator/counter_46_add_4_21/S0
+freqconverter/counter[19]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_21/C0->freqconverter/counter_45_add_4_21/S0
                                           SLICE_R11C31C      C0_TO_F0_DELAY   0.252                  4.997  1       
-oscillator/n97[19]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i19/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[19]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i19/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1228,8 +1228,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i19/CK   oscillator/counter_46__i20/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i19/CK   freqconverter/counter_45__i20/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1244,8 +1244,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i20/Q  (SLICE_R11C31C)
-Path End         : oscillator/counter_46__i20/D  (SLICE_R11C31C)
+Path Begin       : freqconverter/counter_45__i20/Q  (SLICE_R11C31C)
+Path End         : freqconverter/counter_45__i20/D  (SLICE_R11C31C)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1259,21 +1259,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i19/CK   oscillator/counter_46__i20/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i19/CK   freqconverter/counter_45__i20/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i20/CK->oscillator/counter_46__i20/Q
+freqconverter/counter_45__i20/CK->freqconverter/counter_45__i20/Q
                                           SLICE_R11C31C      CLK_TO_Q1_DELAY  0.779                  3.863  2       
-oscillator/counter[20]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_21/C1->oscillator/counter_46_add_4_21/S1
+freqconverter/counter[20]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_21/C1->freqconverter/counter_45_add_4_21/S1
                                           SLICE_R11C31C      C1_TO_F1_DELAY   0.252                  4.997  1       
-oscillator/n97[20]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i20/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[20]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i20/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1281,8 +1281,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i19/CK   oscillator/counter_46__i20/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i19/CK   freqconverter/counter_45__i20/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1297,8 +1297,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i21/Q  (SLICE_R11C31D)
-Path End         : oscillator/counter_46__i21/D  (SLICE_R11C31D)
+Path Begin       : freqconverter/counter_45__i21/Q  (SLICE_R11C31D)
+Path End         : freqconverter/counter_45__i21/D  (SLICE_R11C31D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1312,21 +1312,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i21/CK   oscillator/counter_46__i22/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i21/CK   freqconverter/counter_45__i22/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i21/CK->oscillator/counter_46__i21/Q
+freqconverter/counter_45__i21/CK->freqconverter/counter_45__i21/Q
                                           SLICE_R11C31D      CLK_TO_Q0_DELAY  0.779                  3.863  2       
-oscillator/counter[21]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_23/C0->oscillator/counter_46_add_4_23/S0
+freqconverter/counter[21]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_23/C0->freqconverter/counter_45_add_4_23/S0
                                           SLICE_R11C31D      C0_TO_F0_DELAY   0.252                  4.997  1       
-oscillator/n97[21]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i21/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[21]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i21/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1334,8 +1334,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i21/CK   oscillator/counter_46__i22/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i21/CK   freqconverter/counter_45__i22/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1350,8 +1350,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i22/Q  (SLICE_R11C31D)
-Path End         : oscillator/counter_46__i22/D  (SLICE_R11C31D)
+Path Begin       : freqconverter/counter_45__i22/Q  (SLICE_R11C31D)
+Path End         : freqconverter/counter_45__i22/D  (SLICE_R11C31D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1365,21 +1365,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i21/CK   oscillator/counter_46__i22/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i21/CK   freqconverter/counter_45__i22/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i22/CK->oscillator/counter_46__i22/Q
+freqconverter/counter_45__i22/CK->freqconverter/counter_45__i22/Q
                                           SLICE_R11C31D      CLK_TO_Q1_DELAY  0.779                  3.863  2       
-oscillator/counter[22]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_23/C1->oscillator/counter_46_add_4_23/S1
+freqconverter/counter[22]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_23/C1->freqconverter/counter_45_add_4_23/S1
                                           SLICE_R11C31D      C1_TO_F1_DELAY   0.252                  4.997  1       
-oscillator/n97[22]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i22/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[22]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i22/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1387,8 +1387,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i21/CK   oscillator/counter_46__i22/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i21/CK   freqconverter/counter_45__i22/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1403,8 +1403,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i13/Q  (SLICE_R11C30D)
-Path End         : oscillator/counter_46__i13/D  (SLICE_R11C30D)
+Path Begin       : freqconverter/counter_45__i13/Q  (SLICE_R11C30D)
+Path End         : freqconverter/counter_45__i13/D  (SLICE_R11C30D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1418,21 +1418,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i13/CK   oscillator/counter_46__i14/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i13/CK   freqconverter/counter_45__i14/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i13/CK->oscillator/counter_46__i13/Q
+freqconverter/counter_45__i13/CK->freqconverter/counter_45__i13/Q
                                           SLICE_R11C30D      CLK_TO_Q0_DELAY  0.779                  3.863  2       
-oscillator/counter[13]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_15/C0->oscillator/counter_46_add_4_15/S0
+freqconverter/counter[13]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_15/C0->freqconverter/counter_45_add_4_15/S0
                                           SLICE_R11C30D      C0_TO_F0_DELAY   0.252                  4.997  1       
-oscillator/n97[13]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i13/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[13]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i13/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1440,8 +1440,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i13/CK   oscillator/counter_46__i14/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i13/CK   freqconverter/counter_45__i14/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1456,8 +1456,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : oscillator/counter_46__i14/Q  (SLICE_R11C30D)
-Path End         : oscillator/counter_46__i14/D  (SLICE_R11C30D)
+Path Begin       : freqconverter/counter_45__i14/Q  (SLICE_R11C30D)
+Path End         : freqconverter/counter_45__i14/D  (SLICE_R11C30D)
 Source Clock     : clk_c (R)
 Destination Clock: clk_c (R)
 Logic Level      : 2
@@ -1471,21 +1471,21 @@ Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i13/CK   oscillator/counter_46__i14/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i13/CK   freqconverter/counter_45__i14/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-oscillator/counter_46__i14/CK->oscillator/counter_46__i14/Q
+freqconverter/counter_45__i14/CK->freqconverter/counter_45__i14/Q
                                           SLICE_R11C30D      CLK_TO_Q1_DELAY  0.779                  3.863  2       
-oscillator/counter[14]                                       NET DELAY        0.882                  4.745  2       
-oscillator/counter_46_add_4_15/C1->oscillator/counter_46_add_4_15/S1
+freqconverter/counter[14]                                    NET DELAY        0.882                  4.745  2       
+freqconverter/counter_45_add_4_15/C1->freqconverter/counter_45_add_4_15/S1
                                           SLICE_R11C30D      C1_TO_F1_DELAY   0.252                  4.997  1       
-oscillator/n97[14]                                           NET DELAY        0.000                  4.997  1       
-oscillator/counter_46__i14/D                                 ENDPOINT         0.000                  4.997  1       
+freqconverter/n97[14]                                        NET DELAY        0.000                  4.997  1       
+freqconverter/counter_45__i14/D                              ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1493,8 +1493,8 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
-oscillator/clk_c                                             NET DELAY        3.084                  3.084  16      
-{oscillator/counter_46__i13/CK   oscillator/counter_46__i14/CK}
+freqconverter/clk_c                                          NET DELAY        3.084                  3.084  16      
+{freqconverter/counter_45__i13/CK   freqconverter/counter_45__i14/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  

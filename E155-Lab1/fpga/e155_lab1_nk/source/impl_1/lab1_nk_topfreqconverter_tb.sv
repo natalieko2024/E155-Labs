@@ -1,6 +1,6 @@
 `timescale 1 ns/1 ns
 
-module lab1_nk_toposcillator_tb();
+module lab1_nk_topfreqconverter_tb();
 	logic clk;		// System clock
 	logic reset;	// System reset
 	logic [3:0] s;
