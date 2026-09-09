@@ -23,7 +23,7 @@ module freqconverter #(parameter WIDTH = 23, MAX = 5000000)( input logic clk,
 			counter <= 0;
 			led2 <= 0;
 		end
-		else if ((counter > max_count) && enable) begin
+		else if ((counter > (max_count-1)) && enable) begin
 			counter <= 0;
 			led2 <= ~led2;
 		end
