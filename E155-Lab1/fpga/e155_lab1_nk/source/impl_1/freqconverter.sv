@@ -31,10 +31,10 @@ module freqconverter #(parameter WIDTH = 23, MAX = 5000000)( input logic clk,
 			counter <= counter + 1'b1;
 			led2 <= led2;
 		end
-		else begin
-			counter <= counter;
-			led2 <= led2;
-		end
+		// else begin
+			// counter <= counter;
+			// led2 <= led2;
+		// end
 	end
 	
 endmodule
