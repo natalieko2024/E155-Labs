@@ -10,11 +10,9 @@ module scan(input logic clk, reset, enable,
 	// Update rows every 2Hz and if enable is high
 	// Push the default value 4'b1000 if reset if low (active)
 	// Otherwise keep the current value
-	always_ff@(posedge count, posedge reset) begin
-		if (enable) begin
-			if (~reset)	rows <= 4'b1000;
-			else		rows <= tempState;
-		end
+	always_ff @(posedge count, negedge reset) begin
+		if (~reset)	rows <= 4'b1000;
+		else if (enable) rows <= tempState;
 	end
 	
 	// Combinational logic to determine next state based on current scanning rows
