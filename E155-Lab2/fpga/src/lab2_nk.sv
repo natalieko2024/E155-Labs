@@ -1,8 +1,9 @@
 module lab2_nk(input logic reset, enable,
 				input logic [4:0] s,
-				input logic [3:0] cols
-				output logic [6:0] seg,
-				output logic [3:0] rows);
+				input logic [3:0] cols,
+				output logic [6:0] segWrite,
+				output logic [3:0] rows
+				output logic [3:0] leds);
 	
 	// Internal HSOSC to provide a 24MHz oscillation frequency output
 	HSOSC #(.CLKHF_DIV("0b01")
@@ -13,14 +14,12 @@ module lab2_nk(input logic reset, enable,
 
 	// 7-segment module
 	switch_7seg 7seg(s[3:0], seg);
-	
-	// multiplexing counter module
-	muxCounter muxCounter(clk, reset, enable, seg, s[4], something);
 
+	// multiplexing counter module to write outputs at a frequency
+	muxCounter muxCounter(clk, reset, enable, s[4], seg, anodeLeft, anodeRight, segWrite);
 	
-	// Switch which dual 7-segment display anode is active assign statements to implement multiplexing and scanning
-	assign anodeLeft = s[4] ? 1 : 0;
-	assign anodeRight = s[4] ? 0 : 1;
+	// assign statements to implement multiplexing and scanning
+	assign leds = cols;
 
 
 

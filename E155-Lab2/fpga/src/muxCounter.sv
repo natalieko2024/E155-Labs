@@ -3,15 +3,16 @@ module muxCounter(input logic clk, reset, enable, switch
                   output logic anodeLeft, anodeRight,
                   output logic [6:0] segWrite);
 
+    logic [6:0] segLeft, segRight;
+
     freqconverter #(.WIDTH = 23, .MAX = 3000000) oscillator(clk, reset, enable, stepDownClk);
 
-    // conserve state for each segment based on switch
-    // output switches between each anode and seg
+    // Switch which 7-seg to write to every rising clock edge and write to it
     always_ff@(posedge stepDownClk, posedge reset) begin
         if (enable)
 			if (~reset)	begin
-                anodeLeft <= 0;
-                anodeRight <= 1;
+                anodeLeft <= 1;
+                anodeRight <= 0;
                 segWrite <= 7'b0;
             end
 			else begin
@@ -20,22 +21,20 @@ module muxCounter(input logic clk, reset, enable, switch
                 if (anodeLeft) segWrite <= segLeft;
                 else segWrite <= segRight;
             end
-		else begin
-            anodeLeft <= anodeLeft;
-            anodeRight <= anodeRight;
-        end
     end
 
+    // Set up next state of anode toggle, always going to invert it
+    // Save the 7-segment output for each side
     always_comb
         if (anodeLeft) begin
             nextAnodeLeft = 0;
             nextAnodeRight = 1;
-            nextSeg = seg;
         end
         else begin
             nextAnodeLeft = 1;
             nextAnodeRight = 0;
-            nextSeg = seg;
         end
+        if (switch) segLeft = seg;
+        else segRight = seg;
     
 endmodule
