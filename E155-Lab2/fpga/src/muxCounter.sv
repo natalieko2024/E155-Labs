@@ -1,9 +1,9 @@
-module muxCounter(input logic clk, reset, enable, switch,
-                  input logic [6:0] seg,
+module muxCounter(input logic clk, reset, enable,
+                  input logic [7:0] s,
                   output logic anodeLeft, anodeRight,
-                  output logic [6:0] segWrite);
+                  output logic [3:0] switchWrite);
 
-    logic [6:0] segLeft, segRight;
+    logic [3:0] switchLeft, switchRight;
 	logic stepDownClk, nextAnodeLeft, nextAnodeRight;
 
     freqconverter #(.WIDTH(23), .MAX(3000000)) oscillator(clk, reset, enable, stepDownClk);
@@ -13,13 +13,13 @@ module muxCounter(input logic clk, reset, enable, switch,
         if (~reset)	begin
 			anodeLeft <= 1;
 			anodeRight <= 0;
-			segWrite <= 7'b0;
+			switchWrite <= 4'b0;
 		end 
 		else if (enable) begin 
 			anodeLeft <= nextAnodeLeft;
 			anodeRight <= nextAnodeRight;
-			if (anodeLeft) segWrite <= segLeft;
-			else segWrite <= segRight;
+			if (anodeLeft) switchWrite <= switchLeft;
+			else switchWrite <= switchRight;
 		end
     end
 
@@ -34,11 +34,11 @@ module muxCounter(input logic clk, reset, enable, switch,
             nextAnodeLeft = 1;
             nextAnodeRight = 0;
         end
-        if (switch) begin
-			segLeft = seg;
+        if (s >= 8'b00010000) begin
+			switchLeft = s[7:4];
 		end
         else begin 
-			segRight = seg;
+			switchRight = s[3:0];
 		end
 	end
     
