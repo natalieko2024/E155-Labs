@@ -11,89 +11,38 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/e155_lab2_nk/lab2_nk
 vfreqconverter
-Z2 2C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
+Z2 2C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1789161760
+Z4 !s110 1789204534
 !i10b 1
-!s100 i;eCz@g75Z0eUf@mHEdj;0
-IG<BlgC;9__d>XkMRM?:jo1
+!s100 k8Y8:kRS`]L>GN2T^TRXW0
+I061PXdm2JKQ_DWFD@YN;X0
 S1
 R1
-w1789112420
+w1789202757
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
 !i122 0
-L0 4 37
+L0 4 38
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1789161760.000000
-Z8 !s107 C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv|
-Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
+Z7 !s108 1789204534.000000
+Z8 !s107 C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
 !i113 0
 Z10 o-L work -sv -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z11 tCvgOpt 0 defaultOptions 1085333592
-vlab2_nk
-R2
-R3
-R4
-!i10b 1
-!s100 iQS>af_jzIjThPSj:W]J?2
-IMVPNd?RVeC1cdDc=Ym1JR3
-S1
-R1
-w1789160812
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv
-!i122 0
-L0 1 33
-R5
-R6
-r1
-!s85 0
-31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vmuxCounter
-R2
-R3
-R4
-!i10b 1
-!s100 ?80B2k3ZfVi[V22a>XSOD0
-I=Xj`[QGm7K`T4F<Om3D0C0
-S1
-R1
-w1789160735
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv
-!i122 0
-L0 1 31
-R5
-R6
-r1
-!s85 0
-31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-nmux@counter
 Tqrun_opt
 !i145 1
 !i144 0
 R4
-V8S<c:F46H8hkCAK`6TL:B2
-04 7 4 work lab2_nk fast 0
+VnFkWM:lPm@HRI=015UBP@2
+04 4 4 work scan fast 0
 R0
-!s12f OEM25U4 
+!s12f OEM25U2 
 !s12b OEM100
 !s124 OEM100
 !s135 nogc
@@ -106,40 +55,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 LZV1PdVTNF[zJGLT7IXI53
-I5DiOEBN588z3HBzmRDOi:0
+!s100 16V==KNSd_PhAf>jF_aMK2
+I83Lg1?]8WMUh<WeoW;gPo2
 S1
 R1
-w1789156467
+w1789203875
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv
 !i122 0
-L0 1 28
-R5
-R6
-r1
-!s85 0
-31
-R7
-R8
-R9
-!i113 0
-R10
-R11
-vswitch_7seg
-R2
-R3
-R4
-!i10b 1
-!s100 3z?1dfXl]4nk_33QC`m1N1
-InN2liNLdB`:fG>Pi;>=:@1
-S1
-R1
-w1788570465
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
-!i122 0
-L0 4 27
+L0 1 31
 R5
 R6
 r1

@@ -25,10 +25,10 @@ module lab2_nk(input logic reset,
 	
 	// keypad guys
 		
-	//// scanning module
-	//scan s1(clk, reset, 1'b1, rows);
+	// scanning module
+	scan s1(clk, reset, 1'b1, rows);
 
-	//// assign statements to implement multiplexing and scanning
-	//assign leds = cols;
+	// assign statements to implement multiplexing and scanning
+	assign leds = ~(cols);
 
 endmodule

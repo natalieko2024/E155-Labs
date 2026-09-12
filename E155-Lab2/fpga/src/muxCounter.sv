@@ -6,7 +6,7 @@ module muxCounter(input logic clk, reset, enable,
 	logic stepDownClk, nextAnodeLeft, nextAnodeRight;
 	logic [22:0] counter;
 
-    freqconverter #(.WIDTH(23), .MAX(100000)) oscillator(clk, reset, enable, stepDownClk, counter);
+    freqconverter #(.WIDTH(17), .MAX(100000)) oscillator(clk, reset, enable, stepDownClk, counter);
 
     // Switch which 7-seg to write to every rising clock edge and write to it
     always_ff @(posedge stepDownClk, negedge reset) begin

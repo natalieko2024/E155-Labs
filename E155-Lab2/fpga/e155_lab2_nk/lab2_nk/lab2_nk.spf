@@ -1,12 +1,9 @@
 <RadiantSimulationProject language="1" name="lab2_nk" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
-    <Source include="none" langstandard="System Verilog" path="../src/lab2_nk.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/muxCounter.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../src/scan.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../../../E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../../../E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" type="VERILOG" worklib="work"/>
     <SimLib value="pmi_work ovi_ice40up"/>
     <GlbInc value=""/>
     <Macro value=""/>
     <Udo value=""/>
-    <TopModule instance="" language="VERILOG" name="lab2_nk"/>
+    <TopModule instance="" language="VERILOG" name="scan"/>
 </RadiantSimulationProject>
