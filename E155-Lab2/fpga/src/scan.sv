@@ -5,7 +5,7 @@ module scan(input logic clk, reset, enable,
 	logic [3:0] tempState;
 	
 	// Use my counter module to step down 24MHz to 2Hz
-	freqconverter #(.WIDTH(23), .MAX(6000000)) counter(clk, reset, enable, count);
+	freqconverter #(.WIDTH(23), .MAX(6000000)) counter(clk, reset, enable, count, countUp);
 	
 	// Update rows every 2Hz and if enable is high
 	// Push the default value 4'b1000 if reset if low (active)
