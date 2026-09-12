@@ -1,0 +1,41 @@
+C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/e155_lab2_nk/lab2_nk.mpf' is used as the ini file.
+-- Compiling module freqconverter
+
+Top level modules:
+	freqconverter
+
+} {} {}} C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/e155_lab2_nk/lab2_nk.mpf' is used as the ini file.
+-- Compiling module scan
+
+Top level modules:
+	scan
+
+} {} {}} C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/e155_lab2_nk/lab2_nk.mpf' is used as the ini file.
+-- Compiling module lab2_nk
+
+Top level modules:
+	lab2_nk
+
+} {} {}} C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/e155_lab2_nk/lab2_nk.mpf' is used as the ini file.
+-- Compiling module switch_7seg
+
+Top level modules:
+	switch_7seg
+
+} {} {}} C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/e155_lab2_nk/lab2_nk.mpf' is used as the ini file.
+-- Compiling module muxCounter
+
+Top level modules:
+	muxCounter
+
+} {} {}}
