@@ -22,7 +22,7 @@ module lab2_nk(input logic reset,
 	muxCounter mc1(clk, reset, 1'b1, s, anodeLeft, anodeRight, switchLeft, switchRight);
 	
 	// Implement 7-segment mux for which side to write to
-	assign switchWrite = anodeLeft? switchLeft : switchRight;
+	assign switchWrite = anodeLeft? switchRight : switchLeft;
 	
 	// 7-segment module
 	switch_7seg ss1(switchWrite, segWrite);

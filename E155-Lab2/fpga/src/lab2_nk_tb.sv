@@ -24,15 +24,15 @@ module lab2_nk_tb();
 		// test 1 - testing mux behaviour
 		s = 8'b00001111;
 		#10
-		assert (segWrite == 7'b0000001)
-			$display("PASS right segments are correct at time %t", $time);
-		else
-			$display("FAIL right segments are incorrect at time %t", $time);
-		#8333334 	// this is how long the 120Hz clock should take, subtract time after reset
 		assert (segWrite == 7'b0111000)
-			$display("PASS left segments are correct at at time %t", $time);
+			$display("PASS left segments are correct at time %t", $time);
 		else
-			$display("FAIL left segments are incorrect at at time %t", $time);
+			$display("FAIL left segments are incorrect at time %t", $time);
+		#8333334 	// this is how long the 120Hz clock should take
+		assert (segWrite == 7'b0000001)
+			$display("PASS right segments are correct at at time %t", $time);
+		else
+			$display("FAIL right segments are incorrect at at time %t", $time);
 
 		// test 2 - testing column input to LED output
 		cols = 4'b0000;
