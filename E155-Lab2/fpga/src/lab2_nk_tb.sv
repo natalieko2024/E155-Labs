@@ -19,32 +19,38 @@ module lab2_nk_tb();
 	//assert cols = 0 and see if leds work when row is 1
 	initial begin
 		reset = 0;
-		#4 reset = 1;
-		#4
+		#1000 reset = 1;
 
 		// test 1 - testing mux behaviour
 		s = 8'b00001111;
-		#1000
+		#10
 		assert (segWrite == 7'b0000001)
-			$display("PASS left segments are correct at time %t", $time);
+			$display("PASS right segments are correct at time %t", $time);
 		else
-			$display("FAIL left segments are incorrect at time %t", $time);
-		#1000
-		assert (segWrite == 7'0111000)
-			$display("PASS right segments are correct at at time %t", $time);
+			$display("FAIL right segments are incorrect at time %t", $time);
+		#8333334 	// this is how long the 120Hz clock should take, subtract time after reset
+		assert (segWrite == 7'b0111000)
+			$display("PASS left segments are correct at at time %t", $time);
 		else
-			$display("FAIL right segments are correct at at time %t", $time);
+			$display("FAIL left segments are incorrect at at time %t", $time);
 
 		// test 2 - testing column input to LED output
 		cols = 4'b0000;
-		#1000
+		#8333334
 		assert (leds == 4'b1111)
 			$display("PASS leds are inverted columns at time %t", $time);
 		else
 			$display("FAIL leds are incorrect at time %t", $time);
 
+		cols = 4'b1010;
+		#8333334
+		assert (leds == 4'b0101)
+			$display("PASS leds are inverted columns at time %t", $time);
+		else
+			$display("FAIL leds are incorrect at time %t", $time);
+
 		//assert cols = 0 for each one and show led output
-		#1000000000 $stop;
+		#100 $stop;
 	end
 	
 endmodule
