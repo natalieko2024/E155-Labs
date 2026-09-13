@@ -1,3 +1,7 @@
+// Natalie Ko (nko@g.hmc.edu
+// Created on 8 Sept 2026
+// The module lab2_nk wires the submodules together and implements a mux and inverter to switch which 7-segment to write to and write to column-scanning LEDs.
+
 module lab2_nk(input logic reset, 
 				input logic [7:0] s,
 				input logic [3:0] cols,
@@ -17,18 +21,16 @@ module lab2_nk(input logic reset,
 	// multiplexing counter module to write outputs at a frequency
 	muxCounter mc1(clk, reset, 1'b1, s, anodeLeft, anodeRight, switchLeft, switchRight);
 	
-	// 7-segment module
-	switch_7seg ss1(switchWrite, segWrite);
-	
 	// Implement 7-segment mux for which side to write to
 	assign switchWrite = anodeLeft? switchLeft : switchRight;
 	
-	// keypad guys
+	// 7-segment module
+	switch_7seg ss1(switchWrite, segWrite);
 		
-	// scanning module
+	// scanning module to send the rotating scanning signal to keypad rows
 	scan s1(clk, reset, 1'b1, rows);
 
-	// assign statements to implement multiplexing and scanning
+	// columns are active low, assign the negation to activate LEDs
 	assign leds = ~(cols);
 
 endmodule
