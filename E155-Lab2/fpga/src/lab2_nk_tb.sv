@@ -21,14 +21,28 @@ module lab2_nk_tb();
 		reset = 0;
 		#4 reset = 1;
 		#4
-		s = 8'b00000000;
-		// test 1 - testing rows at 1/8 clock cycle
-		assert (segWrite == 4'b0000)
-			$display("PASS row outputs are correct with enable at time %t", $time);
+
+		// test 1 - testing mux behaviour
+		s = 8'b00001111;
+		#1000
+		assert (segWrite == 7'b0000001)
+			$display("PASS left segments are correct at time %t", $time);
 		else
-			$display("FAIL row outputs are incorrect with enable at time %t", $time);
-			
-		// go through all of the switch inputs
+			$display("FAIL left segments are incorrect at time %t", $time);
+		#1000
+		assert (segWrite == 7'0111000)
+			$display("PASS right segments are correct at at time %t", $time);
+		else
+			$display("FAIL right segments are correct at at time %t", $time);
+
+		// test 2 - testing column input to LED output
+		cols = 4'b0000;
+		#1000
+		assert (leds == 4'b1111)
+			$display("PASS leds are inverted columns at time %t", $time);
+		else
+			$display("FAIL leds are incorrect at time %t", $time);
+
 		//assert cols = 0 for each one and show led output
 		#1000000000 $stop;
 	end
