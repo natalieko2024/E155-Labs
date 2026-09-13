@@ -3,8 +3,13 @@
 -reflib ovi_ice40up
 
 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/muxCounter.sv" 
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" 
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan_tb.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -15,11 +20,11 @@
 -end
 
 -gui
--top scan
+-top lab2_nk_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end
 
 -do "view wave"
 -do "add wave /*"
--do "run 100 ns"
+-do "run -all"

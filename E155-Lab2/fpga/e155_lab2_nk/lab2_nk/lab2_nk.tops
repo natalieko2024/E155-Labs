@@ -1,1 +1,2 @@
-scan,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv
+lab2_nk_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/lab2_nk_tb.sv
+scan_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan_tb.sv

@@ -31,7 +31,6 @@ module scan_tb();
 		#4
 
 		// test 1 - testing rows at 1/8 clock cycle
-		#6000000;	// Time for 1/8 
 		assert (rows == 4'b1000)
 			$display("PASS row outputs are correct with enable at time %t", $time);
 		else
@@ -40,7 +39,7 @@ module scan_tb();
 		// test 2 - testing rows at 2/8 clock cycle
 		#6000000;
 		assert (rows == 4'b0100)
-			$$display("PASS row outputs are correct with enable at time %t", $time);
+			$display("PASS row outputs are correct with enable at time %t", $time);
 		else
 			$display("FAIL row outputs are incorrect with enable at time %t", $time);
 		
@@ -60,12 +59,11 @@ module scan_tb();
 
 		// toggle reset at an irregular interval
 		reset = 0;
-		#1000;
+		#100000;
 		reset = 1;
 		#4
 		
 		// test 5 - testing rows at 1/8 clock cycle
-		#6000000;	// slightly more than 20 to account for setup time after reset
 		assert (rows == 4'b1000)
 			$display("PASS row outputs are correct with enable after reset at time %t", $time);
 		else
@@ -74,7 +72,7 @@ module scan_tb();
 		// test 6 - testing rows at 2/8 clock cycle
 		#6000000;
 		assert (rows == 4'b0100)
-			$$display("PASS row outputs are correct with enable after reset at time %t", $time);
+			$display("PASS row outputs are correct with enable after reset at time %t", $time);
 		else
 			$display("FAIL row outputs are incorrect with enable after reset at time %t", $time);
 		
@@ -106,7 +104,7 @@ module scan_tb();
 		// test 10 - testing rows at 2/8 clock cycle
 		#6000000;
 		assert (rows == 4'b0001)
-			$$display("PASS row outputs are correct without enable at time %t", $time);
+			$display("PASS row outputs are correct without enable at time %t", $time);
 		else
 			$display("FAIL row outputs are incorrect without enable at time %t", $time);
 		
@@ -126,7 +124,7 @@ module scan_tb();
 		// test 12 - testing rows at 2/8 clock cycle
 		#6000000;
 		assert (rows == 4'b1000)
-			$$display("PASS row outputs are correct without enable after reset at time %t", $time);
+			$display("PASS row outputs are correct without enable after reset at time %t", $time);
 		else
 			$display("FAIL row outputs are incorrect without enable after reset at time %t", $time);
 	
