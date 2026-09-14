@@ -61,7 +61,7 @@ module scan_tb();
 		reset = 0;
 		#100000;
 		reset = 1;
-		#4
+		#4z
 		
 		// test 5 - testing rows at 1/8 clock cycle
 		assert (rows == 4'b1000)
@@ -95,7 +95,7 @@ module scan_tb();
         #30
 		
 		// test 9 - testing rows at 1/8 clock cycle
-		#6000000;	// slightly more than 20 to account for setup time after reset
+		#6000000;	
 		assert (rows == 4'b0001)
 			$display("PASS row outputs are correct without enable at time %t", $time);
 		else
@@ -115,7 +115,7 @@ module scan_tb();
 		#4
 		
 		// test 11 - testing rows at 1/8 clock cycle
-		#6000000;	// slightly more than 20 to account for setup time after reset
+		#6000000;	
 		assert (rows == 4'b1000)
 			$display("PASS row outputs are correct without enable after reset at time %t", $time);
 		else

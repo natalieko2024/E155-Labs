@@ -10,9 +10,10 @@ module lab1_nk_freqconverter_tb();
 	logic reset;	// System reset
 	logic enable;	// Counter enable
 	logic led2;		// Oscillating LED
+	logic count;	// Counter
 	
 	// Instantiate freqconverter under test
-	freqconverter #(.WIDTH(4), .MAX(10)) dut (clk, reset, enable, led2);
+	freqconverter #(.WIDTH(4), .MAX(10)) dut (clk, reset, enable, led2, count);
 	
 	// Generate clock, each clock cycle is 2ns
 	always begin
