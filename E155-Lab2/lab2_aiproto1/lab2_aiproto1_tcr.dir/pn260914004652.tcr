@@ -1,0 +1,11 @@
+#Start recording tcl command: 9/14/2026 00:38:51
+#Project Location: C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1; Project name: lab2_aiproto1
+prj_create -name "lab2_aiproto1" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1/source/top_display_multiplexer.sv"
+prj_add_source "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1/source/sev_seg_decoder.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+#Stop recording: 9/14/2026 00:46:52

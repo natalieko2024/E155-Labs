@@ -1,0 +1,32 @@
+---------------------------------------------------
+Report for cell display_multiplexer
+   Instance path: display_multiplexer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	      14.00        100.0
+                                  LUT4	         59        100.0
+                               LUTGATE	         35        100.0
+                                LUTCCU	         24        100.0
+                                 IOREG	         14        100.0
+                                 IOBUF	         23        100.0
+                                PFUREG	         24        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                         freqconverter	          1        57.6
+                           switch_7seg	          1        16.9
+---------------------------------------------------
+Report for cell switch_7seg
+   Instance path: display_multiplexer/decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         10        16.9
+                               LUTGATE	         10        28.6
+---------------------------------------------------
+Report for cell freqconverter
+   Instance path: display_multiplexer/freq_divider
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34        57.6
+                               LUTGATE	         10        28.6
+                                LUTCCU	         24        100.0
+                                PFUREG	         24        100.0

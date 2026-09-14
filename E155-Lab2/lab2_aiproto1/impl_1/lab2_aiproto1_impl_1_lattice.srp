@@ -1,0 +1,213 @@
+synthesis:  version Radiant Software (64-bit) 2026.1.0.37.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Sep 14 00:40:04 2026
+
+
+Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1/impl_1/lab2_aiproto1_impl_1_lattice.synproj -logfile lab2_aiproto1_impl_1_lattice.srp -gui -msgset C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1/promote.xml 
+
+Lattice Synthesis Engine launched.
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+
+###################### Device Information ######################
+----------------------------------------------------------------
+Lattice Family        | iCE40UP
+----------------------------------------------------------------
+Device                | iCE40UP5K
+----------------------------------------------------------------
+Package               | SG48
+----------------------------------------------------------------
+Performance Grade     | High-Performance_1.2V
+----------------------------------------------------------------
+################################################################
+
+####################### Device Resources #######################
+----------------------------------------------------------------
+Logic Cells           | 5280
+----------------------------------------------------------------
+RAM Blocks            | 30
+----------------------------------------------------------------
+DSP Blocks            | 8
+----------------------------------------------------------------
+PLLs                  | 1
+----------------------------------------------------------------
+I/O Pins              | 56
+----------------------------------------------------------------
+################################################################
+
+Resolving user-selected strategy settings...
+
+INFO <35001797> - synthesis: Use DCC Insertion disabled by default.
+
+###################### Strategy Settings #######################
+----------------------------------------------------------------
+Optimization Goal     | Area
+----------------------------------------------------------------
+Top-level Module Name | top_display_multiplexer
+----------------------------------------------------------------
+Target Frequency      | 200.000 MHz
+----------------------------------------------------------------
+Maximum Fanout        | 1000
+----------------------------------------------------------------
+Timing Path Count     | 3
+----------------------------------------------------------------
+RAM Read/Write Check  | False
+----------------------------------------------------------------
+BRAM Utilization      | 100.0%
+----------------------------------------------------------------
+DSP Usage             | True
+----------------------------------------------------------------
+DSP Utilization       | 100.0%
+----------------------------------------------------------------
+FSM Encoding Style    | Auto
+----------------------------------------------------------------
+Resolve Mixed Drivers | False
+----------------------------------------------------------------
+Fix Gated Clocks      | True
+----------------------------------------------------------------
+Mux Style             | Auto
+----------------------------------------------------------------
+Use Carry Chain       | True
+----------------------------------------------------------------
+Carry Chain Length    | Infinite
+----------------------------------------------------------------
+Loop Limit            | 1950
+----------------------------------------------------------------
+Use I/O Insertion     | True
+----------------------------------------------------------------
+Use I/O Registers     | True
+----------------------------------------------------------------
+Resource Sharing      | True
+----------------------------------------------------------------
+Propagate Constants   | True
+----------------------------------------------------------------
+Remove Duplicate Reg  | True
+----------------------------------------------------------------
+Force GSR             | False
+----------------------------------------------------------------
+ROM Style             | Auto
+----------------------------------------------------------------
+RAM Style             | Auto
+----------------------------------------------------------------
+Remove LOC Properties | False
+----------------------------------------------------------------
+Partition Flow        | False
+----------------------------------------------------------------
+Use DCC Insertion     | None
+----------------------------------------------------------------
+################################################################
+
+
+The -comp option is FALSE.
+The -syn option is FALSE.
+
+Output HDL filename: lab2_aiproto1_impl_1.vm
+-sdc option: SDC file input is lab2_aiproto1_impl_1_cpe.ldc.
+-path . (searchpath added)
+-path .. (searchpath added)
+-path ../source (searchpath added)
+-path C:/lscc/radiant/2026.1/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v
+Verilog design file: ../source/top_display_multiplexer.sv
+Verilog design file: ../source/sev_seg_decoder.sv
+VHDL library: pmi
+VHDL design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd
+
+Compiling design...
+
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\generic.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\iCE40UP\iCE40UP_sp.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v. VERI-1482
+Analyzing Verilog file ../source/top_display_multiplexer.sv. VERI-1482
+Analyzing Verilog file ../source/sev_seg_decoder.sv. VERI-1482
+Top module name (Verilog): top_display_multiplexer
+INFO <35901018> - synthesis: ../source/top_display_multiplexer.sv(1): compiling module top_display_multiplexer. VERI-1018
+INFO <35901018> - synthesis: ../source/sev_seg_decoder.sv(5): compiling module sev_seg_decoder. VERI-1018
+[Parameter Setting Section Start]
+
+	[Parameter Settings for top-level module]
+	(Module: top_display_multiplexer)
+		CLK_FREQ_HZ               50000000
+		REFRESH_HZ                200
+		CNT_MAX                   125000
+
+[Parameter Setting Section End]
+
+
+
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: clk
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: rst_n
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit0[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit0[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit0[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit0[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit1[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit1[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit1[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: in_digit1[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[6]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[5]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[4]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: anode[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: anode[0]
+
+################### Begin Area Report (top_display_multiplexer)######################
+Number of register bits => 18 of 5280 (0 % )
+CCU2 => 9
+FD1P3XZ => 18
+IB => 10
+LUT4 => 37
+OB => 9
+################### End Area Report ##################
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 0
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n33, loads : 25
+  Net : digit_sel_N_37, loads : 18
+  Net : clk_cnt_16__N_1[16], loads : 11
+  Net : clk_cnt_16__N_1[15], loads : 11
+  Net : n273, loads : 10
+  Net : n73[16], loads : 10
+  Net : n73[15], loads : 10
+  Net : clk_cnt_16__N_1[14], loads : 10
+  Net : clk_cnt_16__N_1[13], loads : 10
+  Net : n271, loads : 9
+################### End Clock Report ##################
+
+################### Begin Constraint Report ######################
+Constraint Summary:
+  Total number of constraints: 0
+  Total number of constraints dropped: 0
+###################  End Constraint Report  ######################
+
+Peak Memory Usage: 87 MB
+
+--------------------------------------------------------------
+Total CPU Time: 0 secs 
+Total REAL Time: 4 secs 
+--------------------------------------------------------------
+Checksum -- synthesis -- netlist: e2b974d918d6ce3136bee5b8c6910985e52226

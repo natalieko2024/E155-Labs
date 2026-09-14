@@ -1,0 +1,9 @@
+-w
+-gui
+-msgset "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto2/promote.xml"
+-n 1
+-t 1
+-s 1
+-cores 1
+-hsp m
+-exp parPathBased=ON

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userSetting name="C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto2/promote.xml" version="Diamond (64-bit) 2026.1.0.37.0" date="Mon Sep 14 00:50:41 2026" vendor="Lattice Semiconductor Corporation" >
+  <msg mid="2043188" type="Error" internal="true" />
+  <msg mid="2043018" type="Info" internal="true" />
+  <msg mid="35901328" type="Info" internal="true" />
+  <msg mid="2043137" type="Error" internal="true" />
+  <msg mid="2044369" type="Error" internal="true" />
+  <msg mid="2044344" type="Error" internal="true" />
+  <msg mid="2044365" type="Warning" internal="true" />
+  <msg mid="2044387" type="Warning" internal="true" />
+  <msg mid="2043072" type="Error" internal="true" />
+  <msg mid="35901188" type="Warning" internal="true" />
+</userSetting>

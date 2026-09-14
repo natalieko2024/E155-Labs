@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto2/source/impl_1/display_multiplexer.sv"
+-path "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto2" "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto2"
+-top display_multiplexer
+-isTop
+-a "iCE40UP"
+-t "iCE40UP5K"

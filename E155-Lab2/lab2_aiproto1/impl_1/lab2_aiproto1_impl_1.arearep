@@ -1,0 +1,21 @@
+----------------------------------------------------------------------
+Report for cell top_display_multiplexer.TECH
+Register bits:  18 of 5280 (0.341%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2         9          100.0
+                            FD1P3XZ        18          100.0
+                                 IB        10          100.0
+                               LUT4        37          100.0
+                                 OB         9          100.0
+SUB MODULES
+                    sev_seg_decoder         1
+                              TOTAL        84
+----------------------------------------------------------------------
+Report for cell sev_seg_decoder.v1
+Instance Path : u_decoder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           18.9
+                              TOTAL         7

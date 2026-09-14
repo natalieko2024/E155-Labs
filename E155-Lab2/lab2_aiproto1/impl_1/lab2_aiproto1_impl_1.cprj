@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1/source/top_display_multiplexer.sv" "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1/source/sev_seg_decoder.sv"
+-path "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1" "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/lab2_aiproto1"
+-top top_display_multiplexer
+-isTop
+-a "iCE40UP"
+-t "iCE40UP5K"

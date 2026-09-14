@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+Report for cell display_multiplexer.TECH
+Register bits:  24 of 5280 (0.455%)
+I/O cells:      23
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        12          100.0
+                            FD1P3XZ        24          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         9          100.0
+                              IOL_B        14          100.0
+                               LUT4        34          100.0
+                                 OB        14          100.0
+SUB MODULES
+                      freqconverter         1
+                        switch_7seg         1
+                              TOTAL       110
+----------------------------------------------------------------------
+Report for cell switch_7seg.v1
+Instance Path : decoder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        10           29.4
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell freqconverter.v1
+Instance Path : freq_divider
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        12          100.0
+                            FD1P3XZ        24          100.0
+                               LUT4        10           29.4
+                              TOTAL        46

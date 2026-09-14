@@ -1,0 +1,20 @@
+---------------------------------------------------
+Report for cell top_display_multiplexer
+   Instance path: top_display_multiplexer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         56        100.0
+                               LUTGATE	         38        100.0
+                                LUTCCU	         18        100.0
+                                 IOBUF	         19        100.0
+                                PFUREG	         18        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                       sev_seg_decoder	          1        12.5
+---------------------------------------------------
+Report for cell sev_seg_decoder
+   Instance path: top_display_multiplexer/u_decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7        12.5
+                               LUTGATE	          7        18.4
