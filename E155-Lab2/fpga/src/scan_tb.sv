@@ -61,7 +61,7 @@ module scan_tb();
 		reset = 0;
 		#100000;
 		reset = 1;
-		#4z
+		#4
 		
 		// test 5 - testing rows at 1/8 clock cycle
 		assert (rows == 4'b1000)
