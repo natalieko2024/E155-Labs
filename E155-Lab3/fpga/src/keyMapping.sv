@@ -1,8 +1,10 @@
 module keyMapping(input logic clk, reset, enable,
                 input logic [3:0] rows, cols,
                 output logic [15:0] map);
+				
+	logic [15:0] newMap;
 
-    always_ff(@posedge clk, negedge reset) begin
+    always_ff@(posedge clk, negedge reset) begin
         if (~reset) map <= 16'b1111111111111111;
         else if (enable) map <= newMap;
     end

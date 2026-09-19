@@ -24,7 +24,7 @@ module keypadFSM(input logic clk, reset,
                 nextState = 3'b001;
             end
 
-            3'001: begin
+            3'b001: begin
                 scan1EN = 1'b1;
                 scan2EN = 1'b0;
                 displayEN = 1'b0;
@@ -56,7 +56,7 @@ module keypadFSM(input logic clk, reset,
                 scan2EN = 1'b0;
                 displayEN = 1'b0;
                 countReset = 1'b0;
-                if ~(checkCol & cols) nextState = 3'b000;
+                if (~(checkCol && cols)) nextState = 3'b000;
                 else nextState = 3'b100;
             end
 
