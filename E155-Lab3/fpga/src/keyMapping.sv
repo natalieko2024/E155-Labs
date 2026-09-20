@@ -8,15 +8,10 @@ module keyMapping(input logic clk, reset, enable,
         if (~reset) map <= 16'b1111111111111111;
         else if (enable) map <= newMap;
     end
-
-    always_comb begin
-        case(rows)
-            4'b0001: newMap[3:0] = cols;
-            4'b0010: newMap[7:4] = cols;
-            4'b0100: newMap[11:8] = cols;
-            4'b1000: newMap[15:12] = cols;
-            default: newMap = map;
-        endcase
-    end
+	
+	assign newMap[3:0] = rows[0] ? ~cols : 4'b0;
+	assign newMap[7:4] = rows[1] ? ~cols : 4'b0;
+	assign newMap[11:8] = rows[2] ? ~cols : 4'b0;
+	assign newMap[15:12] = rows[3] ? ~cols : 4'b0;
 
 endmodule

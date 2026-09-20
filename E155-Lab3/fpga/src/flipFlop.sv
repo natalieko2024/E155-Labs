@@ -1,5 +1,5 @@
 // flip flop
-module flipFlop #(parameter WIDTH) (input logic clk, enable
+module flipFlop #(parameter WIDTH) (input logic clk, enable,
                                         input logic [WIDTH-1:0] d, 
                                         output logic [WIDTH-1:0] q);
 

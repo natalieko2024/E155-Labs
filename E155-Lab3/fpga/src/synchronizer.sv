@@ -5,8 +5,8 @@ module synchronizer #(parameter WIDTH) (input logic clk,
 	logic [WIDTH-1:0] n1;
 
     always_ff @(posedge clk) begin
-        n1 <= d; 
-        q <= n1;
+		n1 <= d; 
+		q <= n1;
     end
 
 endmodule

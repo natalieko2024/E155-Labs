@@ -8,7 +8,7 @@ module keySwitchConverter(input logic [15:0] map,
 			16'b0010000000000000: switches = 4'h3;
 			16'b0001000000000000: switches = 4'hA;
 			16'b0000100000000000: switches = 4'h4;
-			16'b0000010000000000: swtiches = 4'h5;
+			16'b0000010000000000: switches = 4'h5;
 			16'b0000001000000000: switches = 4'h6;
 			16'b0000000100000000: switches = 4'hB;
 			16'b0000000010000000: switches = 4'h7;
