@@ -5,10 +5,10 @@ module scan #(parameter COUNTWIDTH, COUNTMAX) (input logic clk, reset, enable,
 			output logic [3:0] rows);
 		
 	logic stepDownClk;
-	logic [23:0] countUp;
+	logic [COUNTWIDTH-1:0] countUp;
 	
 	// Use my counter module to step down 24MHz to 1Hz
-	freqconverter #(.WIDTH(COUNTWIDTH+5), .MAX(COUNTMAX)) counter(clk, reset, enable, stepDownClk, countUp);
+	freqconverter #(.WIDTH(COUNTWIDTH), .MAX(COUNTMAX)) counter(clk, reset, enable, stepDownClk, countUp);
 	
 	// Assign statements based on the counter output to shift the bits of rows every 1/8 clock cycle so they end up oscillating at 2Hz
 	assign rows[3] = (countUp >= 0) && (countUp <= ((COUNTMAX >> 2)-1));

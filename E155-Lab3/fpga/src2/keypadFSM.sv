@@ -1,16 +1,16 @@
 module keypadFSM(input logic clk, reset,
-                input logic [4:0] scanCount, 
+                input logic [4:0] scanCount, position,
 				input logic [18:0] debounceCount,
                 input logic [15:0] initialMap, finalMap,
-                output logic scan1EN, scan2EN, scanCountRST, debounceRST, displayEN);
+                output logic scan1EN, scan2EN, scanCountRST, debounceRST, displayEN,
+				output logic [2:0] state);
 
-    logic [2:0] state, nextState;
+    logic [2:0] nextState;
     logic match, singleKey;
 	logic highBit;
 
     assign match = (initialMap == finalMap);
     assign singleKey = (((finalMap != 0) && (finalMap & (finalMap - 1))) == 0);
-	assign highBit = $clog2(finalMap);
 
     always_ff @(posedge clk, negedge reset) begin
         if (~reset) state <= 3'b000;
@@ -36,7 +36,7 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b1;    // Start counting for scanning
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                if (scanCount >= 16) nextState = 3'b010;     // If we scan enough, move to OFF1 state
+                if (scanCount >= 24) nextState = 3'b010;     // If we scan enough, move to OFF1 state
                 else nextState = 3'b001;        // Else stay in SCAN1 state
             end
 
@@ -47,7 +47,7 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b0;    // Stop counting for scanning, reset count to 0
                 debounceRST = 1'b1;     // Start counting for debouncing
                 displayEN = 1'b0;
-                if (debounceCount >= 120000) nextState = 3'b011;     // When finished debouncing attempt, move to SCAN2 state
+                if (debounceCount >= 24) nextState = 3'b011;     // When finished debouncing attempt, move to SCAN2 state
                 else nextState = 3'b010;        // Else stay in OFF1 state
             end
 
@@ -58,7 +58,7 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b1;    // Start counting for scanning
                 debounceRST = 1'b0;     // Stop counting for debouncing, reset count to 0
                 displayEN = 1'b0;
-                if (scanCount >= 16) nextState = 3'b100;     // If we scan enough, move to OFF2 state
+                if (scanCount >= 24) nextState = 3'b100;     // If we scan enough, move to OFF2 state
                 else nextState = 3'b011;        // Else stay in SCAN2 state
             end
 
@@ -69,8 +69,11 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b0;    // Stop counting for scanning, reset count to 0
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                if (match && singleKey) nextState = 3'b001;     // If successfully debounced and only 1 key pressed, move to DISPLAY state
-                else if ((~match) || (~singleKey)) nextState = 3'b000;     // If either condition not fulfilled, go to RESET state
+                //if (match && singleKey) nextState = 3'b101;     // If successfully debounced and only 1 key pressed, move to DISPLAY state
+                //else if ((~match) || (~singleKey)) nextState = 3'b000;     // If either condition not fulfilled, go to RESET state
+                //else nextState = 3'b100;    // Else stay in OFF2 state
+				if (~singleKey) nextState = 3'b101;     // If successfully debounced and only 1 key pressed, move to DISPLAY state
+                else if (singleKey) nextState = 3'b000;     // If either condition not fulfilled, go to RESET state
                 else nextState = 3'b100;    // Else stay in OFF2 state
             end
 
@@ -88,10 +91,10 @@ module keypadFSM(input logic clk, reset,
             3'b110: begin
                 scan1EN = 1'b1;     // Start scanning, overwrite initialMap with current readings
                 scan2EN = 1'b0;
-                scanCountRST = 1'b1;    // Start counting to scan
-                debounceRST = 1'b0;
+                scanCountRST = 1'b0;
+                debounceRST = 1'b1;    // Start counting to scan and debounce
                 displayEN = 1'b0;   // Don't shift the display digits anymore
-                if (scanCount >= 16) nextState = 3'b111;    // If finished counting, move to OFF3 state
+                if (debounceCount >= 24) nextState = 3'b111;    // If finished counting and debouncing, move to OFF3 state
                 else nextState = 3'b110;    // Else stay in SCAN3 state
             end
 
@@ -102,8 +105,9 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b0;    // Stop counting to scan, reset counter
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                if (finalMap[highBit] != initialMap[highBit]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
-                else nextState = 3'b111;    // Else stay in OFF3 state
+                //if (finalMap[position] != initialMap[position]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
+                //else nextState = 3'b111;    // Else stay in OFF3 state
+				nextState = 3'b000;
             end
 
             default: begin

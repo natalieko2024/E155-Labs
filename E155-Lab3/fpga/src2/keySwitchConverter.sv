@@ -19,6 +19,7 @@ module keySwitchConverter(input logic [15:0] map,
             16'b0000000000000100: switches = 4'b0000;   // row[0] and col[2] = 0
             16'b0000000000000010: switches = 4'b1111;   // row[0] and col[1] = F
             16'b0000000000000001: switches = 4'b1101;   // row[0] and col[0] = D
+			default: switches = 4'b0000;
         endcase
     end
 
