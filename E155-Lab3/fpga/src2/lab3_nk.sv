@@ -4,7 +4,7 @@ module lab3_nk(input logic reset,
                 output logic [6:0] segWrite,
                 output logic [3:0] rows, rowLEDs);
 
-    logic clk, scanCLK, debounceCLK, scanCountRST, debounceRST, scan1EN, scan2EN, displayEN;
+    logic clk, scanCLK, debounceCLK, scanCountRST, debounceRST, scan1EN, scan2EN, displayEN, tick;
     logic [3:0] syncCols, switches, switchRight, switchLeft, switchWrite;
 	logic [4:0] scanCount, position;
 	logic [18:0] debounce;
@@ -29,11 +29,11 @@ module lab3_nk(input logic reset,
     freqconverter #(.WIDTH(19), .MAX(200000)) debounceCounter(clk, debounceRST, 1'b1, debounceCLK, debounce);
 
     // Scan at 3MHz -> bits oscillate at 6MHz
-    scan #(.COUNTWIDTH(10), .COUNTMAX(24)) scanner(clk, reset, (scan1EN | scan2EN), rows);
+    scan #(.COUNTWIDTH(10), .COUNTMAX(24)) scanner(clk, reset, (scan1EN | scan2EN), rows, tick);
 
     // Make keymap
-    keyMapper initialMapper(clk, reset, scan1EN, rows, syncCols, initialMap);
-    keyMapper finalMapper(clk, reset, scan2EN, rows, syncCols, finalMap);
+    keyMapper initialMapper(clk, reset, tick, scan1EN, rows, syncCols, initialMap);
+    keyMapper finalMapper(clk, reset, tick, scan2EN, rows, syncCols, finalMap);
 	
 	findHighBit whichOneIsHigh(finalMap, position);
 
