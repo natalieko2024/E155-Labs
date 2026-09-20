@@ -1,4 +1,4 @@
-module keyColConverter(input logic [15:0] map
+module keyColConverter(input logic [15:0] map,
                         output logic [3:0] cols);
 
     assign cols[0] = (map[0] | map[4] | map[8] | map[12]);

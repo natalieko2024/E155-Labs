@@ -1,13 +1,16 @@
 module keypadFSM(input logic clk, reset,
-                input logic scanCount, debounceCount,
+                input logic [4:0] scanCount, 
+				input logic [18:0] debounceCount,
                 input logic [15:0] initialMap, finalMap,
                 output logic scan1EN, scan2EN, scanCountRST, debounceRST, displayEN);
 
     logic [2:0] state, nextState;
     logic match, singleKey;
+	logic highBit;
 
     assign match = (initialMap == finalMap);
     assign singleKey = (((finalMap != 0) && (finalMap & (finalMap - 1))) == 0);
+	assign highBit = $clog2(finalMap);
 
     always_ff @(posedge clk, negedge reset) begin
         if (~reset) state <= 3'b000;
@@ -99,7 +102,7 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b0;    // Stop counting to scan, reset counter
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                if (finalMap[$clog(finalMap)] != initialMap[$clog(finalMap)]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
+                if (finalMap[highBit] != initialMap[highBit]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
                 else nextState = 3'b111;    // Else stay in OFF3 state
             end
 

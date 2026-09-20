@@ -4,8 +4,12 @@ module lab3_nk(input logic reset,
                 output logic [6:0] segWrite,
                 output logic [3:0] rows);
 
-    logic scanCLK,;
-    logic [3:0] syncCols;
+    logic scanCLK, debounceCLK, scanCountRST, debounceRST, scan1EN, scan2EN, displayEN;
+    logic [3:0] syncCols, switches;
+	logic [4:0] scanCount;
+	logic [18:0] debounce;
+	logic [15:0] initialMap, finalMap;
+	logic [6:0] seg, segRight, segLeft;
 
     // Set up the internal HSOSC to provide a 24MHz oscillation frequency output
 	HSOSC #(.CLKHF_DIV("0b01")) 
@@ -38,9 +42,9 @@ module lab3_nk(input logic reset,
     enableFlipFlop #(.WIDTH(7)) pushSegRight(clk, displayEN, seg, segRight);
     enableFlipFlop #(.WIDTH(7)) pushSegLeft(clk, displayEN, segRight, segLeft);
 
-    assign anodeLeft = (debounceCount < 100000);
-    assign anodeRight = (debounceCount >= 100000);
+    assign anode[1] = (debounce < 100000);
+    assign anode[0] = (debounce >= 100000);
 
-    assign segWrite = anodeLeft ? segRight : segLeft;
+    assign segWrite = anode[1] ? segRight : segLeft;
 
 endmodule
