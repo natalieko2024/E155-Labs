@@ -45,6 +45,11 @@ module mapFSM(input logic clk, reset,
                     finalKeymap = keymap;
                 end
             end
+			
+			default: begin
+				scanEN = 1'b0;
+				nextState = 2'b00;
+			end
         endcase
     end
 

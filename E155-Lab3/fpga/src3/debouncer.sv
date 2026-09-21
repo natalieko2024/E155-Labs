@@ -51,6 +51,12 @@ module debouncer(input logic clk, reset,
                 else if (initialCols != finalCols) nextState = 2'b00;
                 else nextState = 2'b10;
             end
+			
+			default: begin
+				countRST = 1'b0;
+				countEN = 1'b0;
+				nextState = 2'b00;
+			end
 
         endcase
     end
