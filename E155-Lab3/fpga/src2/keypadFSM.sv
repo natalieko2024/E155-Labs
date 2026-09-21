@@ -1,5 +1,5 @@
 module keypadFSM(input logic clk, reset,
-				input logic [13:0] scanCount, 
+                input logic [13:0] scanCount, 
                 input logic [4:0] position,
 				input logic [18:0] debounceCount,
                 input logic [15:0] initialMap, finalMap,
