@@ -105,9 +105,8 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b0;    // Stop counting to scan, reset counter
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                //if (finalMap[position] != initialMap[position]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
-                //else nextState = 3'b111;    // Else stay in OFF3 state
-				nextState = 3'b000;
+                if (finalMap[position] != initialMap[position]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
+                else nextState = 3'b111;    // Else stay in OFF3 state
             end
 
             default: begin
