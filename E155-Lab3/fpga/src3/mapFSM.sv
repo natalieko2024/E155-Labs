@@ -8,96 +8,41 @@ module mapFSM(input logic clk, reset,
 	statetype state, nextState;
 	
 	always_ff @(posedge clk, negedge reset) begin
-		if (~reset) begin
-			state <= SCAN;
-			rightKeymap <= 0;
-			leftKeymap <= 0;
-		end
-		else begin 
-			state <= nextState;
-			//State 1: SCAN
-			if (state == SCAN) begin 
-				scanEN <= 1'b1;
-                if ($onehot(keymap)) begin
-                    nextState <= PRESS;
-                    initialKeymap <= keymap;
-                end
-                else if (~$onehot(keymap)) nextState <= SCAN;
-			end
-			//State 2: PRESS
-            if (state == PRESS) begin
-                scanEN <= 1'b0;
-				rightKeymap <= initialKeymap;
-				leftKeymap <= rightKeymap; 
-                nextState <= HOLD;
-            end
-
-             //State 3: HOLD
-            if (state == HOLD) begin
-                scanEN <= 1'b0;
-                if (keymap == 0) nextState <= SCAN;
-                else if ((initialKeymap != finalKeymap) && ($onehot(finalKeymap))) nextState <= PRESS;
-                else begin
-                    nextState <= HOLD;
-                    finalKeymap <= keymap;
-					
-                end
-            end
-			
-		end
+		if (~reset) state <= SCAN;
+		else state <= nextState;
 	end
 
-
-
-
-    //logic [1:0] state, nextState;
-	//logic [15:0] initialKeymap, finalKeymap;
-
-    //always_ff @(posedge clk, negedge reset) begin
-        //if (~reset) state <= 2'b00;
-        //else if (state == 2'b01) begin
-            //rightKeymap <= initialKeymap;
-            //leftKeymap <= rightKeymap; 
-        //end
-        //else state <= nextState;
-    //end
-
-    //always_comb begin
-        //case(state)
-            
-             ////State 1: SCAN
-            //2'b00: begin
-                //scanEN = 1'b1;
-                //if ($onehot(keymap)) begin
-                    //nextState = 2'b01;
-                    //initialKeymap = keymap;
-                //end
-                //else if (~$onehot(keymap)) nextState = 2'b00;
-                //else nextState = 2'b00;
-            //end
-
-             ////State 2: PRESS
-            //2'b01: begin
-                //scanEN = 1'b0;
-                //nextState = 2'b10;
-            //end
-
-             ////State 3: HOLD
-            //2'b10: begin
-                //scanEN = 1'b0;
-                //if (keymap == 0) nextState = 2'b00;
-                //else if ((initialKeymap != finalKeymap) && ($onehot(finalKeymap))) nextState = 2'b01;
-                //else begin
-                    //nextState = 2'b10;
-                    //finalKeymap = keymap;
-                //end
-            //end
+	always_comb begin
+		case(state)
+			SCAN: nextState = $onehot(keymap) ? PRESS : SCAN;
+			PRESS: nextState = HOLD;
+			HOLD: begin
+				if ((initialKeymap != finalKeymap) && $onehot(finalKeymap)) nextState = PRESS;
+				else if (keymap == 0) nextState = SCAN;
+				else nextState = HOLD;
+			end 
+			default: nextState = SCAN;
+		endcase
+	end
+	
+	always_ff @(posedge clk, negedge reset) begin
+		if (~reset) begin
+			rightKeymap <= 0;
+			leftKeymap <= 0;
+			scanEN <= 1;
+		end
+		else begin
+			if (state == SCAN) scanEN <= 1;
+			else scanEN <= 0;
+				
+			if (state == PRESS) begin
+				leftKeymap <= rightKeymap;
+				rightKeymap <= keymap;
+			end
 			
-			//default: begin
-				//scanEN = 1'b0;
-				//nextState = 2'b00;
-			//end
-        //endcase
-    //end
+			if ((state == SCAN) && (nextState == PRESS)) initialKeymap <= keymap;
+			if ((state == HOLD) && (nextState == HOLD)) finalKeymap <= keymap;
+		end
+	end
 
 endmodule

@@ -5,7 +5,9 @@ module keyMapper(input logic clk, reset, enable,
                 input logic [3:0] rows, cols,
                 output logic [15:0] map);
 
-    logic [15:0] newMap;
+    logic [15:0] newMap, tempMap;
+	
+	assign tempMap = newMap;
 
     always_ff @(posedge clk, negedge reset) begin
         if (~reset) map <= 16'b0;
@@ -20,10 +22,10 @@ module keyMapper(input logic clk, reset, enable,
     //assign newMap[15:12] = rows[3] ? ~cols : map[15:12];
 	
 	always_comb begin
-		if (rows[2]) newMap = {newMap[15:4], ~cols};
-		else if (rows[3]) newMap = {newMap[15:8], ~cols, newMap[3:0]};
-		else if (rows[0]) newMap = {newMap[15:12], ~cols, newMap[7:0]};
-		else if (rows[1]) newMap = {~cols, newMap[11:0]};
+		if (rows[2]) newMap = {tempMap[15:4], ~cols};
+		else if (rows[3]) newMap = {tempMap[15:8], ~cols, tempMap[3:0]};
+		else if (rows[0]) newMap = {tempMap[15:12], ~cols, tempMap[7:0]};
+		else if (rows[1]) newMap = {~cols, tempMap[11:0]};
 		else newMap = 16'b0;
 	end
 

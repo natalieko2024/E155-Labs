@@ -20,13 +20,14 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab3_nk_impl_1.bin</File>
-			<FileTime>09/20/26 21:36:14</FileTime>
-			<JedecChecksum>0xBE91</JedecChecksum>
+			<FileTime>09/21/26 11:49:12</FileTime>
+			<JedecChecksum>0x4E68</JedecChecksum>
 			<MemoryType>Compressed Random Access Memory (CRAM)</MemoryType>
 			<Operation>Fast Configuration</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
 				<IOState>HighZ</IOState>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 		</Device>
