@@ -2,7 +2,7 @@
 // Created on 8 Sept 2026
 // The module scan steps down the 24MHz HSOSC clock signal to 1Hz and sets the bits of the scanning signal so each bit of the row output oscillates every 2Hz.
 module scan #(parameter COUNTWIDTH, COUNTMAX) (input logic clk, reset, enable,
-												output logic [3:0] rows
+												output logic [3:0] rows,
 												output logic tick);
 		
 	logic stepDownClk;

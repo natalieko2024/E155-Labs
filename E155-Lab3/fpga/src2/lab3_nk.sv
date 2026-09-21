@@ -2,9 +2,11 @@ module lab3_nk(input logic reset,
                 input logic [3:0] cols,
                 output logic [1:0] anode,
                 output logic [6:0] segWrite,
-                output logic [3:0] rows, rowLEDs);
+                output logic [3:0] rows, rowLEDs,
+				output logic scan1EN, scan2EN, scanCountRST);
 
-    logic clk, scanCLK, debounceCLK, scanCountRST, debounceRST, scan1EN, scan2EN, displayEN, tick;
+	logic clk, scanCLK, debounceCLK, debounceRST, displayEN, tick;
+    //logic clk, scanCLK, debounceCLK, scanCountRST, debounceRST, scan1EN, scan2EN, displayEN, tick;
     logic [3:0] syncCols, switches, switchRight, switchLeft, switchWrite;
 	logic [4:0] scanCount, position;
 	logic [18:0] debounce;
@@ -23,13 +25,13 @@ module lab3_nk(input logic reset,
     synchronizer #(.WIDTH(4)) sync(clk, cols, syncCols);
     
     // Count till 16 = 4 scan cycles done
-    freqconverter #(.WIDTH(5), .MAX(31)) scanCounter(clk, scanCountRST, 1'b1, scanCLK, scanCount);
+    freqconverter #(.WIDTH(13), .MAX(4801)) scanCounter(clk, scanCountRST, 1'b1, scanCLK, scanCount);
 
     // Count till 120000 -> 10ms for debouncing
     freqconverter #(.WIDTH(19), .MAX(200000)) debounceCounter(clk, debounceRST, 1'b1, debounceCLK, debounce);
 
     // Scan at 3MHz -> bits oscillate at 6MHz
-    scan #(.COUNTWIDTH(10), .COUNTMAX(24)) scanner(clk, reset, (scan1EN | scan2EN), rows, tick);
+    scan #(.COUNTWIDTH(13), .COUNTMAX(4800)) scanner(clk, reset, (scan1EN | scan2EN), rows, tick);
 
     // Make keymap
     keyMapper initialMapper(clk, reset, tick, scan1EN, rows, syncCols, initialMap);

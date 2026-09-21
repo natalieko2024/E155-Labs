@@ -1,5 +1,6 @@
 module keypadFSM(input logic clk, reset,
-                input logic [4:0] scanCount, position,
+				input logic [13:0] scanCount, 
+                input logic [4:0] position,
 				input logic [18:0] debounceCount,
                 input logic [15:0] initialMap, finalMap,
                 output logic scan1EN, scan2EN, scanCountRST, debounceRST, displayEN,
@@ -36,7 +37,7 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b1;    // Start counting for scanning
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                if (scanCount >= 24) nextState = 3'b010;     // If we scan enough, move to OFF1 state
+                if (scanCount >= 4800) nextState = 3'b010;     // If we scan enough, move to OFF1 state
                 else nextState = 3'b001;        // Else stay in SCAN1 state
             end
 
@@ -58,7 +59,7 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b1;    // Start counting for scanning
                 debounceRST = 1'b0;     // Stop counting for debouncing, reset count to 0
                 displayEN = 1'b0;
-                if (scanCount >= 24) nextState = 3'b100;     // If we scan enough, move to OFF2 state
+                if (scanCount >= 4800) nextState = 3'b100;     // If we scan enough, move to OFF2 state
                 else nextState = 3'b011;        // Else stay in SCAN2 state
             end
 
@@ -105,9 +106,8 @@ module keypadFSM(input logic clk, reset,
                 scanCountRST = 1'b0;    // Stop counting to scan, reset counter
                 debounceRST = 1'b0;
                 displayEN = 1'b0;
-                //if (finalMap[position] != initialMap[position]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
-                //else nextState = 3'b111;    // Else stay in OFF3 state
-				nextState = 3'b000;
+                if (finalMap[position] != initialMap[position]) nextState = 3'b000;    // If pressed key isn't pressed anymore, move to RESET state
+                else nextState = 3'b111;    // Else stay in OFF3 state
             end
 
             default: begin
