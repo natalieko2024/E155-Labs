@@ -61,5 +61,4 @@ module debouncer(input logic clk, reset,
         endcase
     end
 
-
 endmodule

@@ -9,8 +9,8 @@ module mapFSM(input logic clk, reset,
     always_ff @(posedge clk, negedge reset) begin
         if (~reset) state <= 2'b00;
         else if (state == 2'b01) begin
-            rightKeymap = initialKeymap;
-            leftKeymap = rightKeymap; 
+            rightKeymap <= initialKeymap;
+            leftKeymap <= rightKeymap; 
         end
         else state <= nextState;
     end
