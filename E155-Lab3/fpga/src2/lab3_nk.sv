@@ -23,13 +23,13 @@ module lab3_nk(input logic reset,
     synchronizer #(.WIDTH(4)) sync(clk, cols, syncCols);
     
     // Count till 16 = 4 scan cycles done
-    freqconverter #(.WIDTH(5), .MAX(31)) scanCounter(clk, scanCountRST, 1'b1, scanCLK, scanCount);
+    freqconverter #(.WIDTH(13), .MAX(4801)) scanCounter(clk, scanCountRST, 1'b1, scanCLK, scanCount);
 
     // Count till 120000 -> 10ms for debouncing
     freqconverter #(.WIDTH(19), .MAX(200000)) debounceCounter(clk, debounceRST, 1'b1, debounceCLK, debounce);
 
     // Scan at 3MHz -> bits oscillate at 6MHz
-    scan #(.COUNTWIDTH(10), .COUNTMAX(24)) scanner(clk, reset, (scan1EN | scan2EN), rows, tick);
+    scan #(.COUNTWIDTH(13), .COUNTMAX(4800)) scanner(clk, reset, (scan1EN | scan2EN), rows, tick);
 
     // Make keymap
     keyMapper initialMapper(clk, reset, tick, scan1EN, rows, syncCols, initialMap);
