@@ -1,14 +1,13 @@
 <RadiantSimulationProject language="1" name="lab3_nk" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
+    <Source include="none" langstandard="System Verilog" path="../src3/debouncer.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src3/keyMapper.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src3/keySwitchConverter.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src3/lab3_nk.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src3/mapFSM.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src3/synchronizer.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../../../E155-Lab2/fpga/src/scan.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../../../E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../../../E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/enableFlipFlop.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/keyMapper.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/keypadFSM.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/keySwitchConverter.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/lab3_nk.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/synchronizer.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src2/findHighBit.sv" type="VERILOG" worklib="work"/>
     <SimLib value="pmi_work ovi_ice40up"/>
     <GlbInc value=""/>
     <Macro value=""/>

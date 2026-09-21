@@ -1,6 +1,6 @@
 module debouncer(input logic clk, reset, 
                 input logic [3:0] syncCols, 
-                input logic [20:0] count,
+                input logic [31:0] count,
                 output logic countRST, countEN,
                 output logic [3:0] debouncedCols);
 

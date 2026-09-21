@@ -3,16 +3,15 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab2/fpga/src/scan.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/enableFlipFlop.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/keyMapper.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/keypadFSM.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/keySwitchConverter.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/lab3_nk.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/synchronizer.sv" 
-"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab3/fpga/src2/findHighBit.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*

@@ -6,8 +6,8 @@ module lab3_nk(input logic reset,
 
     logic clk, stepDownClk, countRST, countEN, anodeClk, scanEN;
     logic [3:0] syncCols, debouncedCols, rightSwitches, leftSwitches;
-    logic [20:0] count;
-    logic [18:0] anodeCount;
+    logic [31:0] count;
+    logic [31:0] anodeCount;
     logic [15:0] keymap, rightKeymap, leftKeymap;
     logic [6:0] rightSeg, leftSeg;
 
@@ -17,9 +17,9 @@ module lab3_nk(input logic reset,
 
     synchronizer #(.WIDTH(4)) sync(clk, cols, syncCols);
 
-    freqconverter #(.WIDTH(21), .MAX(1200000)) counter(clk, countRST, countEN, stepDownClk, count);
+    freqconverter #(.WIDTH(32), .MAX(1200000)) counter(clk, countRST, countEN, stepDownClk, count);
 
-    freqconverter #(.WIDTH(18), .MAX(200000)) anodeSwitcher(clk, reset, 1'b1, anodeClk, anodeCount);
+    freqconverter #(.WIDTH(32), .MAX(200000)) anodeSwitcher(clk, reset, 1'b1, anodeClk, anodeCount);
 
     debouncer debounce(clk, reset, syncCols, count, countRST, countEN, debouncedCols);
 
