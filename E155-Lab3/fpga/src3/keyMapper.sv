@@ -20,10 +20,10 @@ module keyMapper(input logic clk, reset, enable,
     //assign newMap[15:12] = rows[3] ? ~cols : map[15:12];
 	
 	always_comb begin
-		if (rows[0]) newMap[3:0] = ~cols;
-		else if (rows[1]) newMap[7:4] = ~cols;
-		else if (rows[2]) newMap[11:8] = ~cols;
-		else if (rows[3]) newMap[15:12] = ~cols;
+		if (rows[2]) newMap = {newMap[15:4], ~cols};
+		else if (rows[3]) newMap = {newMap[15:8], ~cols, newMap[3:0]};
+		else if (rows[0]) newMap = {newMap[15:12], ~cols, newMap[7:0]};
+		else if (rows[1]) newMap = {~cols, newMap[11:0]};
 		else newMap = 16'b0;
 	end
 
