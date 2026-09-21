@@ -17,9 +17,9 @@ module lab3_nk(input logic reset,
 
     synchronizer #(.WIDTH(4)) sync(clk, cols, syncCols);
 
-    freqConverter #(.WIDTH(21), .MAX(1200000)) counter(clk, countRST, countEN, stepDownClk, count);
+    freqconverter #(.WIDTH(21), .MAX(1200000)) counter(clk, countRST, countEN, stepDownClk, count);
 
-    freqConverter #(.WIDTH(18), .MAX(200000)) anodeSwitcher(clk, reset, 1'b1, anodeClk, anodeCount);
+    freqconverter #(.WIDTH(18), .MAX(200000)) anodeSwitcher(clk, reset, 1'b1, anodeClk, anodeCount);
 
     debouncer debounce(clk, reset, syncCols, count, countRST, countEN, debouncedCols);
 
@@ -36,9 +36,9 @@ module lab3_nk(input logic reset,
     switch_7seg getRightSeg(rightSwitches, rightSeg);
     switch_7seg getLeftSeg(leftSwitches, leftSeg);
 
-    assign anode[1] = (anodeCount < 100000);
-    assign anode[0] = (anodeCount >= 100000);
+    assign anodes[1] = (anodeCount < 100000);
+    assign anodes[0] = (anodeCount >= 100000);
 
-    assign segWrite = anode[1] ? rightSeg : leftSeg;
+    assign segWrite = anodes[1] ? rightSeg : leftSeg;
 
 endmodule

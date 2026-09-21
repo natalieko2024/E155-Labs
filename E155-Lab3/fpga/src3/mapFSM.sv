@@ -4,6 +4,7 @@ module mapFSM(input logic clk, reset,
                 output logic [15:0] rightKeymap, leftKeymap);
 
     logic [1:0] state, nextState;
+	logic [15:0] initialKeymap, finalKeymap;
 
     always_ff @(posedge clk, negedge reset) begin
         if (~reset) state <= 2'b00;
@@ -38,7 +39,7 @@ module mapFSM(input logic clk, reset,
             2'b10: begin
                 scanEN = 1'b0;
                 if (keymap == 0) nextState = 2'b00;
-                else if ((initialKeymap != finalKeymap) && ($onehot(finalKeymap))) nextState =. 2'b01;
+                else if ((initialKeymap != finalKeymap) && ($onehot(finalKeymap))) nextState = 2'b01;
                 else begin
                     nextState = 2'b10;
                     finalKeymap = keymap;
