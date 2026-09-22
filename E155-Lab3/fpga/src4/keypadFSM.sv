@@ -19,8 +19,8 @@ module keypadFSM(input logic clk, reset,
 			OFF1: nextState = (debounceCount >= 120000) ? SCAN2 : OFF1;
 			SCAN2: nextState = (scanCount >= 16) ? OFF2 : SCAN2;
 			OFF2: begin
-				if ((map1 == map2) && $onehot(map2)) nextState = DISPLAY;
-				else if ((~(map1 == map2)) || (~$onehot(map2))) nextState = SCAN1;
+				if ($onehot(map2)) nextState = DISPLAY;				//(map1 == map2) && 
+				else if ((~$onehot(map2))) nextState = SCAN1;			//(~(map1 == map2)) || 
 				else nextState = OFF2;
 			end
 			DISPLAY: nextState = SCAN3;
@@ -28,8 +28,8 @@ module keypadFSM(input logic clk, reset,
 			OFF3: nextState = (debounceCount >= 120000) ? SCAN4 : OFF3;
 			SCAN4: nextState = (scanCount >= 16) ? OFF4 : SCAN4;
 			OFF4: begin
-				if ((map3 == map4) && (map2[position] != map4[position])) nextState = SCAN1;
-				else if ((~(map3 == map4)) || (map2[position] == map4[position])) nextState = SCAN3;
+				if ((map2[position] != map4[position])) nextState = SCAN1;			//(map3 == map4) && 
+				else if ((map2[position] == map4[position])) nextState = SCAN3;			//(~(map3 == map4)) || 
 				else nextState = OFF4;
 			end
 			default: nextState = SCAN1;
