@@ -19,10 +19,10 @@ module keyMapper(input logic clk, reset, enable,
     // (cols are active low, so ~cols will write 1 when the key is pressed)
 	
 	always_comb begin
-		if (rows[0] && (row0Count == 200)) newMap = {tempMap[15:4], ~cols};
-		else if (rows[1] && (row1Count == 200)) newMap = {tempMap[15:8], ~cols, tempMap[3:0]};
-		else if (rows[2] && (row2Count == 200)) newMap = {tempMap[15:12], ~cols, tempMap[7:0]};
-		else if (rows[3] && (row3Count == 200)) newMap = {~cols, tempMap[11:0]};
+		if (rows[0]) newMap = {tempMap[15:4], ~cols};	// && (row0Count == 100)
+		else if (rows[1]) newMap = {tempMap[15:8], ~cols, tempMap[3:0]};	// && (row1Count == 100)
+		else if (rows[2]) newMap = {tempMap[15:12], ~cols, tempMap[7:0]};	// && (row2Count == 100)
+		else if (rows[3]) newMap = {~cols, tempMap[11:0]};	// && (row3Count == 100)
 		else newMap = 16'b0;
 	end
 
