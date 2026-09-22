@@ -8,7 +8,7 @@ module keyMap(input clk, reset,
 	// Make the keymap
 	flipFlop #(4) readRow0(clk, reset, (rows[0] & sample0), ~cols, keyMap[3:0]);
 	flipFlop #(4) readRow1(clk, reset, (rows[1] & sample0), ~cols, keyMap[7:4]);
-	flipFlop #(4) readRow2(clk, reset, (rows[2] & samplE0), ~cols, keyMap[11:8]);
+	flipFlop #(4) readRow2(clk, reset, (rows[2] & sample0), ~cols, keyMap[11:8]);
 	flipFlop #(4) readRow3(clk, reset, (rows[3] & sample0), ~cols, keyMap[15:12]);
 
 	// Sample during the period where a row is active
