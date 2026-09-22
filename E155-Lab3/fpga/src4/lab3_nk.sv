@@ -1,13 +1,15 @@
 module lab3_nk(input logic reset, 
-                input logic [3:0] rows,
-                output logic [3:0] cols,
+                output logic [3:0] rows,
+                input logic [3:0] cols,
                 output logic [1:0] anodes,
-                output logic [6:0] segWrite);
+                output logic [6:0] segWrite,
+				output logic [3:0] state,
+				output logic led);
 
     logic [3:0] syncCols;
-    logic scan1EN, scan2EN, scan3EN, scan4EN, scanRST, scanClk, debounceRST, debounceClk, displayEN;
+    logic clk, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, scanClk, debounceRST, debounceClk, displayEN;
     logic [12:0] scanCount;
-    logic [18:0] debounceCount;
+    logic [20:0] debounceCount;
     logic [15:0] map1, map2, map3, map4;
     logic [3:0] position, switches;
     logic [6:0] seg, segRight, segLeft;
@@ -15,6 +17,8 @@ module lab3_nk(input logic reset,
     // Set up the internal HSOSC to provide a 24MHz oscillation frequency output
 	HSOSC #(.CLKHF_DIV("0b01")) 
 		hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
+		
+	scan #(9, 500) scanner(clk, reset, $onehot({scan1EN, scan2EN, scan3EN, scan4EN}), rows);
 
     // synchronize all cols
     synchronizer #(4) sync(clk, cols, syncCols);
@@ -23,7 +27,7 @@ module lab3_nk(input logic reset,
     // count till 16 = 4 scan cycles done
     freqconverter #(13, 4801) scanCounter(clk, scanRST, ($onehot({scan1EN, scan2EN, scan3EN, scan4EN})), scanClk, scanCount);
     // count till 120000 -> 10ms for debounce
-    freqconverter #(19, 200000) debounceCounter(clk, debounceRST, 1'b1, debounceClk, debounceCount);
+    freqconverter #(21, 2000000) debounceCounter(clk, debounceRST, 1'b1, debounceClk, debounceCount);
 
     // make mappers
     keyMapper makeMap1(clk, reset, scan1EN, rows, syncCols, map1);
@@ -48,7 +52,8 @@ module lab3_nk(input logic reset,
     assign segWrite = anodes[1] ? segRight : segLeft;
 
     // implement fsm
-    keypadFSM fsm(clk, reset, scanCount, debounceCount, map1, map2, map3, map4, position, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, debounceRST, displayEN);
+    keypadFSM fsm(clk, reset, scanCount, debounceCount, map1, map2, map3, map4, position, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, debounceRST, displayEN, state);
     
+	assign led = (state == 4'b0100);
 
 endmodule
