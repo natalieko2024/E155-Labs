@@ -1,8 +1,6 @@
-module mainFSM(input logic clk, reset, 
+module mainFSM(input logic clk, reset, debounced,
                 input logic [15:0] keymap,
-                output logic scanEN,
-                output logic [15:0] rightKeymap, leftKeymap,
-				output logic [1:0] state);
+                output logic [15:0] rightKeymap, leftKeymap);
 
 	logic [15:0] initialKeymap, finalKeymap;
 	typedef enum logic [1:0] {SCAN = 2'b00, PRESS = 2'b01, HOLD = 2'b10} statetype;
@@ -11,39 +9,20 @@ module mainFSM(input logic clk, reset,
 	always_ff @(posedge clk, negedge reset) begin
 		if (~reset) state <= SCAN;
 		else state <= nextState;
+        if (state == PRESS) begin
+            leftKeymap <= rightKeymap;
+			rightKeymap <= keymap;
+        end
+
 	end
 
 	always_comb begin
 		case(state)
-			SCAN: nextState = $onehot(keymap) ? PRESS : SCAN;
+			SCAN: nextState = (debounced & $onehot(keymap)) ? PRESS : SCAN;
 			PRESS: nextState = HOLD;
-			HOLD: begin 
-				if (keymap == 0) nextState = SCAN;
-				else if ((initialKeymap != finalKeymap) && $onehot(finalKeymap)) nextState = PRESS;
-				else nextState = HOLD;
-			end 
+			HOLD: nextState = (~$onehot(keymap)) ? SCAN : HOLD;
 			default: nextState = SCAN;
 		endcase
-	end
-	
-	always_ff @(posedge clk, negedge reset) begin
-		if (~reset) begin
-			rightKeymap <= 0;
-			leftKeymap <= 0;
-			scanEN <= 1;
-		end
-		else begin
-			if (state == SCAN) scanEN <= 1;
-			else scanEN <= 0;
-				
-			if ((state == PRESS) && (keymap != 0)) begin
-				leftKeymap <= rightKeymap;
-				rightKeymap <= keymap;
-			end
-			
-			if ((state == SCAN) && (nextState == PRESS)) initialKeymap <= keymap;
-			if ((state == HOLD) && (nextState == HOLD)) finalKeymap <= keymap;
-		end
 	end
 
 endmodule
