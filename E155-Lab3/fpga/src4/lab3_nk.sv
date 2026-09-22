@@ -2,9 +2,7 @@ module lab3_nk(input logic reset,
                 output logic [3:0] rows,
                 input logic [3:0] cols,
                 output logic [1:0] anodes,
-                output logic [6:0] segWrite,
-				output logic [3:0] state,
-				output logic led);
+                output logic [6:0] segWrite);
 
     logic [3:0] syncCols;
     logic clk, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, scanClk, debounceRST, debounceClk, displayEN;
@@ -52,8 +50,6 @@ module lab3_nk(input logic reset,
     assign segWrite = anodes[1] ? segRight : segLeft;
 
     // implement fsm
-    keypadFSM fsm(clk, reset, scanCount, debounceCount, map1, map2, map3, map4, position, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, debounceRST, displayEN, state);
-    
-	assign led = (state == 4'b0100);
+    keypadFSM fsm(clk, reset, scanCount, debounceCount, map1, map2, map3, map4, position, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, debounceRST, displayEN);
 
 endmodule

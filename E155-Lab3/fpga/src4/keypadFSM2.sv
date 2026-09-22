@@ -3,12 +3,11 @@ module keypadFSM(input logic clk, reset,
                 input logic [20:0] debounceCount,
                 input logic [15:0] map1, map2, map3, map4,
 				input logic [3:0] position,
-                output logic scan1EN, scan2EN, scan3EN, scan4EN, scanCountRST, debounceRST, displayEN,
-				output logic [3:0] state);
+                output logic scan1EN, scan2EN, scan3EN, scan4EN, scanCountRST, debounceRST, displayEN);
 
 	typedef enum logic [3:0] {SCAN1 = 4'b0000, OFF1 = 4'b0001, SCAN2 = 4'b0010, OFF2 = 4'b0011, DISPLAY = 4'b0100, SCAN3 = 4'b0101, OFF3 = 4'b0110, SCAN4 = 4'b0111, OFF4 = 4'b1000} statetype;
-	//statetype state, nextState;
-	statetype nextState;
+	statetype state, nextState;
+	//statetype nextState;
 
 	always_ff @(posedge clk, negedge reset) begin
 		if (~reset) state <= SCAN1;
@@ -25,7 +24,7 @@ module keypadFSM(input logic clk, reset,
 				scanCountRST = 1;
 				debounceRST = 0;
 				displayEN = 0;
-				if (scanCount >= 16) nextState = OFF1;
+				if (scanCount >= 20) nextState = OFF1;
 				else nextState = SCAN1;
 			end
 			
@@ -49,7 +48,7 @@ module keypadFSM(input logic clk, reset,
 				scanCountRST = 1;
 				debounceRST = 0;
 				displayEN = 0;
-				if (scanCount >= 16) nextState = OFF2;
+				if (scanCount >= 20) nextState = OFF2;
 				else nextState = SCAN2;
 			end
 			
@@ -85,7 +84,7 @@ module keypadFSM(input logic clk, reset,
 				scanCountRST = 1;
 				debounceRST = 0;
 				displayEN = 0;
-				if (scanCount >= 16) nextState = OFF3;
+				if (scanCount >= 20) nextState = OFF3;
 				else nextState = SCAN3;
 			end
 			
@@ -109,7 +108,7 @@ module keypadFSM(input logic clk, reset,
 				scanCountRST = 1;
 				debounceRST = 0;
 				displayEN = 0;
-				if (scanCount >= 16) nextState = OFF4;
+				if (scanCount >= 20) nextState = OFF4;
 				else nextState = SCAN4;
 			end
 			
