@@ -28,8 +28,8 @@ module lab3_nk(input logic reset,
     // make mappers
     keyMapper makeMap1(clk, reset, scan1EN, rows, syncCols, map1);
     keyMapper makeMap2(clk, reset, scan2EN, rows, syncCols, map2);
-    keyMapper makeMap1(clk, reset, scan3EN, rows, syncCols, map3);
-    keyMapper makeMap2(clk, reset, scan4EN, rows, syncCols, map4);
+    keyMapper makeMap3(clk, reset, scan3EN, rows, syncCols, map3);
+    keyMapper makeMap4(clk, reset, scan4EN, rows, syncCols, map4);
 
     // find high bit
     findHighBit findPosition(map4, position);
@@ -39,8 +39,8 @@ module lab3_nk(input logic reset,
 
     switch_7seg convertSeg(switches, seg);
 
-    enableFlipFlop #(4) shiftRight(clk, reset, displayEN, seg, segRight);
-    enableFlipFlop #(4) shiftLeft(clk, reset, displayEN, segRight, segLeft);
+    enableFlipFlop #(7) shiftRight(clk, reset, displayEN, seg, segRight);
+    enableFlipFlop #(7) shiftLeft(clk, reset, displayEN, segRight, segLeft);
 
     assign anodes[1] = (debounceCount < 100000);
     assign anodes[0] = (debounceCount >= 100000);
@@ -48,7 +48,7 @@ module lab3_nk(input logic reset,
     assign segWrite = anodes[1] ? segRight : segLeft;
 
     // implement fsm
-    keypadFSM fsm(clk, reset, scanCount, debounceCount, map1, map2, map3, map4, scan1EN, scan2EN, scan3EN, scan4EN, scanCountRST, debounceRST, displayEN);
+    keypadFSM fsm(clk, reset, scanCount, debounceCount, map1, map2, map3, map4, position, scan1EN, scan2EN, scan3EN, scan4EN, scanRST, debounceRST, displayEN);
     
 
 endmodule

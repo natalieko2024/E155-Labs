@@ -24,3 +24,5 @@ module findHighBit(input logic [15:0] map,
 		endcase
 		
 	end
+	
+endmodule

@@ -2,7 +2,8 @@ module lab3_nk(input logic reset,
                 input logic [3:0] cols,
                 output logic [3:0] rows,
                 output logic [6:0] segWrite,
-                output logic [1:0] anodes);
+                output logic [1:0] anodes,
+				output logic [1:0] state);
 
     logic clk, stepDownClk, countRST, countEN, anodeClk, scanEN;
     logic [3:0] syncCols, debouncedCols, rightSwitches, leftSwitches;
@@ -23,9 +24,9 @@ module lab3_nk(input logic reset,
 
     debouncer debounce(clk, reset, syncCols, count, countRST, countEN, debouncedCols);
 
-    keyMapper mapKeys(clk, reset, 1'b1, rows, debouncedCols, keymap);
+    keyMapper mapKeys(clk, reset, 1'b1, rows, syncCols, keymap);
 
-    mapFSM fsm(clk, reset, keymap, scanEN, rightKeymap, leftKeymap);
+    mapFSM fsm(clk, reset, keymap, scanEN, rightKeymap, leftKeymap, state);
 
     // max is 6MHz (cutting it close)
     scan #(.COUNTWIDTH(9), .COUNTMAX(500)) scanner(clk, reset, scanEN, rows);

@@ -1,7 +1,8 @@
 module mapFSM(input logic clk, reset, 
                 input logic [15:0] keymap,
                 output logic scanEN,
-                output logic [15:0] rightKeymap, leftKeymap);
+                output logic [15:0] rightKeymap, leftKeymap,
+				output logic [1:0] state);
 
 	logic [15:0] initialKeymap, finalKeymap;
 	typedef enum logic [1:0] {SCAN = 2'b00, PRESS = 2'b01, HOLD = 2'b10} statetype;
@@ -16,9 +17,9 @@ module mapFSM(input logic clk, reset,
 		case(state)
 			SCAN: nextState = $onehot(keymap) ? PRESS : SCAN;
 			PRESS: nextState = HOLD;
-			HOLD: begin
-				if ((initialKeymap != finalKeymap) && $onehot(finalKeymap)) nextState = PRESS;
-				else if (keymap == 0) nextState = SCAN;
+			HOLD: begin 
+				if (keymap == 0) nextState = SCAN;
+				else if ((initialKeymap != finalKeymap) && $onehot(finalKeymap)) nextState = PRESS;
 				else nextState = HOLD;
 			end 
 			default: nextState = SCAN;
