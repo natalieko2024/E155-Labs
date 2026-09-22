@@ -4,6 +4,9 @@ module keyMap(input clk, reset,
                 output logic [3:0] switches,
                 output logic press);
 
+	logic badClk, sample;
+	logic [8:0] count;
+
 	// Make the keymap
 	flop #(4) readRow0(clk, reset, (rows[0] & sample), ~cols, keyMap[3:0]);
 	flop #(4) readRow1(clk, reset, (rows[1] & sample), ~cols, keyMap[7:4]);

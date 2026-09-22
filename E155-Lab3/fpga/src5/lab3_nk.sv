@@ -2,9 +2,10 @@ module lab3_nk(input logic reset,
                 input logic [3:0] cols,
                 output logic [3:0] rows,
                 output logic [6:0] segWrite,
-                output logic [1:0] anodes);
+                output logic [1:0] anodes,
+				output logic [1:0] state);
 
-    logic clk, stepDownClk, countRST, countEN, anodeClk, scanEN, debounced, press;
+    logic clk, stepDownClk, countRST, countEN, anodeClk, scanEN, debounced, press, displayEN;
     logic [3:0] syncCols, syncRows, switches;
     //logic [31:0] count;
     logic [31:0] anodeCount;
@@ -26,15 +27,15 @@ module lab3_nk(input logic reset,
 
     keyMap mapKeys(clk, reset, syncRows, syncCols, keyMap, switches, press);
 
-    mainFSM fsm(clk, reset, 1'b1, press, keyMap, rightKeymap, leftKeymap);
+    mainFSM fsm(clk, reset, 1'b1, press, keyMap, rightKeymap, leftKeymap, displayEN, state);
 
     // max is 6MHz (cutting it close)
     scan #(.COUNTWIDTH(9), .COUNTMAX(500)) scanner(clk, reset, 1'b1, rows);
 
     switch_7seg getSeg(switches, seg);
 
-    flop #(4) shiftRight(clk, reset, 1'b1, seg, segRight);
-    flop #(4) shiftLeft(clk, reset, 1'b1, segRight, segLeft);
+    flop #(7) shiftRight(clk, reset, displayEN, seg, segRight);
+    flop #(7) shiftLeft(clk, reset, displayEN, segRight, segLeft);
 
     assign anodes[1] = (anodeCount < 100000);
     assign anodes[0] = (anodeCount >= 100000);
