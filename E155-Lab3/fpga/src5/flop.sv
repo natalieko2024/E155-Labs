@@ -1,4 +1,4 @@
-module enableFlipFlop #(parameter WIDTH) (input logic clk, reset, enable,
+module flop #(parameter WIDTH) (input logic clk, reset, enable,
                                             input logic [(WIDTH - 1):0] d,
                                             output logic [(WIDTH - 1):0] q);
 

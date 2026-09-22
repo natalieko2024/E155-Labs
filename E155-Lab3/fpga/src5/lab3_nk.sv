@@ -24,7 +24,7 @@ module lab3_nk(input logic reset,
 
     debounceFSM debounce(clk, reset, syncCols, count, countRST, countEN, debouncedCols);
 
-    keyMapper mapKeys(clk, reset, 1'b1, rows, syncCols, keymap);
+    keyMap mapKeys(clk, reset, rows, syncCols, keymap);
 
     mainFSM fsm(clk, reset, keymap, scanEN, rightKeymap, leftKeymap, state);
 

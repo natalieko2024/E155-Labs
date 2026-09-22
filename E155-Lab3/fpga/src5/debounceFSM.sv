@@ -1,4 +1,4 @@
-module debouncer(input logic clk, reset, 
+module debounceFSM(input logic clk, reset, 
                 input logic [3:0] syncCols, 
                 input logic [31:0] count,
                 output logic countRST, countEN,

@@ -1,4 +1,4 @@
-module mapFSM(input logic clk, reset, 
+module mainFSM(input logic clk, reset, 
                 input logic [15:0] keymap,
                 output logic scanEN,
                 output logic [15:0] rightKeymap, leftKeymap,
