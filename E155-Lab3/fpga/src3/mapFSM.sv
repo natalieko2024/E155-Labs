@@ -35,7 +35,7 @@ module mapFSM(input logic clk, reset,
 			if (state == SCAN) scanEN <= 1;
 			else scanEN <= 0;
 				
-			if (state == PRESS) begin
+			if ((state == PRESS) && (keymap != 0)) begin
 				leftKeymap <= rightKeymap;
 				rightKeymap <= keymap;
 			end

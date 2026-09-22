@@ -16,10 +16,6 @@ module keyMapper(input logic clk, reset, enable,
 
     // If the particular row is high, write ~cols to newMap
     // (cols are active low, so ~cols will write 1 when the key is pressed)
-    //assign newMap[3:0] = rows[0] ? ~cols : map[3:0];
-    //assign newMap[7:4] = rows[1] ? ~cols : map[7:4];
-    //assign newMap[11:8] = rows[2] ? ~cols : map[11:8];
-    //assign newMap[15:12] = rows[3] ? ~cols : map[15:12];
 	
 	always_comb begin
 		if (rows[2]) newMap = {tempMap[15:4], ~cols};
