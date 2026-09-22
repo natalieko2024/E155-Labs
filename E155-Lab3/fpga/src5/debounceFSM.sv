@@ -24,11 +24,12 @@ module debounceFSM(input logic clk, reset,
                 if (keyMap == 0) nextState = IDLE;
                 else if (count >= 1200000) nextState = PRESS;
                 else nextState = WAIT;
-        end
+			end
 
         PRESS: nextState = (keyMap == 0) ? IDLE : PRESS;
 
         default: nextState = IDLE;
+		endcase
     end
 
     assign debounced = (state == PRESS);
