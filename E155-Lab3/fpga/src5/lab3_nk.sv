@@ -3,7 +3,8 @@ module lab3_nk(input logic reset,
                 output logic [3:0] rows,
                 output logic [6:0] segWrite,
                 output logic [1:0] anodes,
-				output logic [1:0] state);
+				output logic [1:0] state,
+				output logic [3:0] leds);
 
     logic clk, stepDownClk, countRST, countEN, anodeClk, scanEN, debounced, press, displayEN;
     logic [3:0] syncCols, syncRows, switches;
@@ -11,6 +12,8 @@ module lab3_nk(input logic reset,
     logic [31:0] anodeCount;
     logic [15:0] keyMap, rightKeymap, leftKeymap;
     logic [6:0] seg, segRight, segLeft;
+	
+	assign leds = {3'b0, press};
 
     // Set up the internal HSOSC to provide a 24MHz oscillation frequency output
 	HSOSC #(.CLKHF_DIV("0b01")) 
