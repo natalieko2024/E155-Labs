@@ -1,4 +1,4 @@
-module mainFSM(input logic clk, reset, debounced,
+module mainFSM(input logic clk, reset, debounced, press,
                 input logic [15:0] keymap,
                 output logic [15:0] rightKeymap, leftKeymap);
 
@@ -8,19 +8,20 @@ module mainFSM(input logic clk, reset, debounced,
 	
 	always_ff @(posedge clk, negedge reset) begin
 		if (~reset) state <= SCAN;
-		else state <= nextState;
-        if (state == PRESS) begin
-            leftKeymap <= rightKeymap;
-			rightKeymap <= keymap;
+		else begin
+            state <= nextState;
+            if (state == PRESS) begin
+                leftKeymap <= rightKeymap;
+                rightKeymap <= keymap;
+            end
         end
-
 	end
 
 	always_comb begin
 		case(state)
-			SCAN: nextState = (debounced & $onehot(keymap)) ? PRESS : SCAN;
+			SCAN: nextState = (debounced & press) ? PRESS : SCAN;
 			PRESS: nextState = HOLD;
-			HOLD: nextState = (~$onehot(keymap)) ? SCAN : HOLD;
+			HOLD: nextState = (~press) ? SCAN : HOLD;
 			default: nextState = SCAN;
 		endcase
 	end

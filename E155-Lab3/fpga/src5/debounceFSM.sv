@@ -18,12 +18,12 @@ module debounceFSM(input logic clk, reset,
 
     always_comb begin
         case(state)
-        IDLE: nextState = (keyMap == 0) ? IDLE : WAIT;
+            IDLE: nextState = (keyMap == 0) ? IDLE : WAIT;
 
-        WAIT: begin
-            if (keyMap == 0) nextState = IDLE;
-            else if (count >= 1200000) nextState = PRESS;
-            else nextState = WAIT;
+            WAIT: begin
+                if (keyMap == 0) nextState = IDLE;
+                else if (count >= 1200000) nextState = PRESS;
+                else nextState = WAIT;
         end
 
         PRESS: nextState = (keyMap == 0) ? IDLE : PRESS;
