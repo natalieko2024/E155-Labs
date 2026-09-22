@@ -20,7 +20,8 @@ module lab3_nk(input logic reset,
 
     freqconverter #(.WIDTH(32), .MAX(200001)) anodeSwitcher(clk, reset, 1'b1, anodeClk, anodeCount);
 
-    keyMap  getMap(clk, reset, rows, syncCols, keyMap);
+    //keyMap  getMap(clk, reset, rows, syncCols, keyMap);
+    keyMapper getMap(clk, reset, 1'b1, rows, syncCols, keyMap);
 
     debouncer debounce(clk, reset, keyMap, debouncedKeyMap);
 
