@@ -30,8 +30,8 @@ module lab3_nk(input logic reset,
 
     switch_7seg getSegs(switches, segs);
 
-    flop #(7) shiftRight(clk, reset, displayEN, segs, segRight);
-    flop #(7) shiftLeft(clk, reset, displayEN, segRight, segLeft);
+    flipFlop #(7) shiftRight(clk, reset, displayEN, segs, segRight);
+    flipFlop #(7) shiftLeft(clk, reset, displayEN, segRight, segLeft);
 
     assign anodes[1] = (anodeCount < 100000);
     assign anodes[0] = (anodeCount >= 100000);
