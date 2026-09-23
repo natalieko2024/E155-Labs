@@ -123,14 +123,14 @@ module keySwitchConverter_tb();
 			$display("PASS switches are correct for corresponding map");
 		else
 			$display("FAIL switches are incorrect for corresponding map");
-		#1 $stop;
+		#1
 		map = 16'b0100100100000001;
 		#1
         assert (switches == 4'b0000)
 			$display("PASS switches are correct for corresponding map");
 		else
 			$display("FAIL switches are incorrect for corresponding map");
-		#1 $stop;
+		#5 $stop;
     end
 
 endmodule
