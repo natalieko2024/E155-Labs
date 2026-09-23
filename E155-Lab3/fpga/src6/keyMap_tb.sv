@@ -1,6 +1,9 @@
 // Defining the delays in terms of ns with a precision of 1ns
 `timescale 1 ns/1 ns
 
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 18 Sept 2026
+// Testing inputs are added to keymap
 module keyMap_tb();
     
     logic clk, reset;
@@ -49,6 +52,15 @@ module keyMap_tb();
         cols = 4'b0101;
         #250
         assert(keyMap == 16'b0010010010001010)
+            $display("PASS keyMap is correct at %t", $time);
+        else
+            $display("FAIL keyMap is incorrect at %t", $time);
+
+        //overwrite first row saved
+        rows = 4'b1000;
+        cols = 4'b0101;
+        #250
+        assert(keyMap == 16'b1010010010001010)
             $display("PASS keyMap is correct at %t", $time);
         else
             $display("FAIL keyMap is incorrect at %t", $time);

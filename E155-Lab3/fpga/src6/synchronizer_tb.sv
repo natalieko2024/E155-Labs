@@ -1,6 +1,9 @@
 // Defining the delays in terms of ns with a precision of 1ns
 `timescale 1 ns/1 ns
 
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 18 Sept 2026
+// Testing outputs are 2 clock edges behind inputs
 module synchronizer_tb();
 
     logic clk;

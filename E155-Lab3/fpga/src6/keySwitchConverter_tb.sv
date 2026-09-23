@@ -1,6 +1,9 @@
 // Defining the delays in terms of ns with a precision of 1ns
 `timescale 1 ns/1 ns
 
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 18 Sept 2026
+// Test all combinational logic of keySwitchConverter
 module keySwitchConverter_tb();
 
     logic [15:0] map;
@@ -117,6 +120,13 @@ module keySwitchConverter_tb();
         map = 16'b0000000000000001;
 		#1
         assert (switches == 4'b1101)
+			$display("PASS switches are correct for corresponding map");
+		else
+			$display("FAIL switches are incorrect for corresponding map");
+		#1 $stop;
+		map = 16'b0100100100000001;
+		#1
+        assert (switches == 4'b0000)
 			$display("PASS switches are correct for corresponding map");
 		else
 			$display("FAIL switches are incorrect for corresponding map");

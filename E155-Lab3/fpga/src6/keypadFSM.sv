@@ -1,3 +1,6 @@
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 18 Sept 2026
+// Finite state machine for the keypad scanner using previous state and keymap for state transition logic. Output controls the 7-segment write.
 module keypadFSM(input logic clk, reset,
                 input logic [15:0] keyMap,
                 output logic displayEN);

@@ -1,6 +1,9 @@
 // Defining the delays in terms of ns with a precision of 1ns
 `timescale 1 ns/1 ns
 
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 18 Sept 2026
+// Check outputs are 1 clk edge behind inputs
 module flipFlop_tb();
 
     logic clk, reset, enable;

@@ -1,3 +1,6 @@
+// Natalie Ko (nko@g.hmc.edu)
+// Created on 18 Sept 2026
+// The module keySwitchConverter turns the map into the corresponding switch inputs so that the key presses display the correct number.
 module keySwitchConverter(input logic [15:0] map,
                             output logic [3:0] switches);
 

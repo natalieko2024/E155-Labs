@@ -5,6 +5,7 @@
 // Created on 12 Sept 2026
 // The module scan_tb is a testbench testing the bit-shifting behaviour for the row output. 
 // This tests whether the row signal is as expected during normal operation, after a reset, and with/without enable. 
+// Edit 18 Sept 2026 for parametrized scan module
 module scan_tb();
 	logic clk;		// System clock
 	logic reset;	// System reset
