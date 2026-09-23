@@ -10,31 +10,108 @@ Z0 !s99 nomlopt
 !i10f 100
 cModel Technology
 Z1 dC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/lab3_nk/lab3_nk
-vdebouncer
-Z2 2C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
+vdebounced_tb
+Z2 2C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debouncer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1790025180
+Z4 !s110 1790164630
 !i10b 1
-!s100 43enO8_[AW[67R3DWGhNd3
-I4>c[M:95cTHH;InA71PUL3
+!s100 BKWTB:kQU3D2hR6`Q55R`0
+IWJ;N?G`78bGD_ic<X9?:c2
 S1
 R1
-w1790017981
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv
+w1790156863
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv
 !i122 0
-L0 1 57
+L0 4 97
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1790025180.000000
-Z8 !s107 C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv|
-Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
+Z7 !s108 1790164630.000000
+Z8 !s107 C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debouncer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debouncer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv|C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
 !i113 0
 Z10 o-L work -sv -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z11 tCvgOpt 0 defaultOptions 1085333592
+vdebouncer
+R2
+R3
+R4
+!i10b 1
+!s100 BJ_BWmcmRV3Q6Pi4Hijl[2
+IL6EoXEIKOJ;3bMZ;1UnQN2
+S1
+R1
+Z12 w1790156630
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debouncer.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debouncer.sv
+!i122 0
+Z13 L0 1 26
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vflipFlop
+R2
+R3
+R4
+!i10b 1
+!s100 _Jn:jHnFgo6lF<YLWJ1QR0
+I7bI;m=@I4G`?R96?EMUY?3
+S1
+R1
+w1790157675
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop.sv
+!i122 0
+L0 1 10
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nflip@flop
+vflipFlop_tb
+R2
+R3
+R4
+!i10b 1
+!s100 hVhUX0b4n=c>IJa:lKGg01
+IMK[aM;kS4nKddaIz?KNNI0
+S1
+R1
+w1790158125
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv
+!i122 0
+L0 4 67
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nflip@flop_tb
 vfreqconverter
 R2
 R3
@@ -44,7 +121,7 @@ R4
 I061PXdm2JKQ_DWFD@YN;X0
 S1
 R1
-Z12 w1789202757
+Z14 w1790156629
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv
 !i122 0
@@ -60,20 +137,20 @@ R9
 !i113 0
 R10
 R11
-vkeyMapper
+vkeyMap
 R2
 R3
 R4
 !i10b 1
-!s100 XESToimkU3hTnmA6Yo>NE3
-I[^@Z?8BB5:cOJUOHb5Y883
+!s100 5O]X:I_MMa058IB]LlzgA1
+Ifefm4S>geU?5Ua[hRKe001
 S1
 R1
-w1790019175
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv
+R12
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap.sv
 !i122 0
-L0 4 29
+L0 1 18
 R5
 R6
 r1
@@ -85,21 +162,99 @@ R9
 !i113 0
 R10
 R11
-nkey@mapper
+nkey@map
+vkeyMap_tb
+R2
+R3
+R4
+!i10b 1
+!s100 D5RPh2V19C:O`8n?0Y><52
+IIdmWiKN^>;8^^HF4]d;@<2
+S1
+R1
+w1790159887
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv
+!i122 0
+L0 4 64
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nkey@map_tb
+vkeypadFSM
+R2
+R3
+R4
+!i10b 1
+!s100 T=O<`0mfWLlf;oAF<SlC_0
+I4N43S3M^eU@UC]2HG<=^k1
+S1
+R1
+R12
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM.sv
+!i122 0
+L0 1 54
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nkeypad@f@s@m
+vkeypadFSM_tb
+R2
+R3
+R4
+!i10b 1
+!s100 OLKU:JFW`mDUUJ6]`7ZeK2
+IA[I@HK?>DjfFb:a[a0ZUB0
+S1
+R1
+w1790156971
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv
+!i122 0
+L0 4 184
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nkeypad@f@s@m_tb
 vkeySwitchConverter
 R2
 R3
 R4
 !i10b 1
 !s100 ^QAF`<72V5K^?UC7^nR7;1
-Ig[Nd7R@6:Bahjn15Hb[a90
+I>9JXk><;XV]>l<nYcM?Bd0
 S1
 R1
-Z13 w1789961284
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv
+R12
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter.sv
 !i122 0
-L0 1 26
+R13
 R5
 R6
 r1
@@ -112,20 +267,46 @@ R9
 R10
 R11
 nkey@switch@converter
+vkeySwitchConverter_tb
+R2
+R3
+R4
+!i10b 1
+!s100 A?^YQncL3eU@?`[h9hHjN2
+IX[Q;mhlgXK9I;0j@2h2PN1
+S1
+R1
+w1790160235
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv
+!i122 0
+L0 4 123
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nkey@switch@converter_tb
 vlab3_nk
 R2
 R3
 R4
 !i10b 1
-!s100 LifM;^A`z@Li>39iBKaLf2
-I;KYLCKZjP?zhOoV4LUl_S1
+!s100 zoK0JjEXiWgNg?355Nl0X2
+I?Y^dIHYfknnO>VP8R_5[`3
 S1
 R1
-w1789966791
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv
+R12
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk.sv
 !i122 0
-L0 1 44
+L0 1 47
 R5
 R6
 r1
@@ -137,20 +318,20 @@ R9
 !i113 0
 R10
 R11
-vmapFSM
+vlab3_nk_tb
 R2
 R3
 R4
 !i10b 1
-!s100 k@39AWc3eD3YL_74iDLmW3
-IBO478C;M86ROKz3djba=T2
+!s100 ]lD7Kz56^glCEZm:gJi^53
+IEMTDkD5GP8M79cEB[1`Rn0
 S1
 R1
-w1790022533
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv
+w1790164370
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv
 !i122 0
-L0 1 48
+L0 4 1020
 R5
 R6
 r1
@@ -162,15 +343,14 @@ R9
 !i113 0
 R10
 R11
-nmap@f@s@m
 Tqrun_opt
 !i145 1
 !i144 0
-!s110 1790025182
-VLE]=NaUg[F[SR8NIljo0U2
-04 7 4 work lab3_nk fast 0
+R4
+VBngkG7Z_G<2Dd[Pim27hj3
+04 7 4 work scan_tb fast 0
 R0
-!s12f OEM25U13 
+!s12f OEM25U3 
 !s12b OEM100
 !s124 OEM100
 !s135 nogc
@@ -187,11 +367,36 @@ R4
 IOnSoJS^5ZJaAMPcG8b?gB1
 S1
 R1
-w1789961283
+R12
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv
 !i122 0
 L0 4 16
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vscan_tb
+R2
+R3
+R4
+!i10b 1
+!s100 P8a:7bK1`7NbK5m2@:UY@2
+IcIL@0^TE7OeG1fNUMC9Hc0
+S1
+R1
+w1790164608
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv
+!i122 0
+L0 8 127
 R5
 R6
 r1
@@ -212,7 +417,7 @@ R4
 InN2liNLdB`:fG>Pi;>=:@1
 S1
 R1
-R12
+R14
 8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
 FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv
 !i122 0
@@ -234,14 +439,39 @@ R3
 R4
 !i10b 1
 !s100 A`46j3mgSIfK2lH]SbQiE2
-I15X1^K9X2`aZ5icg41>EJ3
+I?iE8eaWkoEjnDcIWM<1^e1
 S1
 R1
-R13
-8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv
-FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv
+R12
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer.sv
 !i122 0
 L0 1 12
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vsynchronizer_tb
+R2
+R3
+R4
+!i10b 1
+!s100 Yj6_VN93_zG6P@Xc@lo262
+IAajlTLi:L7_fz7gBU4bMM3
+S1
+R1
+w1790160435
+8C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv
+!i122 0
+L0 4 62
 R5
 R6
 r1

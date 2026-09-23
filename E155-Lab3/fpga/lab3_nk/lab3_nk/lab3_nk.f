@@ -3,15 +3,24 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/debouncer.sv" 
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keyMapper.sv" 
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/keySwitchConverter.sv" 
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv" 
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/mapFSM.sv" 
-"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/synchronizer.sv" 
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab2/fpga/src/scan.sv" 
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/freqconverter.sv" 
 "C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab1/fpga/e155_lab1_nk/source/impl_1/switch_7seg.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debouncer.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -22,11 +31,11 @@
 -end
 
 -gui
--top lab3_nk
+-top scan_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end
 
 -do "view wave"
 -do "add wave /*"
--do "run 1e+08 ns"
+-do "run -all"

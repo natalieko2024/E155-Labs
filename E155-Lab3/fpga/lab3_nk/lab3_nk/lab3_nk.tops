@@ -1,1 +1,8 @@
-lab3_nk,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src3/lab3_nk.sv
+debounced_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/debounced_tb.sv
+flipFlop_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/flipFlop_tb.sv
+keyMap_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keyMap_tb.sv
+keypadFSM_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keypadFSM_tb.sv
+keySwitchConverter_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/keySwitchConverter_tb.sv
+lab3_nk_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/lab3_nk_tb.sv
+synchronizer_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/synchronizer_tb.sv
+scan_tb,/,C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/src6/svan_tbsv.sv

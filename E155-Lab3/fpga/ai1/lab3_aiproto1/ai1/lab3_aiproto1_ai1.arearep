@@ -1,0 +1,42 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  83 of 5280 (1.572%)
+I/O cells:      18
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34          100.0
+                            FD1P3XZ        83          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         5          100.0
+                               LUT4       120          100.0
+                                 OB        13          100.0
+SUB MODULES
+                            clk_gen         1
+                     keypad_scanner         1
+                      seven_seg_mux         1
+                              TOTAL       259
+----------------------------------------------------------------------
+Report for cell clk_gen.v1
+Instance Path : u_clk_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        34          100.0
+                            FD1P3XZ        66           79.5
+                               LUT4        87           72.5
+                              TOTAL       187
+----------------------------------------------------------------------
+Report for cell keypad_scanner.v1
+Instance Path : u_keypad
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            9.6
+                               LUT4        15           12.5
+                              TOTAL        23
+----------------------------------------------------------------------
+Report for cell seven_seg_mux.v1
+Instance Path : u_display
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         1            1.2
+                               LUT4        14           11.7
+                              TOTAL        15

@@ -1,0 +1,1755 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2026.1.0.37.0
+
+Wed Sep 23 05:04:06 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt lab3_aiproto1_ai1.twr lab3_aiproto1_ai1.udb -gui -msgset C:/Users/nko/Documents/GitHub/E155-Labs/E155-Lab3/fpga/ai1/lab3_aiproto1/promote.xml
+
+-----------------------------------------
+Design:          top
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+**Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  Timing Overview
+        1.1  SDC Constraints
+        1.2  Constraint Coverage
+        1.3  Overall Summary
+        1.4  Unconstrained Report
+        1.5  Combinational Loop
+    2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+        2.1  Clock Summary
+        2.2  Endpoint slacks
+        2.3  Detailed Report
+    3  Hold at Speed Grade m Corner at -40 Degrees
+        3.1  Endpoint slacks
+        3.2  Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  Timing Overview
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_clock -name {clk} -period 41.6667 [get_pins {hf_osc_inst/CLKHF }] 
+
+1.2  Constraint Coverage
+---------------------------
+Constraint Coverage: 79.941%
+
+
+1.3  Overall Summary
+---------------------------
+ Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees     Timing Errors: 0 endpoints;  Total Negative Slack: 0.000 ns 
+ Hold at Speed Grade m Corner at -40 Degrees                          Timing Errors: 0 endpoints;  Total Negative Slack: 0.000 ns 
+
+1.4  Unconstrained Report
+===========================
+
+1.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+         Listing 4 Start Points         |           Type           
+-------------------------------------------------------------------
+key_digit_older_i0_i3/Q                 |          No required time
+key_digit_older_i0_i2/Q                 |          No required time
+key_digit_older_i0_i1/Q                 |          No required time
+key_digit_older_i0_i0/Q                 |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         4
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+{key_digit_older_i0_i3/SR   key_digit_older_i0_i2/SR}                           
+                                        |           No arrival time
+{key_digit_recent_i0_i0/SR   key_digit_recent_i0_i1/SR}                           
+                                        |           No arrival time
+{key_digit_older_i0_i1/SR   key_digit_older_i0_i0/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i0/SR   u_clk_gen/count_mux_191__i1/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i31/SR   u_clk_gen/count_mux_191__i30/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i29/SR   u_clk_gen/count_mux_191__i28/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i27/SR   u_clk_gen/count_mux_191__i26/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i25/SR   u_clk_gen/count_mux_191__i24/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i23/SR   u_clk_gen/count_mux_191__i22/SR}                           
+                                        |           No arrival time
+{u_clk_gen/count_mux_191__i21/SR   u_clk_gen/count_mux_191__i20/SR}                           
+                                        |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                        43
+                                        |                          
+-------------------------------------------------------------------
+
+1.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+ext_rst_n                               |                     input
+kp_rows[3]                              |                     input
+kp_rows[2]                              |                     input
+kp_rows[1]                              |                     input
+kp_rows[0]                              |                     input
+kp_cols[3]                              |                    output
+kp_cols[2]                              |                    output
+kp_cols[1]                              |                    output
+kp_cols[0]                              |                    output
+digit_sel[1]                            |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                        18
+                                        |                          
+-------------------------------------------------------------------
+
+Nets without clock definition
+Define a clock on a top level port or a generated clock on a clock divider pin associated with this net(s).
+--------------------------------------------------
+There is no instance satisfying reporting criteria
+
+
+
+1.5  Combinational Loop
+========================
+None
+
+===============================================================
+2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+===============================================================
+
+2.1  Clock Summary
+=======================
+
+2.1.1 Clock "clk"
+=======================
+create_clock -name {clk} -period 41.6667 [get_pins {hf_osc_inst/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+               Clock clk                |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk                               |             Target |          41.667 ns |         24.000 MHz 
+                                        | Actual (all paths) |          20.792 ns |         48.095 MHz 
+hf_osc_inst/CLKHF (MPW)                 |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
+2.2  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+u_clk_gen/count_scan_190__i31/D          |   22.837 ns 
+u_clk_gen/count_mux_191__i31/D           |   23.432 ns 
+u_clk_gen/count_mux_191__i14/D           |   24.246 ns 
+u_clk_gen/count_mux_191__i20/D           |   24.246 ns 
+u_clk_gen/count_mux_191__i25/D           |   24.246 ns 
+u_clk_gen/count_mux_191__i27/D           |   24.246 ns 
+u_clk_gen/count_mux_191__i29/D           |   24.246 ns 
+u_clk_gen/count_scan_190__i30/D          |   24.264 ns 
+u_clk_gen/count_mux_191__i30/D           |   24.264 ns 
+u_clk_gen/count_mux_191__i28/D           |   24.299 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
+
+2.3  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_scan_190__i0/Q  (SLICE_R13C3A)
+Path End         : u_clk_gen/count_scan_190__i31/D  (SLICE_R13C5D)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 34
+Delay Ratio      : 41.1% (route), 58.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 22.836 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  44      
+u_display/clk                                                NET DELAY               5.499                  5.499  44      
+{u_clk_gen/count_scan_190__i1/CK   u_clk_gen/count_scan_190__i0/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_clk_gen/count_scan_190__i0/CK->u_clk_gen/count_scan_190__i0/Q
+                                          SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
+u_clk_gen/count_scan[0]                                      NET DELAY               2.022                  8.909  2       
+u_clk_gen/count_scan_190_add_4_1/C1->u_clk_gen/count_scan_190_add_4_1/CO1
+                                          SLICE_R12C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+u_clk_gen/n747                                               NET DELAY               0.000                  9.252  2       
+u_clk_gen/count_scan_190_add_4_3/CI0->u_clk_gen/count_scan_190_add_4_3/CO0
+                                          SLICE_R12C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+u_clk_gen/n1896                                              NET DELAY               0.000                  9.529  2       
+u_clk_gen/count_scan_190_add_4_3/CI1->u_clk_gen/count_scan_190_add_4_3/CO1
+                                          SLICE_R12C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+u_clk_gen/n749                                               NET DELAY               0.000                  9.806  2       
+u_clk_gen/count_scan_190_add_4_5/CI0->u_clk_gen/count_scan_190_add_4_5/CO0
+                                          SLICE_R12C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+u_clk_gen/n1899                                              NET DELAY               0.000                 10.083  2       
+u_clk_gen/count_scan_190_add_4_5/CI1->u_clk_gen/count_scan_190_add_4_5/CO1
+                                          SLICE_R12C3C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+u_clk_gen/n751                                               NET DELAY               0.000                 10.360  2       
+u_clk_gen/count_scan_190_add_4_7/CI0->u_clk_gen/count_scan_190_add_4_7/CO0
+                                          SLICE_R12C3D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+u_clk_gen/n1902                                              NET DELAY               0.000                 10.637  2       
+u_clk_gen/count_scan_190_add_4_7/CI1->u_clk_gen/count_scan_190_add_4_7/CO1
+                                          SLICE_R12C3D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+u_clk_gen/n753                                               NET DELAY               0.555                 11.469  2       
+u_clk_gen/count_scan_190_add_4_9/CI0->u_clk_gen/count_scan_190_add_4_9/CO0
+                                          SLICE_R12C4A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+u_clk_gen/n1905                                              NET DELAY               0.000                 11.746  2       
+u_clk_gen/count_scan_190_add_4_9/CI1->u_clk_gen/count_scan_190_add_4_9/CO1
+                                          SLICE_R12C4A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+u_clk_gen/n755                                               NET DELAY               0.000                 12.023  2       
+u_clk_gen/count_scan_190_add_4_11/CI0->u_clk_gen/count_scan_190_add_4_11/CO0
+                                          SLICE_R12C4B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+u_clk_gen/n1908                                              NET DELAY               0.000                 12.300  2       
+u_clk_gen/count_scan_190_add_4_11/CI1->u_clk_gen/count_scan_190_add_4_11/CO1
+                                          SLICE_R12C4B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+u_clk_gen/n757                                               NET DELAY               0.000                 12.577  2       
+u_clk_gen/count_scan_190_add_4_13/CI0->u_clk_gen/count_scan_190_add_4_13/CO0
+                                          SLICE_R12C4C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+u_clk_gen/n1911                                              NET DELAY               0.000                 12.854  2       
+u_clk_gen/count_scan_190_add_4_13/CI1->u_clk_gen/count_scan_190_add_4_13/CO1
+                                          SLICE_R12C4C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+u_clk_gen/n759                                               NET DELAY               0.000                 13.131  2       
+u_clk_gen/count_scan_190_add_4_15/CI0->u_clk_gen/count_scan_190_add_4_15/CO0
+                                          SLICE_R12C4D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+u_clk_gen/n1914                                              NET DELAY               0.000                 13.408  2       
+u_clk_gen/count_scan_190_add_4_15/CI1->u_clk_gen/count_scan_190_add_4_15/CO1
+                                          SLICE_R12C4D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+u_clk_gen/n761                                               NET DELAY               0.555                 14.240  2       
+u_clk_gen/count_scan_190_add_4_17/CI0->u_clk_gen/count_scan_190_add_4_17/CO0
+                                          SLICE_R12C5A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+u_clk_gen/n1917                                              NET DELAY               0.000                 14.517  2       
+u_clk_gen/count_scan_190_add_4_17/CI1->u_clk_gen/count_scan_190_add_4_17/CO1
+                                          SLICE_R12C5A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+u_clk_gen/n763                                               NET DELAY               0.000                 14.794  2       
+u_clk_gen/count_scan_190_add_4_19/CI0->u_clk_gen/count_scan_190_add_4_19/CO0
+                                          SLICE_R12C5B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+u_clk_gen/n1920                                              NET DELAY               0.000                 15.071  2       
+u_clk_gen/count_scan_190_add_4_19/CI1->u_clk_gen/count_scan_190_add_4_19/CO1
+                                          SLICE_R12C5B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+u_clk_gen/n765                                               NET DELAY               0.000                 15.348  2       
+u_clk_gen/count_scan_190_add_4_21/CI0->u_clk_gen/count_scan_190_add_4_21/CO0
+                                          SLICE_R12C5C       CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+u_clk_gen/n1923                                              NET DELAY               0.000                 15.625  2       
+u_clk_gen/count_scan_190_add_4_21/CI1->u_clk_gen/count_scan_190_add_4_21/CO1
+                                          SLICE_R12C5C       CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+u_clk_gen/n767                                               NET DELAY               0.000                 15.902  2       
+u_clk_gen/count_scan_190_add_4_23/CI0->u_clk_gen/count_scan_190_add_4_23/CO0
+                                          SLICE_R12C5D       CIN0_TO_COUT0_DELAY     0.277                 16.179  2       
+u_clk_gen/n1926                                              NET DELAY               0.000                 16.179  2       
+u_clk_gen/count_scan_190_add_4_23/CI1->u_clk_gen/count_scan_190_add_4_23/CO1
+                                          SLICE_R12C5D       CIN1_TO_COUT1_DELAY     0.277                 16.456  2       
+u_clk_gen/n769                                               NET DELAY               0.555                 17.011  2       
+u_clk_gen/count_scan_190_add_4_25/CI0->u_clk_gen/count_scan_190_add_4_25/CO0
+                                          SLICE_R12C6A       CIN0_TO_COUT0_DELAY     0.277                 17.288  2       
+u_clk_gen/n1929                                              NET DELAY               0.000                 17.288  2       
+u_clk_gen/count_scan_190_add_4_25/CI1->u_clk_gen/count_scan_190_add_4_25/CO1
+                                          SLICE_R12C6A       CIN1_TO_COUT1_DELAY     0.277                 17.565  2       
+u_clk_gen/n771                                               NET DELAY               0.000                 17.565  2       
+u_clk_gen/count_scan_190_add_4_27/CI0->u_clk_gen/count_scan_190_add_4_27/CO0
+                                          SLICE_R12C6B       CIN0_TO_COUT0_DELAY     0.277                 17.842  2       
+u_clk_gen/n1932                                              NET DELAY               0.000                 17.842  2       
+u_clk_gen/count_scan_190_add_4_27/CI1->u_clk_gen/count_scan_190_add_4_27/CO1
+                                          SLICE_R12C6B       CIN1_TO_COUT1_DELAY     0.277                 18.119  2       
+u_clk_gen/n773                                               NET DELAY               0.000                 18.119  2       
+u_clk_gen/count_scan_190_add_4_29/CI0->u_clk_gen/count_scan_190_add_4_29/CO0
+                                          SLICE_R12C6C       CIN0_TO_COUT0_DELAY     0.277                 18.396  2       
+u_clk_gen/n1935                                              NET DELAY               0.000                 18.396  2       
+u_clk_gen/count_scan_190_add_4_29/CI1->u_clk_gen/count_scan_190_add_4_29/CO1
+                                          SLICE_R12C6C       CIN1_TO_COUT1_DELAY     0.277                 18.673  2       
+u_clk_gen/n775                                               NET DELAY               0.000                 18.673  2       
+u_clk_gen/count_scan_190_add_4_31/CI0->u_clk_gen/count_scan_190_add_4_31/CO0
+                                          SLICE_R12C6D       CIN0_TO_COUT0_DELAY     0.277                 18.950  2       
+u_clk_gen/n1938                                              NET DELAY               0.000                 18.950  2       
+u_clk_gen/count_scan_190_add_4_31/CI1->u_clk_gen/count_scan_190_add_4_31/CO1
+                                          SLICE_R12C6D       CIN1_TO_COUT1_DELAY     0.277                 19.227  2       
+u_clk_gen/n777                                               NET DELAY               1.216                 20.443  2       
+u_clk_gen/count_scan_190_add_4_33/D0->u_clk_gen/count_scan_190_add_4_33/S0
+                                          SLICE_R12C7A       D0_TO_F0_DELAY          0.449                 20.892  1       
+u_clk_gen/n133_adj_192[31]                                   NET DELAY               2.763                 23.655  1       
+u_clk_gen/i466_2_lut/A->u_clk_gen/i466_2_lut/Z
+                                          SLICE_R13C5D       D0_TO_F0_DELAY          0.476                 24.131  1       
+u_clk_gen/count_scan_31__N_25[31]                            NET DELAY               0.000                 24.131  1       
+u_clk_gen/count_scan_190__i31/D                              ENDPOINT                0.000                 24.131  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  44      
+u_display/clk                                                NET DELAY               5.499                 47.165  44      
+{u_clk_gen/count_scan_190__i31/CK   u_clk_gen/count_scan_190__i30/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(24.130)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       22.836  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i0/Q  (SLICE_R15C9A)
+Path End         : u_clk_gen/count_mux_191__i31/D  (SLICE_R16C13B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 34
+Delay Ratio      : 39.2% (route), 60.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 23.431 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  44      
+u_display/clk                                                NET DELAY               5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i0/CK   u_clk_gen/count_mux_191__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i0/CK->u_clk_gen/count_mux_191__i0/Q
+                                          SLICE_R15C9A       CLK_TO_Q0_DELAY         1.388                  6.887  2       
+u_clk_gen/count_mux[0]                                       NET DELAY               2.022                  8.909  2       
+u_clk_gen/count_mux_191_add_4_1/C1->u_clk_gen/count_mux_191_add_4_1/CO1
+                                          SLICE_R16C9A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+u_clk_gen/n780                                               NET DELAY               0.000                  9.252  2       
+u_clk_gen/count_mux_191_add_4_3/CI0->u_clk_gen/count_mux_191_add_4_3/CO0
+                                          SLICE_R16C9B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+u_clk_gen/n1848                                              NET DELAY               0.000                  9.529  2       
+u_clk_gen/count_mux_191_add_4_3/CI1->u_clk_gen/count_mux_191_add_4_3/CO1
+                                          SLICE_R16C9B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+u_clk_gen/n782                                               NET DELAY               0.000                  9.806  2       
+u_clk_gen/count_mux_191_add_4_5/CI0->u_clk_gen/count_mux_191_add_4_5/CO0
+                                          SLICE_R16C9C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+u_clk_gen/n1851                                              NET DELAY               0.000                 10.083  2       
+u_clk_gen/count_mux_191_add_4_5/CI1->u_clk_gen/count_mux_191_add_4_5/CO1
+                                          SLICE_R16C9C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+u_clk_gen/n784                                               NET DELAY               0.000                 10.360  2       
+u_clk_gen/count_mux_191_add_4_7/CI0->u_clk_gen/count_mux_191_add_4_7/CO0
+                                          SLICE_R16C9D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+u_clk_gen/n1854                                              NET DELAY               0.000                 10.637  2       
+u_clk_gen/count_mux_191_add_4_7/CI1->u_clk_gen/count_mux_191_add_4_7/CO1
+                                          SLICE_R16C9D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+u_clk_gen/n786                                               NET DELAY               0.555                 11.469  2       
+u_clk_gen/count_mux_191_add_4_9/CI0->u_clk_gen/count_mux_191_add_4_9/CO0
+                                          SLICE_R16C10A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+u_clk_gen/n1857                                              NET DELAY               0.000                 11.746  2       
+u_clk_gen/count_mux_191_add_4_9/CI1->u_clk_gen/count_mux_191_add_4_9/CO1
+                                          SLICE_R16C10A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+u_clk_gen/n788                                               NET DELAY               0.000                 12.023  2       
+u_clk_gen/count_mux_191_add_4_11/CI0->u_clk_gen/count_mux_191_add_4_11/CO0
+                                          SLICE_R16C10B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+u_clk_gen/n1860                                              NET DELAY               0.000                 12.300  2       
+u_clk_gen/count_mux_191_add_4_11/CI1->u_clk_gen/count_mux_191_add_4_11/CO1
+                                          SLICE_R16C10B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+u_clk_gen/n790                                               NET DELAY               0.000                 12.577  2       
+u_clk_gen/count_mux_191_add_4_13/CI0->u_clk_gen/count_mux_191_add_4_13/CO0
+                                          SLICE_R16C10C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+u_clk_gen/n1863                                              NET DELAY               0.000                 12.854  2       
+u_clk_gen/count_mux_191_add_4_13/CI1->u_clk_gen/count_mux_191_add_4_13/CO1
+                                          SLICE_R16C10C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+u_clk_gen/n792                                               NET DELAY               0.000                 13.131  2       
+u_clk_gen/count_mux_191_add_4_15/CI0->u_clk_gen/count_mux_191_add_4_15/CO0
+                                          SLICE_R16C10D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+u_clk_gen/n1866                                              NET DELAY               0.000                 13.408  2       
+u_clk_gen/count_mux_191_add_4_15/CI1->u_clk_gen/count_mux_191_add_4_15/CO1
+                                          SLICE_R16C10D      CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+u_clk_gen/n794                                               NET DELAY               0.555                 14.240  2       
+u_clk_gen/count_mux_191_add_4_17/CI0->u_clk_gen/count_mux_191_add_4_17/CO0
+                                          SLICE_R16C11A      CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+u_clk_gen/n1869                                              NET DELAY               0.000                 14.517  2       
+u_clk_gen/count_mux_191_add_4_17/CI1->u_clk_gen/count_mux_191_add_4_17/CO1
+                                          SLICE_R16C11A      CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+u_clk_gen/n796                                               NET DELAY               0.000                 14.794  2       
+u_clk_gen/count_mux_191_add_4_19/CI0->u_clk_gen/count_mux_191_add_4_19/CO0
+                                          SLICE_R16C11B      CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+u_clk_gen/n1872                                              NET DELAY               0.000                 15.071  2       
+u_clk_gen/count_mux_191_add_4_19/CI1->u_clk_gen/count_mux_191_add_4_19/CO1
+                                          SLICE_R16C11B      CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+u_clk_gen/n798                                               NET DELAY               0.000                 15.348  2       
+u_clk_gen/count_mux_191_add_4_21/CI0->u_clk_gen/count_mux_191_add_4_21/CO0
+                                          SLICE_R16C11C      CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+u_clk_gen/n1875                                              NET DELAY               0.000                 15.625  2       
+u_clk_gen/count_mux_191_add_4_21/CI1->u_clk_gen/count_mux_191_add_4_21/CO1
+                                          SLICE_R16C11C      CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+u_clk_gen/n800                                               NET DELAY               0.000                 15.902  2       
+u_clk_gen/count_mux_191_add_4_23/CI0->u_clk_gen/count_mux_191_add_4_23/CO0
+                                          SLICE_R16C11D      CIN0_TO_COUT0_DELAY     0.277                 16.179  2       
+u_clk_gen/n1878                                              NET DELAY               0.000                 16.179  2       
+u_clk_gen/count_mux_191_add_4_23/CI1->u_clk_gen/count_mux_191_add_4_23/CO1
+                                          SLICE_R16C11D      CIN1_TO_COUT1_DELAY     0.277                 16.456  2       
+u_clk_gen/n802                                               NET DELAY               0.555                 17.011  2       
+u_clk_gen/count_mux_191_add_4_25/CI0->u_clk_gen/count_mux_191_add_4_25/CO0
+                                          SLICE_R16C12A      CIN0_TO_COUT0_DELAY     0.277                 17.288  2       
+u_clk_gen/n1881                                              NET DELAY               0.000                 17.288  2       
+u_clk_gen/count_mux_191_add_4_25/CI1->u_clk_gen/count_mux_191_add_4_25/CO1
+                                          SLICE_R16C12A      CIN1_TO_COUT1_DELAY     0.277                 17.565  2       
+u_clk_gen/n804                                               NET DELAY               0.000                 17.565  2       
+u_clk_gen/count_mux_191_add_4_27/CI0->u_clk_gen/count_mux_191_add_4_27/CO0
+                                          SLICE_R16C12B      CIN0_TO_COUT0_DELAY     0.277                 17.842  2       
+u_clk_gen/n1884                                              NET DELAY               0.000                 17.842  2       
+u_clk_gen/count_mux_191_add_4_27/CI1->u_clk_gen/count_mux_191_add_4_27/CO1
+                                          SLICE_R16C12B      CIN1_TO_COUT1_DELAY     0.277                 18.119  2       
+u_clk_gen/n806                                               NET DELAY               0.000                 18.119  2       
+u_clk_gen/count_mux_191_add_4_29/CI0->u_clk_gen/count_mux_191_add_4_29/CO0
+                                          SLICE_R16C12C      CIN0_TO_COUT0_DELAY     0.277                 18.396  2       
+u_clk_gen/n1887                                              NET DELAY               0.000                 18.396  2       
+u_clk_gen/count_mux_191_add_4_29/CI1->u_clk_gen/count_mux_191_add_4_29/CO1
+                                          SLICE_R16C12C      CIN1_TO_COUT1_DELAY     0.277                 18.673  2       
+u_clk_gen/n808                                               NET DELAY               0.000                 18.673  2       
+u_clk_gen/count_mux_191_add_4_31/CI0->u_clk_gen/count_mux_191_add_4_31/CO0
+                                          SLICE_R16C12D      CIN0_TO_COUT0_DELAY     0.277                 18.950  2       
+u_clk_gen/n1890                                              NET DELAY               0.000                 18.950  2       
+u_clk_gen/count_mux_191_add_4_31/CI1->u_clk_gen/count_mux_191_add_4_31/CO1
+                                          SLICE_R16C12D      CIN1_TO_COUT1_DELAY     0.277                 19.227  2       
+u_clk_gen/n810                                               NET DELAY               1.216                 20.443  2       
+u_clk_gen/count_mux_191_add_4_33/D0->u_clk_gen/count_mux_191_add_4_33/S0
+                                          SLICE_R16C13A      D0_TO_F0_DELAY          0.449                 20.892  1       
+u_clk_gen/n133[31]                                           NET DELAY               2.168                 23.060  1       
+u_clk_gen/i434_2_lut/A->u_clk_gen/i434_2_lut/Z
+                                          SLICE_R16C13B      D0_TO_F0_DELAY          0.476                 23.536  1       
+u_clk_gen/count_mux_31__N_89[31]                             NET DELAY               0.000                 23.536  1       
+u_clk_gen/count_mux_191__i31/D                               ENDPOINT                0.000                 23.536  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  44      
+u_display/clk                                                NET DELAY               5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i31/CK   u_clk_gen/count_mux_191__i30/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(23.535)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       23.431  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i23/Q  (SLICE_R17C11C)
+Path End         : u_clk_gen/count_mux_191__i14/D  (SLICE_R15C11D)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 5
+Delay Ratio      : 81.2% (route), 18.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.245 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  44      
+u_display/clk                                                NET DELAY           5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i23/CK   u_clk_gen/count_mux_191__i22/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i23/CK->u_clk_gen/count_mux_191__i23/Q
+                                          SLICE_R17C11C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
+u_clk_gen/count_mux[23]                                      NET DELAY           3.331                 10.218  2       
+u_clk_gen/i11_4_lut/A->u_clk_gen/i11_4_lut/Z
+                                          SLICE_R15C12D      A0_TO_F0_DELAY      0.449                 10.667  1       
+u_clk_gen/n27                                                NET DELAY           3.146                 13.813  1       
+u_clk_gen/i15_4_lut/B->u_clk_gen/i15_4_lut/Z
+                                          SLICE_R17C12C      A1_TO_F1_DELAY      0.449                 14.262  2       
+u_clk_gen/n1032                                              NET DELAY           2.763                 17.025  2       
+u_clk_gen/i411_4_lut/A->u_clk_gen/i411_4_lut/Z
+                                          SLICE_R17C10C      D0_TO_F0_DELAY      0.476                 17.501  32      
+u_clk_gen/mux_tick_N_187                                     NET DELAY           4.745                 22.246  32      
+u_clk_gen/i451_2_lut/B->u_clk_gen/i451_2_lut/Z
+                                          SLICE_R15C11D      B1_TO_F1_DELAY      0.476                 22.722  1       
+u_clk_gen/count_mux_31__N_89[14]                             NET DELAY           0.000                 22.722  1       
+u_clk_gen/count_mux_191__i14/D                               ENDPOINT            0.000                 22.722  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  44      
+u_display/clk                                                NET DELAY           5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i15/CK   u_clk_gen/count_mux_191__i14/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(22.721)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   24.245  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i23/Q  (SLICE_R17C11C)
+Path End         : u_clk_gen/count_mux_191__i20/D  (SLICE_R15C11A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 5
+Delay Ratio      : 81.2% (route), 18.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.245 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  44      
+u_display/clk                                                NET DELAY           5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i23/CK   u_clk_gen/count_mux_191__i22/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i23/CK->u_clk_gen/count_mux_191__i23/Q
+                                          SLICE_R17C11C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
+u_clk_gen/count_mux[23]                                      NET DELAY           3.331                 10.218  2       
+u_clk_gen/i11_4_lut/A->u_clk_gen/i11_4_lut/Z
+                                          SLICE_R15C12D      A0_TO_F0_DELAY      0.449                 10.667  1       
+u_clk_gen/n27                                                NET DELAY           3.146                 13.813  1       
+u_clk_gen/i15_4_lut/B->u_clk_gen/i15_4_lut/Z
+                                          SLICE_R17C12C      A1_TO_F1_DELAY      0.449                 14.262  2       
+u_clk_gen/n1032                                              NET DELAY           2.763                 17.025  2       
+u_clk_gen/i411_4_lut/A->u_clk_gen/i411_4_lut/Z
+                                          SLICE_R17C10C      D0_TO_F0_DELAY      0.476                 17.501  32      
+u_clk_gen/mux_tick_N_187                                     NET DELAY           4.745                 22.246  32      
+u_clk_gen/i445_2_lut/B->u_clk_gen/i445_2_lut/Z
+                                          SLICE_R15C11A      B1_TO_F1_DELAY      0.476                 22.722  1       
+u_clk_gen/count_mux_31__N_89[20]                             NET DELAY           0.000                 22.722  1       
+u_clk_gen/count_mux_191__i20/D                               ENDPOINT            0.000                 22.722  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  44      
+u_display/clk                                                NET DELAY           5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i21/CK   u_clk_gen/count_mux_191__i20/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(22.721)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   24.245  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i23/Q  (SLICE_R17C11C)
+Path End         : u_clk_gen/count_mux_191__i25/D  (SLICE_R15C12C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 5
+Delay Ratio      : 81.2% (route), 18.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.245 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  44      
+u_display/clk                                                NET DELAY           5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i23/CK   u_clk_gen/count_mux_191__i22/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i23/CK->u_clk_gen/count_mux_191__i23/Q
+                                          SLICE_R17C11C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
+u_clk_gen/count_mux[23]                                      NET DELAY           3.331                 10.218  2       
+u_clk_gen/i11_4_lut/A->u_clk_gen/i11_4_lut/Z
+                                          SLICE_R15C12D      A0_TO_F0_DELAY      0.449                 10.667  1       
+u_clk_gen/n27                                                NET DELAY           3.146                 13.813  1       
+u_clk_gen/i15_4_lut/B->u_clk_gen/i15_4_lut/Z
+                                          SLICE_R17C12C      A1_TO_F1_DELAY      0.449                 14.262  2       
+u_clk_gen/n1032                                              NET DELAY           2.763                 17.025  2       
+u_clk_gen/i411_4_lut/A->u_clk_gen/i411_4_lut/Z
+                                          SLICE_R17C10C      D0_TO_F0_DELAY      0.476                 17.501  32      
+u_clk_gen/mux_tick_N_187                                     NET DELAY           4.745                 22.246  32      
+u_clk_gen/i440_2_lut/B->u_clk_gen/i440_2_lut/Z
+                                          SLICE_R15C12C      B0_TO_F0_DELAY      0.476                 22.722  1       
+u_clk_gen/count_mux_31__N_89[25]                             NET DELAY           0.000                 22.722  1       
+u_clk_gen/count_mux_191__i25/D                               ENDPOINT            0.000                 22.722  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  44      
+u_display/clk                                                NET DELAY           5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i25/CK   u_clk_gen/count_mux_191__i24/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(22.721)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   24.245  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i23/Q  (SLICE_R17C11C)
+Path End         : u_clk_gen/count_mux_191__i27/D  (SLICE_R15C12B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 5
+Delay Ratio      : 81.2% (route), 18.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.245 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  44      
+u_display/clk                                                NET DELAY           5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i23/CK   u_clk_gen/count_mux_191__i22/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i23/CK->u_clk_gen/count_mux_191__i23/Q
+                                          SLICE_R17C11C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
+u_clk_gen/count_mux[23]                                      NET DELAY           3.331                 10.218  2       
+u_clk_gen/i11_4_lut/A->u_clk_gen/i11_4_lut/Z
+                                          SLICE_R15C12D      A0_TO_F0_DELAY      0.449                 10.667  1       
+u_clk_gen/n27                                                NET DELAY           3.146                 13.813  1       
+u_clk_gen/i15_4_lut/B->u_clk_gen/i15_4_lut/Z
+                                          SLICE_R17C12C      A1_TO_F1_DELAY      0.449                 14.262  2       
+u_clk_gen/n1032                                              NET DELAY           2.763                 17.025  2       
+u_clk_gen/i411_4_lut/A->u_clk_gen/i411_4_lut/Z
+                                          SLICE_R17C10C      D0_TO_F0_DELAY      0.476                 17.501  32      
+u_clk_gen/mux_tick_N_187                                     NET DELAY           4.745                 22.246  32      
+u_clk_gen/i438_2_lut/B->u_clk_gen/i438_2_lut/Z
+                                          SLICE_R15C12B      B0_TO_F0_DELAY      0.476                 22.722  1       
+u_clk_gen/count_mux_31__N_89[27]                             NET DELAY           0.000                 22.722  1       
+u_clk_gen/count_mux_191__i27/D                               ENDPOINT            0.000                 22.722  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  44      
+u_display/clk                                                NET DELAY           5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i27/CK   u_clk_gen/count_mux_191__i26/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(22.721)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   24.245  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i23/Q  (SLICE_R17C11C)
+Path End         : u_clk_gen/count_mux_191__i29/D  (SLICE_R16C13C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 5
+Delay Ratio      : 81.2% (route), 18.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.245 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  44      
+u_display/clk                                                NET DELAY           5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i23/CK   u_clk_gen/count_mux_191__i22/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i23/CK->u_clk_gen/count_mux_191__i23/Q
+                                          SLICE_R17C11C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
+u_clk_gen/count_mux[23]                                      NET DELAY           3.331                 10.218  2       
+u_clk_gen/i11_4_lut/A->u_clk_gen/i11_4_lut/Z
+                                          SLICE_R15C12D      A0_TO_F0_DELAY      0.449                 10.667  1       
+u_clk_gen/n27                                                NET DELAY           3.146                 13.813  1       
+u_clk_gen/i15_4_lut/B->u_clk_gen/i15_4_lut/Z
+                                          SLICE_R17C12C      A1_TO_F1_DELAY      0.449                 14.262  2       
+u_clk_gen/n1032                                              NET DELAY           2.763                 17.025  2       
+u_clk_gen/i411_4_lut/A->u_clk_gen/i411_4_lut/Z
+                                          SLICE_R17C10C      D0_TO_F0_DELAY      0.476                 17.501  32      
+u_clk_gen/mux_tick_N_187                                     NET DELAY           4.745                 22.246  32      
+u_clk_gen/i436_2_lut/B->u_clk_gen/i436_2_lut/Z
+                                          SLICE_R16C13C      B0_TO_F0_DELAY      0.476                 22.722  1       
+u_clk_gen/count_mux_31__N_89[29]                             NET DELAY           0.000                 22.722  1       
+u_clk_gen/count_mux_191__i29/D                               ENDPOINT            0.000                 22.722  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  44      
+u_display/clk                                                NET DELAY           5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i29/CK   u_clk_gen/count_mux_191__i28/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(22.721)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   24.245  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_scan_190__i0/Q  (SLICE_R13C3A)
+Path End         : u_clk_gen/count_scan_190__i30/D  (SLICE_R13C5D)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 33
+Delay Ratio      : 37.9% (route), 62.1% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.263 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  44      
+u_display/clk                                                NET DELAY               5.499                  5.499  44      
+{u_clk_gen/count_scan_190__i1/CK   u_clk_gen/count_scan_190__i0/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_clk_gen/count_scan_190__i0/CK->u_clk_gen/count_scan_190__i0/Q
+                                          SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
+u_clk_gen/count_scan[0]                                      NET DELAY               2.022                  8.909  2       
+u_clk_gen/count_scan_190_add_4_1/C1->u_clk_gen/count_scan_190_add_4_1/CO1
+                                          SLICE_R12C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+u_clk_gen/n747                                               NET DELAY               0.000                  9.252  2       
+u_clk_gen/count_scan_190_add_4_3/CI0->u_clk_gen/count_scan_190_add_4_3/CO0
+                                          SLICE_R12C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+u_clk_gen/n1896                                              NET DELAY               0.000                  9.529  2       
+u_clk_gen/count_scan_190_add_4_3/CI1->u_clk_gen/count_scan_190_add_4_3/CO1
+                                          SLICE_R12C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+u_clk_gen/n749                                               NET DELAY               0.000                  9.806  2       
+u_clk_gen/count_scan_190_add_4_5/CI0->u_clk_gen/count_scan_190_add_4_5/CO0
+                                          SLICE_R12C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+u_clk_gen/n1899                                              NET DELAY               0.000                 10.083  2       
+u_clk_gen/count_scan_190_add_4_5/CI1->u_clk_gen/count_scan_190_add_4_5/CO1
+                                          SLICE_R12C3C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+u_clk_gen/n751                                               NET DELAY               0.000                 10.360  2       
+u_clk_gen/count_scan_190_add_4_7/CI0->u_clk_gen/count_scan_190_add_4_7/CO0
+                                          SLICE_R12C3D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+u_clk_gen/n1902                                              NET DELAY               0.000                 10.637  2       
+u_clk_gen/count_scan_190_add_4_7/CI1->u_clk_gen/count_scan_190_add_4_7/CO1
+                                          SLICE_R12C3D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+u_clk_gen/n753                                               NET DELAY               0.555                 11.469  2       
+u_clk_gen/count_scan_190_add_4_9/CI0->u_clk_gen/count_scan_190_add_4_9/CO0
+                                          SLICE_R12C4A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+u_clk_gen/n1905                                              NET DELAY               0.000                 11.746  2       
+u_clk_gen/count_scan_190_add_4_9/CI1->u_clk_gen/count_scan_190_add_4_9/CO1
+                                          SLICE_R12C4A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+u_clk_gen/n755                                               NET DELAY               0.000                 12.023  2       
+u_clk_gen/count_scan_190_add_4_11/CI0->u_clk_gen/count_scan_190_add_4_11/CO0
+                                          SLICE_R12C4B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+u_clk_gen/n1908                                              NET DELAY               0.000                 12.300  2       
+u_clk_gen/count_scan_190_add_4_11/CI1->u_clk_gen/count_scan_190_add_4_11/CO1
+                                          SLICE_R12C4B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+u_clk_gen/n757                                               NET DELAY               0.000                 12.577  2       
+u_clk_gen/count_scan_190_add_4_13/CI0->u_clk_gen/count_scan_190_add_4_13/CO0
+                                          SLICE_R12C4C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+u_clk_gen/n1911                                              NET DELAY               0.000                 12.854  2       
+u_clk_gen/count_scan_190_add_4_13/CI1->u_clk_gen/count_scan_190_add_4_13/CO1
+                                          SLICE_R12C4C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+u_clk_gen/n759                                               NET DELAY               0.000                 13.131  2       
+u_clk_gen/count_scan_190_add_4_15/CI0->u_clk_gen/count_scan_190_add_4_15/CO0
+                                          SLICE_R12C4D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+u_clk_gen/n1914                                              NET DELAY               0.000                 13.408  2       
+u_clk_gen/count_scan_190_add_4_15/CI1->u_clk_gen/count_scan_190_add_4_15/CO1
+                                          SLICE_R12C4D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+u_clk_gen/n761                                               NET DELAY               0.555                 14.240  2       
+u_clk_gen/count_scan_190_add_4_17/CI0->u_clk_gen/count_scan_190_add_4_17/CO0
+                                          SLICE_R12C5A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+u_clk_gen/n1917                                              NET DELAY               0.000                 14.517  2       
+u_clk_gen/count_scan_190_add_4_17/CI1->u_clk_gen/count_scan_190_add_4_17/CO1
+                                          SLICE_R12C5A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+u_clk_gen/n763                                               NET DELAY               0.000                 14.794  2       
+u_clk_gen/count_scan_190_add_4_19/CI0->u_clk_gen/count_scan_190_add_4_19/CO0
+                                          SLICE_R12C5B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+u_clk_gen/n1920                                              NET DELAY               0.000                 15.071  2       
+u_clk_gen/count_scan_190_add_4_19/CI1->u_clk_gen/count_scan_190_add_4_19/CO1
+                                          SLICE_R12C5B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+u_clk_gen/n765                                               NET DELAY               0.000                 15.348  2       
+u_clk_gen/count_scan_190_add_4_21/CI0->u_clk_gen/count_scan_190_add_4_21/CO0
+                                          SLICE_R12C5C       CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+u_clk_gen/n1923                                              NET DELAY               0.000                 15.625  2       
+u_clk_gen/count_scan_190_add_4_21/CI1->u_clk_gen/count_scan_190_add_4_21/CO1
+                                          SLICE_R12C5C       CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+u_clk_gen/n767                                               NET DELAY               0.000                 15.902  2       
+u_clk_gen/count_scan_190_add_4_23/CI0->u_clk_gen/count_scan_190_add_4_23/CO0
+                                          SLICE_R12C5D       CIN0_TO_COUT0_DELAY     0.277                 16.179  2       
+u_clk_gen/n1926                                              NET DELAY               0.000                 16.179  2       
+u_clk_gen/count_scan_190_add_4_23/CI1->u_clk_gen/count_scan_190_add_4_23/CO1
+                                          SLICE_R12C5D       CIN1_TO_COUT1_DELAY     0.277                 16.456  2       
+u_clk_gen/n769                                               NET DELAY               0.555                 17.011  2       
+u_clk_gen/count_scan_190_add_4_25/CI0->u_clk_gen/count_scan_190_add_4_25/CO0
+                                          SLICE_R12C6A       CIN0_TO_COUT0_DELAY     0.277                 17.288  2       
+u_clk_gen/n1929                                              NET DELAY               0.000                 17.288  2       
+u_clk_gen/count_scan_190_add_4_25/CI1->u_clk_gen/count_scan_190_add_4_25/CO1
+                                          SLICE_R12C6A       CIN1_TO_COUT1_DELAY     0.277                 17.565  2       
+u_clk_gen/n771                                               NET DELAY               0.000                 17.565  2       
+u_clk_gen/count_scan_190_add_4_27/CI0->u_clk_gen/count_scan_190_add_4_27/CO0
+                                          SLICE_R12C6B       CIN0_TO_COUT0_DELAY     0.277                 17.842  2       
+u_clk_gen/n1932                                              NET DELAY               0.000                 17.842  2       
+u_clk_gen/count_scan_190_add_4_27/CI1->u_clk_gen/count_scan_190_add_4_27/CO1
+                                          SLICE_R12C6B       CIN1_TO_COUT1_DELAY     0.277                 18.119  2       
+u_clk_gen/n773                                               NET DELAY               0.000                 18.119  2       
+u_clk_gen/count_scan_190_add_4_29/CI0->u_clk_gen/count_scan_190_add_4_29/CO0
+                                          SLICE_R12C6C       CIN0_TO_COUT0_DELAY     0.277                 18.396  2       
+u_clk_gen/n1935                                              NET DELAY               0.000                 18.396  2       
+u_clk_gen/count_scan_190_add_4_29/CI1->u_clk_gen/count_scan_190_add_4_29/CO1
+                                          SLICE_R12C6C       CIN1_TO_COUT1_DELAY     0.277                 18.673  2       
+u_clk_gen/n775                                               NET DELAY               0.000                 18.673  2       
+u_clk_gen/count_scan_190_add_4_31/CI0->u_clk_gen/count_scan_190_add_4_31/CO0
+                                          SLICE_R12C6D       CIN0_TO_COUT0_DELAY     0.277                 18.950  2       
+u_clk_gen/n1938                                              NET DELAY               0.661                 19.611  2       
+u_clk_gen/count_scan_190_add_4_31/D1->u_clk_gen/count_scan_190_add_4_31/S1
+                                          SLICE_R12C6D       D1_TO_F1_DELAY          0.449                 20.060  1       
+u_clk_gen/n133_adj_192[30]                                   NET DELAY               2.168                 22.228  1       
+u_clk_gen/i467_2_lut/A->u_clk_gen/i467_2_lut/Z
+                                          SLICE_R13C5D       D1_TO_F1_DELAY          0.476                 22.704  1       
+u_clk_gen/count_scan_31__N_25[30]                            NET DELAY               0.000                 22.704  1       
+u_clk_gen/count_scan_190__i30/D                              ENDPOINT                0.000                 22.704  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  44      
+u_display/clk                                                NET DELAY               5.499                 47.165  44      
+{u_clk_gen/count_scan_190__i31/CK   u_clk_gen/count_scan_190__i30/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(22.703)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       24.263  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i0/Q  (SLICE_R15C9A)
+Path End         : u_clk_gen/count_mux_191__i30/D  (SLICE_R16C13B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 33
+Delay Ratio      : 37.9% (route), 62.1% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.263 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  44      
+u_display/clk                                                NET DELAY               5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i0/CK   u_clk_gen/count_mux_191__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i0/CK->u_clk_gen/count_mux_191__i0/Q
+                                          SLICE_R15C9A       CLK_TO_Q0_DELAY         1.388                  6.887  2       
+u_clk_gen/count_mux[0]                                       NET DELAY               2.022                  8.909  2       
+u_clk_gen/count_mux_191_add_4_1/C1->u_clk_gen/count_mux_191_add_4_1/CO1
+                                          SLICE_R16C9A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+u_clk_gen/n780                                               NET DELAY               0.000                  9.252  2       
+u_clk_gen/count_mux_191_add_4_3/CI0->u_clk_gen/count_mux_191_add_4_3/CO0
+                                          SLICE_R16C9B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+u_clk_gen/n1848                                              NET DELAY               0.000                  9.529  2       
+u_clk_gen/count_mux_191_add_4_3/CI1->u_clk_gen/count_mux_191_add_4_3/CO1
+                                          SLICE_R16C9B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+u_clk_gen/n782                                               NET DELAY               0.000                  9.806  2       
+u_clk_gen/count_mux_191_add_4_5/CI0->u_clk_gen/count_mux_191_add_4_5/CO0
+                                          SLICE_R16C9C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+u_clk_gen/n1851                                              NET DELAY               0.000                 10.083  2       
+u_clk_gen/count_mux_191_add_4_5/CI1->u_clk_gen/count_mux_191_add_4_5/CO1
+                                          SLICE_R16C9C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+u_clk_gen/n784                                               NET DELAY               0.000                 10.360  2       
+u_clk_gen/count_mux_191_add_4_7/CI0->u_clk_gen/count_mux_191_add_4_7/CO0
+                                          SLICE_R16C9D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+u_clk_gen/n1854                                              NET DELAY               0.000                 10.637  2       
+u_clk_gen/count_mux_191_add_4_7/CI1->u_clk_gen/count_mux_191_add_4_7/CO1
+                                          SLICE_R16C9D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+u_clk_gen/n786                                               NET DELAY               0.555                 11.469  2       
+u_clk_gen/count_mux_191_add_4_9/CI0->u_clk_gen/count_mux_191_add_4_9/CO0
+                                          SLICE_R16C10A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+u_clk_gen/n1857                                              NET DELAY               0.000                 11.746  2       
+u_clk_gen/count_mux_191_add_4_9/CI1->u_clk_gen/count_mux_191_add_4_9/CO1
+                                          SLICE_R16C10A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+u_clk_gen/n788                                               NET DELAY               0.000                 12.023  2       
+u_clk_gen/count_mux_191_add_4_11/CI0->u_clk_gen/count_mux_191_add_4_11/CO0
+                                          SLICE_R16C10B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+u_clk_gen/n1860                                              NET DELAY               0.000                 12.300  2       
+u_clk_gen/count_mux_191_add_4_11/CI1->u_clk_gen/count_mux_191_add_4_11/CO1
+                                          SLICE_R16C10B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+u_clk_gen/n790                                               NET DELAY               0.000                 12.577  2       
+u_clk_gen/count_mux_191_add_4_13/CI0->u_clk_gen/count_mux_191_add_4_13/CO0
+                                          SLICE_R16C10C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+u_clk_gen/n1863                                              NET DELAY               0.000                 12.854  2       
+u_clk_gen/count_mux_191_add_4_13/CI1->u_clk_gen/count_mux_191_add_4_13/CO1
+                                          SLICE_R16C10C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+u_clk_gen/n792                                               NET DELAY               0.000                 13.131  2       
+u_clk_gen/count_mux_191_add_4_15/CI0->u_clk_gen/count_mux_191_add_4_15/CO0
+                                          SLICE_R16C10D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+u_clk_gen/n1866                                              NET DELAY               0.000                 13.408  2       
+u_clk_gen/count_mux_191_add_4_15/CI1->u_clk_gen/count_mux_191_add_4_15/CO1
+                                          SLICE_R16C10D      CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+u_clk_gen/n794                                               NET DELAY               0.555                 14.240  2       
+u_clk_gen/count_mux_191_add_4_17/CI0->u_clk_gen/count_mux_191_add_4_17/CO0
+                                          SLICE_R16C11A      CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+u_clk_gen/n1869                                              NET DELAY               0.000                 14.517  2       
+u_clk_gen/count_mux_191_add_4_17/CI1->u_clk_gen/count_mux_191_add_4_17/CO1
+                                          SLICE_R16C11A      CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+u_clk_gen/n796                                               NET DELAY               0.000                 14.794  2       
+u_clk_gen/count_mux_191_add_4_19/CI0->u_clk_gen/count_mux_191_add_4_19/CO0
+                                          SLICE_R16C11B      CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+u_clk_gen/n1872                                              NET DELAY               0.000                 15.071  2       
+u_clk_gen/count_mux_191_add_4_19/CI1->u_clk_gen/count_mux_191_add_4_19/CO1
+                                          SLICE_R16C11B      CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+u_clk_gen/n798                                               NET DELAY               0.000                 15.348  2       
+u_clk_gen/count_mux_191_add_4_21/CI0->u_clk_gen/count_mux_191_add_4_21/CO0
+                                          SLICE_R16C11C      CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+u_clk_gen/n1875                                              NET DELAY               0.000                 15.625  2       
+u_clk_gen/count_mux_191_add_4_21/CI1->u_clk_gen/count_mux_191_add_4_21/CO1
+                                          SLICE_R16C11C      CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+u_clk_gen/n800                                               NET DELAY               0.000                 15.902  2       
+u_clk_gen/count_mux_191_add_4_23/CI0->u_clk_gen/count_mux_191_add_4_23/CO0
+                                          SLICE_R16C11D      CIN0_TO_COUT0_DELAY     0.277                 16.179  2       
+u_clk_gen/n1878                                              NET DELAY               0.000                 16.179  2       
+u_clk_gen/count_mux_191_add_4_23/CI1->u_clk_gen/count_mux_191_add_4_23/CO1
+                                          SLICE_R16C11D      CIN1_TO_COUT1_DELAY     0.277                 16.456  2       
+u_clk_gen/n802                                               NET DELAY               0.555                 17.011  2       
+u_clk_gen/count_mux_191_add_4_25/CI0->u_clk_gen/count_mux_191_add_4_25/CO0
+                                          SLICE_R16C12A      CIN0_TO_COUT0_DELAY     0.277                 17.288  2       
+u_clk_gen/n1881                                              NET DELAY               0.000                 17.288  2       
+u_clk_gen/count_mux_191_add_4_25/CI1->u_clk_gen/count_mux_191_add_4_25/CO1
+                                          SLICE_R16C12A      CIN1_TO_COUT1_DELAY     0.277                 17.565  2       
+u_clk_gen/n804                                               NET DELAY               0.000                 17.565  2       
+u_clk_gen/count_mux_191_add_4_27/CI0->u_clk_gen/count_mux_191_add_4_27/CO0
+                                          SLICE_R16C12B      CIN0_TO_COUT0_DELAY     0.277                 17.842  2       
+u_clk_gen/n1884                                              NET DELAY               0.000                 17.842  2       
+u_clk_gen/count_mux_191_add_4_27/CI1->u_clk_gen/count_mux_191_add_4_27/CO1
+                                          SLICE_R16C12B      CIN1_TO_COUT1_DELAY     0.277                 18.119  2       
+u_clk_gen/n806                                               NET DELAY               0.000                 18.119  2       
+u_clk_gen/count_mux_191_add_4_29/CI0->u_clk_gen/count_mux_191_add_4_29/CO0
+                                          SLICE_R16C12C      CIN0_TO_COUT0_DELAY     0.277                 18.396  2       
+u_clk_gen/n1887                                              NET DELAY               0.000                 18.396  2       
+u_clk_gen/count_mux_191_add_4_29/CI1->u_clk_gen/count_mux_191_add_4_29/CO1
+                                          SLICE_R16C12C      CIN1_TO_COUT1_DELAY     0.277                 18.673  2       
+u_clk_gen/n808                                               NET DELAY               0.000                 18.673  2       
+u_clk_gen/count_mux_191_add_4_31/CI0->u_clk_gen/count_mux_191_add_4_31/CO0
+                                          SLICE_R16C12D      CIN0_TO_COUT0_DELAY     0.277                 18.950  2       
+u_clk_gen/n1890                                              NET DELAY               0.661                 19.611  2       
+u_clk_gen/count_mux_191_add_4_31/D1->u_clk_gen/count_mux_191_add_4_31/S1
+                                          SLICE_R16C12D      D1_TO_F1_DELAY          0.449                 20.060  1       
+u_clk_gen/n133[30]                                           NET DELAY               2.168                 22.228  1       
+u_clk_gen/i435_2_lut/A->u_clk_gen/i435_2_lut/Z
+                                          SLICE_R16C13B      D1_TO_F1_DELAY          0.476                 22.704  1       
+u_clk_gen/count_mux_31__N_89[30]                             NET DELAY               0.000                 22.704  1       
+u_clk_gen/count_mux_191__i30/D                               ENDPOINT                0.000                 22.704  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  44      
+u_display/clk                                                NET DELAY               5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i31/CK   u_clk_gen/count_mux_191__i30/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(22.703)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       24.263  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/count_mux_191__i23/Q  (SLICE_R17C11C)
+Path End         : u_clk_gen/count_mux_191__i28/D  (SLICE_R16C13C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 5
+Delay Ratio      : 81.1% (route), 18.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 24.298 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  44      
+u_display/clk                                                NET DELAY           5.499                  5.499  44      
+{u_clk_gen/count_mux_191__i23/CK   u_clk_gen/count_mux_191__i22/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+u_clk_gen/count_mux_191__i23/CK->u_clk_gen/count_mux_191__i23/Q
+                                          SLICE_R17C11C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
+u_clk_gen/count_mux[23]                                      NET DELAY           3.331                 10.218  2       
+u_clk_gen/i11_4_lut/A->u_clk_gen/i11_4_lut/Z
+                                          SLICE_R15C12D      A0_TO_F0_DELAY      0.449                 10.667  1       
+u_clk_gen/n27                                                NET DELAY           3.146                 13.813  1       
+u_clk_gen/i15_4_lut/B->u_clk_gen/i15_4_lut/Z
+                                          SLICE_R17C12C      A1_TO_F1_DELAY      0.449                 14.262  2       
+u_clk_gen/n1032                                              NET DELAY           2.763                 17.025  2       
+u_clk_gen/i411_4_lut/A->u_clk_gen/i411_4_lut/Z
+                                          SLICE_R17C10C      D0_TO_F0_DELAY      0.476                 17.501  32      
+u_clk_gen/mux_tick_N_187                                     NET DELAY           4.692                 22.193  32      
+u_clk_gen/i437_2_lut/B->u_clk_gen/i437_2_lut/Z
+                                          SLICE_R16C13C      C1_TO_F1_DELAY      0.476                 22.669  1       
+u_clk_gen/count_mux_31__N_89[28]                             NET DELAY           0.000                 22.669  1       
+u_clk_gen/count_mux_191__i28/D                               ENDPOINT            0.000                 22.669  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  44      
+u_display/clk                                                NET DELAY           5.499                 47.165  44      
+{u_clk_gen/count_mux_191__i29/CK   u_clk_gen/count_mux_191__i28/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(22.668)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   24.298  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
+===============================================================
+3  Hold at Speed Grade m Corner at -40 Degrees
+===============================================================
+
+3.1  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+u_display/active_digit/D                 |    1.743 ns 
+u_keypad/col_idx_192__i0/D               |    1.743 ns 
+u_keypad/key_code__i3/D                  |    1.743 ns 
+key_digit_older_i0_i1/D                  |    1.743 ns 
+key_digit_older_i0_i0/D                  |    1.743 ns 
+key_digit_older_i0_i3/D                  |    1.743 ns 
+key_digit_older_i0_i2/D                  |    1.743 ns 
+u_keypad/col_idx_192__i1/D               |    1.913 ns 
+u_keypad/key_code__i2/D                  |    1.913 ns 
+u_keypad/key_valid_c/D                   |    1.913 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.2  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_display/active_digit/Q  (SLICE_R18C3C)
+Path End         : u_display/active_digit/D  (SLICE_R18C3C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+u_display/active_digit/CK                                    CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_display/active_digit/CK->u_display/active_digit/Q
+                                          SLICE_R18C3C       CLK_TO_Q1_DELAY  0.779                  3.863  7       
+u_display/digit_sel_c                                        NET DELAY        0.712                  4.575  7       
+u_display/i15_2_lut/A->u_display/i15_2_lut/Z
+                                          SLICE_R18C3C       D1_TO_F1_DELAY   0.252                  4.827  1       
+u_display/digit_sel_c_N_181                                  NET DELAY        0.000                  4.827  1       
+u_display/active_digit/D                                     ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+u_display/active_digit/CK                                    CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/scan_tick_c/Q  (SLICE_R14C4A)
+Path End         : u_keypad/col_idx_192__i0/D  (SLICE_R14C4B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_clk_gen/scan_tick_c/CK   u_keypad/key_valid_c/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_clk_gen/scan_tick_c/CK->u_clk_gen/scan_tick_c/Q
+                                          SLICE_R14C4A       CLK_TO_Q0_DELAY  0.779                  3.863  7       
+u_keypad/scan_tick                                           NET DELAY        0.712                  4.575  7       
+u_keypad/i636_2_lut_4_lut/C->u_keypad/i636_2_lut_4_lut/Z
+                                          SLICE_R14C4B       D0_TO_F0_DELAY   0.252                  4.827  1       
+u_keypad/col_idx_1__N_157[0]                                 NET DELAY        0.000                  4.827  1       
+u_keypad/col_idx_192__i0/D                                   ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/col_idx_192__i0/CK   u_keypad/col_idx_192__i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_keypad/col_idx_192__i1/Q  (SLICE_R14C4B)
+Path End         : u_keypad/key_code__i3/D  (SLICE_R15C3A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/col_idx_192__i0/CK   u_keypad/col_idx_192__i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_keypad/col_idx_192__i1/CK->u_keypad/col_idx_192__i1/Q
+                                          SLICE_R14C4B       CLK_TO_Q1_DELAY  0.779                  3.863  7       
+u_keypad/col_idx[1]                                          NET DELAY        0.712                  4.575  7       
+u_keypad/i465_2_lut/A->u_keypad/i465_2_lut/Z
+                                          SLICE_R15C3A       D0_TO_F0_DELAY   0.252                  4.827  1       
+u_keypad/n456                                                NET DELAY        0.000                  4.827  1       
+u_keypad/key_code__i3/D                                      ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/key_code__i3/CK   u_keypad/key_code__i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key_digit_recent_i0_i1/Q  (SLICE_R17C3A)
+Path End         : key_digit_older_i0_i1/D  (SLICE_R17C3B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_recent_i0_i0/CK   key_digit_recent_i0_i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key_digit_recent_i0_i1/CK->key_digit_recent_i0_i1/Q
+                                          SLICE_R17C3A       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+u_display/key_digit_recent[1]                                NET DELAY        0.712                  4.575  2       
+SLICE_37/D0->SLICE_37/F0                  SLICE_R17C3B       D0_TO_F0_DELAY   0.252                  4.827  1       
+key_digit_recent[1].sig_003.FeedThruLUT                      NET DELAY        0.000                  4.827  1       
+key_digit_older_i0_i1/D                                      ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_older_i0_i1/CK   key_digit_older_i0_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key_digit_recent_i0_i0/Q  (SLICE_R17C3A)
+Path End         : key_digit_older_i0_i0/D  (SLICE_R17C3B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_recent_i0_i0/CK   key_digit_recent_i0_i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key_digit_recent_i0_i0/CK->key_digit_recent_i0_i0/Q
+                                          SLICE_R17C3A       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+u_display/key_digit_recent[0]                                NET DELAY        0.712                  4.575  2       
+SLICE_37/D1->SLICE_37/F1                  SLICE_R17C3B       D1_TO_F1_DELAY   0.252                  4.827  1       
+key_digit_recent[0].sig_004.FeedThruLUT                      NET DELAY        0.000                  4.827  1       
+key_digit_older_i0_i0/D                                      ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_older_i0_i1/CK   key_digit_older_i0_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key_digit_recent_i0_i3/Q  (SLICE_R17C3D)
+Path End         : key_digit_older_i0_i3/D  (SLICE_R17C3C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_recent_i0_i3/CK   key_digit_recent_i0_i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key_digit_recent_i0_i3/CK->key_digit_recent_i0_i3/Q
+                                          SLICE_R17C3D       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+u_display/key_digit_recent[3]                                NET DELAY        0.712                  4.575  2       
+SLICE_34/D0->SLICE_34/F0                  SLICE_R17C3C       D0_TO_F0_DELAY   0.252                  4.827  1       
+key_digit_recent[3].sig_000.FeedThruLUT                      NET DELAY        0.000                  4.827  1       
+key_digit_older_i0_i3/D                                      ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_older_i0_i3/CK   key_digit_older_i0_i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : key_digit_recent_i0_i2/Q  (SLICE_R17C3D)
+Path End         : key_digit_older_i0_i2/D  (SLICE_R17C3C)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_recent_i0_i3/CK   key_digit_recent_i0_i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+key_digit_recent_i0_i2/CK->key_digit_recent_i0_i2/Q
+                                          SLICE_R17C3D       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+u_display/key_digit_recent[2]                                NET DELAY        0.712                  4.575  2       
+SLICE_34/D1->SLICE_34/F1                  SLICE_R17C3C       D1_TO_F1_DELAY   0.252                  4.827  1       
+key_digit_recent[2].sig_001.FeedThruLUT                      NET DELAY        0.000                  4.827  1       
+key_digit_older_i0_i2/D                                      ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{key_digit_older_i0_i3/CK   key_digit_older_i0_i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_keypad/col_idx_192__i1/Q  (SLICE_R14C4B)
+Path End         : u_keypad/col_idx_192__i1/D  (SLICE_R14C4B)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.913 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/col_idx_192__i0/CK   u_keypad/col_idx_192__i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_keypad/col_idx_192__i1/CK->u_keypad/col_idx_192__i1/Q
+                                          SLICE_R14C4B       CLK_TO_Q1_DELAY  0.779                  3.863  7       
+u_keypad/col_idx[1]                                          NET DELAY        0.882                  4.745  7       
+u_keypad/i644_3_lut/A->u_keypad/i644_3_lut/Z
+                                          SLICE_R14C4B       C1_TO_F1_DELAY   0.252                  4.997  1       
+u_keypad/col_idx_1__N_157[1]                                 NET DELAY        0.000                  4.997  1       
+u_keypad/col_idx_192__i1/D                                   ENDPOINT         0.000                  4.997  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/col_idx_192__i0/CK   u_keypad/col_idx_192__i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.997  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.913  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_keypad/col_idx_192__i0/Q  (SLICE_R14C4B)
+Path End         : u_keypad/key_code__i2/D  (SLICE_R15C3A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.913 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/col_idx_192__i0/CK   u_keypad/col_idx_192__i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_keypad/col_idx_192__i0/CK->u_keypad/col_idx_192__i0/Q
+                                          SLICE_R14C4B       CLK_TO_Q0_DELAY  0.779                  3.863  8       
+u_keypad/col_idx[0]                                          NET DELAY        0.882                  4.745  8       
+u_keypad/i497_2_lut/A->u_keypad/i497_2_lut/Z
+                                          SLICE_R15C3A       C1_TO_F1_DELAY   0.252                  4.997  1       
+u_keypad/n458                                                NET DELAY        0.000                  4.997  1       
+u_keypad/key_code__i2/D                                      ENDPOINT         0.000                  4.997  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_keypad/key_code__i3/CK   u_keypad/key_code__i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.997  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.913  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_clk_gen/scan_tick_c/Q  (SLICE_R14C4A)
+Path End         : u_keypad/key_valid_c/D  (SLICE_R14C4A)
+Source Clock     : clk (R)
+Destination Clock: clk (R)
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.913 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_clk_gen/scan_tick_c/CK   u_keypad/key_valid_c/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_clk_gen/scan_tick_c/CK->u_clk_gen/scan_tick_c/Q
+                                          SLICE_R14C4A       CLK_TO_Q0_DELAY  0.779                  3.863  7       
+u_keypad/scan_tick                                           NET DELAY        0.882                  4.745  7       
+u_clk_gen.SLICE_102/C1->u_clk_gen.SLICE_102/F1
+                                          SLICE_R14C4A       C1_TO_F1_DELAY   0.252                  4.997  1       
+u_keypad.n457$n2                                             NET DELAY        0.000                  4.997  1       
+u_keypad/key_valid_c/D                                       ENDPOINT         0.000                  4.997  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc_inst/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  45      
+u_display/clk                                                NET DELAY        3.084                  3.084  45      
+{u_clk_gen/scan_tick_c/CK   u_keypad/key_valid_c/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.997  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.913  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+

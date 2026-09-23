@@ -59,5 +59,7 @@ module synchronizer_tb();
 		else
 			$display("FAIL output is incorrect at %t", $time);
 
+		#2 $stop;
+
     end
 endmodule

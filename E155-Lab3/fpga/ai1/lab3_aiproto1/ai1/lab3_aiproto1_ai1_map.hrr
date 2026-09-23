@@ -1,0 +1,40 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        200        100.0
+                               LUTGATE	        132        100.0
+                                LUTCCU	         68        100.0
+                                 IOBUF	         18        100.0
+                                PFUREG	         83        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                               clk_gen	          1        77.5
+                        keypad_scanner	          1         7.5
+                         seven_seg_mux	          1         7.0
+---------------------------------------------------
+Report for cell clk_gen
+   Instance path: top/u_clk_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        155        77.5
+                               LUTGATE	         87        65.9
+                                LUTCCU	         68        100.0
+                                PFUREG	         66        79.5
+---------------------------------------------------
+Report for cell keypad_scanner
+   Instance path: top/u_keypad
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         15         7.5
+                               LUTGATE	         15        11.4
+                                PFUREG	          8         9.6
+---------------------------------------------------
+Report for cell seven_seg_mux
+   Instance path: top/u_display
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         14         7.0
+                               LUTGATE	         14        10.6
+                                PFUREG	          1         1.2

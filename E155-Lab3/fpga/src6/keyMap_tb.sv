@@ -22,46 +22,46 @@ module keyMap_tb();
         reset = 1'b1; 
 
         rows = 4'b1000;
-        cols = 4'b0010;
-        #200
+        cols = 4'b1101;
+        #210
         assert(keyMap == 16'b0010000000000000)
             $display("PASS keyMap is correct at %t", $time);
         else
             $display("FAIL keyMap is incorrect at %t", $time);
 
         rows = 4'b0100;
-        cols = 4'b0100;
-        #200
+        cols = 4'b1011;
+        #250
         assert(keyMap == 16'b0010010000000000)
             $display("PASS keyMap is correct at %t", $time);
         else
             $display("FAIL keyMap is incorrect at %t", $time);
 
         rows = 4'b0010;
-        cols = 4'b1000;
-        #200
+        cols = 4'b0111;
+        #250
         assert(keyMap == 16'b0010010010000000)
             $display("PASS keyMap is correct at %t", $time);
         else
             $display("FAIL keyMap is incorrect at %t", $time);
 
         rows = 4'b0001;
-        cols = 4'b1010;
-        #200
+        cols = 4'b0101;
+        #250
         assert(keyMap == 16'b0010010010001010)
             $display("PASS keyMap is correct at %t", $time);
         else
             $display("FAIL keyMap is incorrect at %t", $time);
-        #200
+        #250
 
         // toggle reset
-        reset = 1'b1;
+        reset = 1'b0;
         #4
         assert(keyMap == 16'b0000000000000000)
             $display("PASS keyMap is reset at %t", $time);
         else
             $display("FAIL keyMap is not reset at %t", $time);
-		#4 $stop;
+		#250 $stop;
     end
 
 endmodule
