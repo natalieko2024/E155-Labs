@@ -3,10 +3,10 @@
 
 module flipFlop_tb();
 
-    logic clk, reset;
+    logic clk, reset, enable;
     logic [1:0] d, q;
 
-    flipFlop #(.WIDTH(2)) dut (clk, reset, d, q);
+    flipFlop #(.WIDTH(2)) dut (clk, reset, enable, d, q);
 
     always begin
 		clk = 0; 
@@ -64,6 +64,7 @@ module flipFlop_tb();
             $display("PASS output is correct after reset at %t", $time);
 		else
 			$display("FAIL output is incorrect after reset at %t", $time);
+		#4 $stop;
     end
 
 endmodule

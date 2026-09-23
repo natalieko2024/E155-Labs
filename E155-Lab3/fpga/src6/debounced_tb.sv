@@ -94,7 +94,7 @@ module debounced_tb();
         else
             $display("FAIL output is still debounced at %t", $time);
         #2
-
+		$stop;
     end
 
 endmodule
