@@ -2,7 +2,7 @@ module keyMap(input clk, reset,
                 input logic [3:0] rows, cols,
                 output logic [15:0] keyMap);
 
-	logic badClk, sample0, sample1, sample2, sample3;
+	logic badClk, sample0;
 	logic [8:0] count;
 
 	// Make the keymap
