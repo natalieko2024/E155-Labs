@@ -27,8 +27,6 @@ int main(void) {
     GPIOA->PUPDR |= (0b01 << 2*gpioPinOffset(ENCODER_B_PIN)); // Set PA9 as pull-up (PUPD9 = 01)
 
     // Initialize timers
-    //RCC->APB1ENR1 |= (1 << 0); // TIM2EN
-    //initTIM(SPEED_TIM, 4e6);
     RCC->APB2ENR |= (0b01 << 16); // TIM15EN
     initTIM(PRINT_TIM, 10000);
 
