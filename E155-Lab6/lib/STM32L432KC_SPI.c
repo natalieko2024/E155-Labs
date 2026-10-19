@@ -6,46 +6,65 @@
 
 #include "STM32L432KC_SPI.h"
 #include "STM32L432KC_GPIO.h"
-#include "STM32L432KC_RCC.h"
+#include "stm32l432xx.h"
+#include "main.h"
 
 void initSPI(int br, int cpol, int cpha) {
     // Configure GPIO pins
-    gpioEnable(GPIO_PORT_A);
-    pinMode(MOSI_PIN, GPIO_OUTPUT);
-    pinMode(MISO_PIN, GPIO_INPUT);
-    pinMode(SCK_PIN, GPIO_OUTPUT);
+    pinMode(MOSI_PIN, GPIO_ALT);
+    pinMode(MISO_PIN, GPIO_ALT);
+    pinMode(SCK_PIN, GPIO_ALT);
+    pinMode(CE_PIN, GPIO_OUTPUT);
 
-    // Write to SPI_CR1 register
-    // Configure serial clock baud rate
-    SPI1->CR1 &= ~(0b111 << 3);
-    SPI1->CR1 |= (br << 3);
-    // Configure CPOL and CPHA
-    SPI1->CR1 &= ~(0b1 << 1);
-    SPI1->CR1 |= (cpol << 1);
-    SPI1->CR1 &= ~(0b1 << 0);
-    SPI1->CR1 |= (cpha << 0);
-    // Full duplex single master single slave
-    SPI1->CR1 &= ~(0b1 << 10);
-    SPI1->CR1 |= (0b1 << 10);
-    // LSBFIRST bit defines the frame format - data transmitted MSB first
-    SPI1->CR1 &= ~(0b1 << 7);
-    // Hardware NSS management (since MCU is master)
-    SPI1->CR1 &= ~(0b1 << 9);
-    SPI1->CR1 &= ~(0b1 << 8);   //SSI should be 1 because we are master and 0 triggers interrupt
-    SPI1->CR1 |= (0b1 << 8);
-    SPI1->CR2 &= ~(0b1 << 2);
-    SPI1->CR2 |= (0b1 << 2);
-    // MSTR bit
-    SPI1->CR1 &= ~(0b1 << 2);
-    SPI1->CR1 |= (0b1 << 2);
+    GPIOB->AFR[0] |=_VAL2FLD(GPIO_AFRL_AFSEL3, 0b101);
+    GPIOB->AFR[0] |=_VAL2FLD(GPIO_AFRL_AFSEL4, 0b101);
+    GPIOB->AFR[0] |=_VAL2FLD(GPIO_AFRL_AFSEL5, 0b101);
 
-    // Write to SPI_CR2 register
-    // Set DS, higher data length = more accurate
-    SPI1->CR2 &= ~(0b1111 << 8);
-    SPI1->CR2 |= (0b1011 << 8);
-    // Set FRXTH to 1
-    SPI1->CR2 &= ~(0b1 << 12);
-    SPI1->CR2 |= (0b1 << 12);
+    SPI1->CR1 = 0;
+
+    SPI1->CR1 |= _VAL2FLD(SPI_CR1_BR, br);
+    SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPOL, cpol);
+    SPI1->CR1 |= _VAL2FLD(SPI_CR1_CPHA, cpha);
+
+    SPI1->CR1 |= _VAL2FLD(SPI_CR1_MSTR, 1);
+
+    SPI1->CR2 |= _VAL2FLD(SPI_CR2_DS, 0b0111);
+    SPI1->CR2 |= _VAL2FLD(SPI_CR2_SSOE, 1);
+    SPI1->CR2 |= _VAL2FLD(SPI_CR2_FRXTH, 1);
+
+    SPI1->CR1 |= _VAL2FLD(SPI_CR1_SPE, 1);
+
+    //// Write to SPI_CR1 register
+    //// Configure serial clock baud rate
+    //SPI1->CR1 &= ~(0b111 << 3);
+    //SPI1->CR1 |= (br << 3);
+    //// Configure CPOL and CPHA
+    //SPI1->CR1 &= ~(0b1 << 1);
+    //SPI1->CR1 |= (cpol << 1);
+    //SPI1->CR1 &= ~(0b1 << 0);
+    //SPI1->CR1 |= (cpha << 0);
+    //// Full duplex single master single slave
+    //SPI1->CR1 &= ~(0b1 << 10);
+    //SPI1->CR1 |= (0b1 << 10);
+    //// LSBFIRST bit defines the frame format - data transmitted MSB first
+    //SPI1->CR1 &= ~(0b1 << 7);
+    //// Hardware NSS management (since MCU is master)
+    //SPI1->CR1 &= ~(0b1 << 9);
+    //SPI1->CR1 &= ~(0b1 << 8);   //SSI should be 1 because we are master and 0 triggers interrupt
+    //SPI1->CR1 |= (0b1 << 8);
+    //SPI1->CR2 &= ~(0b1 << 2);
+    //SPI1->CR2 |= (0b1 << 2);
+    //// MSTR bit
+    //SPI1->CR1 &= ~(0b1 << 2);
+    //SPI1->CR1 |= (0b1 << 2);
+
+    //// Write to SPI_CR2 register
+    //// Set DS, higher data length = more accurate
+    //SPI1->CR2 &= ~(0b1111 << 8);
+    //SPI1->CR2 |= (0b1011 << 8);
+    //// Set FRXTH to 1
+    //SPI1->CR2 &= ~(0b1 << 12);
+    //SPI1->CR2 |= (0b1 << 12);
 }
 
 char spiSendReceive(char send) {

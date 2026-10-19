@@ -6,10 +6,12 @@ Date: 9/14/19
 */
 
 
+#include "STM32L432KC.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+#include "DS1722.h"
 
 /////////////////////////////////////////////////////////////////
 // Provided Constants and Functions
@@ -22,13 +24,11 @@ char* webpageStart = "<!DOCTYPE html><html><head><title>E155 Web Server Demo Web
 	<body><h1>E155 Web Server Demo Webpage</h1>";
 char* ledStr = "<p>LED Control:</p><form action=\"ledon\"><input type=\"submit\" value=\"Turn the LED on!\"></form>\
 	<form action=\"ledoff\"><input type=\"submit\" value=\"Turn the LED off!\"></form>";
-
 char* tempRes = "<p>Temp resolution:</p><form action=\"res8bit\"><input type=\"submit\" value=\"Make resolution 8 bit\"></form>\
   <form action=\"res9bit\"><input type=\"submit\" value=\"Make resolution 9 bit\"></form>\
   <form action=\"res10bit\"><input type=\"submit\" value=\"Make resolution 10 bit\"></form>\
   <form action=\"res11bit\"><input type=\"submit\" value=\"Make resolution 11 bit\"></form>\
   <form action=\"res12bit\"><input type=\"submit\" value=\"Make resolution 12 bit\"></form>";
-
 char* webpageEnd   = "</body></html>";
 
 //determines whether a given character sequence is in a char array request, returning 1 if present, -1 if not present
@@ -53,27 +53,27 @@ int updateLEDStatus(char request[])
 	return led_status;
 }
 
-void updateResStatus(char request[])
+int updateRes(char request[])
 {
-	char res_status = 0;
+	int res = 0;
 	// The request has been received. now process to determine whether to turn the LED on or off
 	if (inString(request, "res8bit")==1) {
-		res_status = 0b000;
+		res = 8;
 	}
 	else if (inString(request, "res9bit")==1) {
-		res_status = 0b001;
+		res = 9;
 	}
-  else if (inString(request, "res10bit")==1) {
-    res_status = 0b010;
-  }
-  else if (inString(request, "res11bit")==1) {
-    res_status = 0b011;
-  }
-  else if (inString(request, "res12bit")==1) {
-    res_status = 0b100;
-  }
+        else if (inString(request, "res10bit")==1) {
+                res = 10;
+        }
+        else if (inString(request, "res11bit")==1) {
+                res = 11;
+        }
+        else if (inString(request, "res12bit")==1) {
+                res = 12;
+        }
 
-	writeSensor(res_status);
+	return res;
 }
 
 
@@ -89,21 +89,21 @@ int main(void) {
   gpioEnable(GPIO_PORT_B);
   gpioEnable(GPIO_PORT_C);
 
-  pinMode(PB3, GPIO_OUTPUT);
-  pinMode(MOSI_PIN, GPIO_ALT);
-  pinMode(MISO_PIN, GPIO_ALT);
-  pinMode(SCK_PIN, GPIO_ALT);
-  pinMode(CE_PIN, GPIO_OUTPUT);
+  pinMode(LED_PIN, GPIO_OUTPUT);
 
-  RCC->APB2ENR |= (RCC_APB2ENR_SPI1EN);
-  
   RCC->APB2ENR |= (RCC_APB2ENR_TIM15EN);
   initTIM(TIM15);
-  
+
   USART_TypeDef * USART = initUSART(USART1_ID, 125000);
 
+  RCC->APB2ENR |= (RCC_APB2ENR_SPI1EN);
   // we have 80MHz clock. br set by f_clk/value
   initSPI(0b101, 1, 1);
+  initSensor();
+
+  char addr = 0xE2;
+  int res = 9;
+  char tempStr[20];
 
   while(1) {
     /* Wait for ESP8266 to send a request.
@@ -122,12 +122,28 @@ int main(void) {
       request[charIndex++] = readChar(USART);
     }
 
-    updateResStatus(request);
+    res = updateRes(request);
 
-    char tempStr[20];
+    if (res == 8) {
+        addr = 0xE0;
+    }
+    else if (res == 9) {
+        addr = 0xE2;
+    }
+    else if (res == 10) {
+        addr = 0xE4;
+    }
+    else if (res == 11) {
+        addr = 0xE6;
+    }
+    else if (res == 12){
+        addr = 0xE8;
+    }
+
+    writeSensor(addr);
+
     float temp = readSensor();
-    sprintf(tempStr, "%f C", temp);
-  
+    
     // Update string with current LED state
   
     int led_status = updateLEDStatus(request);
@@ -138,16 +154,20 @@ int main(void) {
     else if (led_status == 0)
       sprintf(ledStatusStr,"LED is off!");
 
+    sprintf(tempStr, "%f C", temp);
+
     // finally, transmit the webpage over UART
     sendString(USART, webpageStart); // webpage header code
     sendString(USART, ledStr); // button for controlling LED
+    sendString(USART, tempRes); // button for controlling resolution
 
     sendString(USART, "<h2>LED Status</h2>");
-
 
     sendString(USART, "<p>");
     sendString(USART, ledStatusStr);
     sendString(USART, "</p>");
+
+    sendString(USART, "<h2>Temp Status</h2>");
 
     sendString(USART, "<p>");
     sendString(USART, tempStr);

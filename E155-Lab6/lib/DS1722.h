@@ -1,16 +1,16 @@
 // DS1722.h
-// TODO: <YOUR NAME>
-// TODO: <YOUR EMAIL>
-// TODO: <DATE>
-// TODO: <SHORT DESCRIPTION OF WHAT THIS FILE DOES>
+// Natalie Ko
+// nko@g.hmc.edu
+// 16 Oct 2026
+// Header for temperature sensor functions
 
 #ifndef DS1722_H
 #define DS1722_H
 
 #include <stdint.h>
 
-void initSensor(int res);
-char readSensor(void);
+void initSensor(void);
+float readSensor(void);
 void writeSensor(char writeVal);
 
 #endif
