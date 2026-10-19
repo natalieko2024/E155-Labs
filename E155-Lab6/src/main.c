@@ -18,10 +18,10 @@ Date: 9/14/19
 /////////////////////////////////////////////////////////////////
 
 //Defining the web page in two chunks: everything before the current time, and everything after the current time
-char* webpageStart = "<!DOCTYPE html><html><head><title>E155 Web Server Demo Webpage</title>\
+char* webpageStart = "<!DOCTYPE html><html><head><title>Temperature Sensor Over UART and SPI</title>\
 	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\
 	</head>\
-	<body><h1>E155 Web Server Demo Webpage</h1>";
+	<body><h1>Temperature Sensor Over UART and SPI</h1>";
 char* ledStr = "<p>LED Control:</p><form action=\"ledon\"><input type=\"submit\" value=\"Turn the LED on!\"></form>\
 	<form action=\"ledoff\"><input type=\"submit\" value=\"Turn the LED off!\"></form>";
 char* tempRes = "<p>Temp resolution:</p><form action=\"res8bit\"><input type=\"submit\" value=\"Make resolution 8 bit\"></form>\
@@ -99,6 +99,7 @@ int main(void) {
   RCC->APB2ENR |= (RCC_APB2ENR_SPI1EN);
   // we have 80MHz clock. br set by f_clk/value
   initSPI(0b101, 1, 1);
+
   initSensor();
 
   char addr = 0xE2;

@@ -15,7 +15,7 @@ void initSensor(void) {
     // write configuration register address
     spiSendReceive(0x80);
     // write configuration value 111 oneshot=0 defaultres=001 sd=0
-    //spiSendReceive(0b11100010);
+    spiSendReceive(0b11100010);
     digitalWrite(CE_PIN, PIO_LOW);
 }
 
