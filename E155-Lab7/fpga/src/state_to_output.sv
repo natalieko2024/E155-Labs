@@ -11,8 +11,8 @@
 //   on rows and columns inside.
 /////////////////////////////////////////////
 
-module #(parameter NUMCOLS=4) state_to_output(input  logic [0:3][0:NUMCOLS-1][7:0] a,
-                                                output logic [4*NUMCOLS-1:0]         y);
+module state_to_output #(parameter NUMCOLS=4)(input  logic [0:3][0:NUMCOLS-1][7:0] a,
+                                                output logic [32*NUMCOLS-1:0]         y);
 
     // TODO: Your code goes here
 
@@ -20,10 +20,10 @@ module #(parameter NUMCOLS=4) state_to_output(input  logic [0:3][0:NUMCOLS-1][7:
     genvar i;
 
     for (i = 0; i<NUMCOLS; i = i+1) begin
-        assign y[(COL-1-i)*32+24 +: 8] = a[0][i][7:0];
-        assign y[(COL-1-i)*32+16 +: 8] = a[1][i][7:0];
-        assign y[(COL-1-i)*32+8 +: 8] = a[2][i][7:0];
-        assign y[(COL-1-i)*32 +: 8] = a[3][i][7:0];
+        assign y[(NUMCOLS-1-i)*32+24 +: 8] = a[0][i][7:0];
+        assign y[(NUMCOLS-1-i)*32+16 +: 8] = a[1][i][7:0];
+        assign y[(NUMCOLS-1-i)*32+8 +: 8] = a[2][i][7:0];
+        assign y[(NUMCOLS-1-i)*32 +: 8] = a[3][i][7:0];
     end
 
     // assign y[127:120] = a[0][0][7:0];

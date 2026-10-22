@@ -9,7 +9,9 @@ module keyexpansion(input clk, reset, enable,
     logic [0:3][0:7][7:0] wordArray;
     logic [0:3][7:0] initialTemp, ifTemp, finalTemp, roundConst;
 
-    assign roundConst[1:3][7:0] = 0;
+    assign roundConst[1][7:0] = 0;
+	assign roundConst[2][7:0] = 0;
+	assign roundConst[3][7:0] = 0;
 
     always_comb begin
         case(round)
@@ -38,8 +40,8 @@ module keyexpansion(input clk, reset, enable,
 
     genvar i,k;
 
-    for (i=0; i<4, i++) begin
-        for (k=0; k<4, k++) begin
+    for (i=0; i<4; i++) begin
+        for (k=0; k<4; k++) begin
             assign wordArray[k][i][7:0] = keyArray[i][k][7:0];
         end
     end
@@ -52,31 +54,31 @@ module keyexpansion(input clk, reset, enable,
     // assign initialTemp[0:2][7:0] = wordArray[1:3][3][7:0];
 
     genvar j;
-    for (j=0; j<3, j++) begin
+    for (j=0; j<3; j++) begin
         assign initialTemp[j][7:0] = wordArray[j+1][3][7:0];
     end
 
     assign initialTemp[3][7:0] = wordArray[0][3][7:0];
 
-    subword sw(clk, reset, enable, initialTemp, ifTemp);
+    subwords sw(clk, reset, enable, initialTemp, ifTemp);
 
     assign finalTemp = ifTemp ^ roundConst;
 
     genvar x;
-    for (x=0; x<4, x++) begin
+    for (x=0; x<4; x++) begin
         assign wordArray[x][4][7:0] = wordArray[x][0][7:0] ^ finalTemp;
     end
     // assign wordArray[0:3][4][7:0] = wordArray[0:3][0][7:0] ^ finalTemp;
 
     // 3x else
 
-    assign wordArray[0:3][5][7:0] = wordArray[0:3][1][7:0] ^ wordArray[0:3][4][7:0];
-    assign wordArray[0:3][6][7:0] = wordArray[0:3][2][7:0] ^ wordArray[0:3][5][7:0];
-    assign wordArray[0:3][7][7:0] = wordArray[0:3][3][7:0] ^ wordArray[0:3][6][7:0];
+    //assign wordArray[0:3][5][7:0] = wordArray[0:3][1][7:0] ^ wordArray[0:3][4][7:0];
+    //assign wordArray[0:3][6][7:0] = wordArray[0:3][2][7:0] ^ wordArray[0:3][5][7:0];
+    //assign wordArray[0:3][7][7:0] = wordArray[0:3][3][7:0] ^ wordArray[0:3][6][7:0];
 
     genvar y, z;
-    for (y=0; y<3, y++) begin
-        for (z=0; z<4, z++) begin
+    for (y=0; y<3; y++) begin
+        for (z=0; z<4; z++) begin
             assign wordArray[z][y+5][7:0] = wordArray[z][y+1][7:0] ^ wordArray[z][y+4][7:0];
         end
     end

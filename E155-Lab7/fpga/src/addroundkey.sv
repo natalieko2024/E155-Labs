@@ -13,8 +13,8 @@ module addroundkey(input logic [127:0] a,
 
     genvar i, k;
 
-    for (i=0; i<4, i++) begin
-        for (k=0; k<4, k++) begin
+    for (i=0; i<4; i++) begin
+        for (k=0; k<4; k++) begin
             assign finalState[k][i][7:0] = initialState[k][i][7:0] ^ word[k];
         end
     end

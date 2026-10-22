@@ -1,4 +1,4 @@
-module controller(input logic [4:0] count,
+module controlenables(input logic [4:0] count,
                     input logic clk, reset,
                     output logic subByteEnable, shiftRowEnable, mixColEnable, addRoundKeyEnable, keyExpEnable, newStateEnable, countEnable);
 

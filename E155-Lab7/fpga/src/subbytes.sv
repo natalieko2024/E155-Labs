@@ -12,23 +12,23 @@ module subbytes(input logic clk, reset, enable,
 
     always_comb begin
         case(count)
-            4'b0000: begin row = 2'b00; col = 2'b00 end
-            4'b0001: begin row = 2'b00; col = 2'b01 end
-            4'b0010: begin row = 2'b00; col = 2'b10 end
-            4'b0011: begin row = 2'b00; col = 2'b11 end
-            4'b0100: begin row = 2'b01; col = 2'b00 end
-            4'b0101: begin row = 2'b01; col = 2'b01 end
-            4'b0110: begin row = 2'b01; col = 2'b10 end
-            4'b0111: begin row = 2'b01; col = 2'b11 end
-            4'b1000: begin row = 2'b10; col = 2'b00 end
-            4'b1001: begin row = 2'b10; col = 2'b01 end
-            4'b1010: begin row = 2'b10; col = 2'b10 end
-            4'b1011: begin row = 2'b10; col = 2'b11 end
-            4'b1100: begin row = 2'b11; col = 2'b00 end
-            4'b1101: begin row = 2'b11; col = 2'b01 end
-            4'b1110: begin row = 2'b11; col = 2'b10 end
-            4'b1111: begin row = 2'b11; col = 2'b11 end
-            default: begin row = 2'b00; col = 2'b00 end
+            4'b0000: begin row = 2'b00; col = 2'b00; end
+            4'b0001: begin row = 2'b00; col = 2'b01; end
+            4'b0010: begin row = 2'b00; col = 2'b10; end
+            4'b0011: begin row = 2'b00; col = 2'b11; end
+            4'b0100: begin row = 2'b01; col = 2'b00; end
+            4'b0101: begin row = 2'b01; col = 2'b01; end
+            4'b0110: begin row = 2'b01; col = 2'b10; end
+            4'b0111: begin row = 2'b01; col = 2'b11; end
+            4'b1000: begin row = 2'b10; col = 2'b00; end
+            4'b1001: begin row = 2'b10; col = 2'b01; end
+            4'b1010: begin row = 2'b10; col = 2'b10; end
+            4'b1011: begin row = 2'b10; col = 2'b11; end
+            4'b1100: begin row = 2'b11; col = 2'b00; end
+            4'b1101: begin row = 2'b11; col = 2'b01; end
+            4'b1110: begin row = 2'b11; col = 2'b10; end
+            4'b1111: begin row = 2'b11; col = 2'b11; end
+            default: begin row = 2'b00; col = 2'b00; end
         endcase
     end
 

@@ -87,7 +87,7 @@ module aes_core(input  logic         clk,
     logic [255:0] expandedKey;
 
 
-    counter #(5, 20) cycleCounter(clk, load, 1, cycleCount);
+    counter #(5, 20) cycleCounter(clk, load, 1'b1, cycleCount);
     counter #(4, 10) roundCounter(clk, load, (cycleCount == 19), roundCount);
 
     controlenables enables(cycleCount, clk, load, subByteEnable, shiftRowEnable, mixColEnable, addRoundKeyEnable, keyExpEnable, newStateEnable, countEnable);
@@ -109,8 +109,10 @@ module aes_core(input  logic         clk,
     addroundkey addRoundKey(mixColsFlopped, expandedKey, encodedState);
 
     keyexpansion expandKey(clk, load, keyExpEnable, key, roundCount, expandedKey);
+	
+	
 
-    flopEN #(128) mcff(clk, load, newStateEnable, encodedState, nextState);
+    flopEN #(128) arff(clk, load, newStateEnable, encodedState, nextState);
 
     always_ff @(posedge clk) begin
         if (load) begin
