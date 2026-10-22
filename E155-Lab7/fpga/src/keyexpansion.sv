@@ -31,28 +31,55 @@ module keyexpansion(input clk, reset, enable,
 
     // word column, key row
     // this replaces the first while (bc no overlap)
-    assign wordArray[0:3][0][7:0] = keyArray[0][0:3][7:0];
-    assign wordArray[0:3][1][7:0] = keyArray[1][0:3][7:0];
-    assign wordArray[0:3][2][7:0] = keyArray[2][0:3][7:0];
-    assign wordArray[0:3][3][7:0] = keyArray[3][0:3][7:0];
+    // assign wordArray[0:3][0][7:0] = keyArray[0][0:3][7:0];
+    // assign wordArray[0:3][1][7:0] = keyArray[1][0:3][7:0];
+    // assign wordArray[0:3][2][7:0] = keyArray[2][0:3][7:0];
+    // assign wordArray[0:3][3][7:0] = keyArray[3][0:3][7:0];
+
+    genvar i,k;
+
+    for (i=0; i<4, i++) begin
+        for (k=0; k<4, k++) begin
+            assign wordArray[k][i][7:0] = keyArray[i][k][7:0];
+        end
+    end
 
     // 1x if
 
     // just need same number of bits to assign to each other
     // temp is w[i-1] then rotated
-    assign initialTemp[0:2][7:0] = wordArray[1:3][3][7:0];
+
+    // assign initialTemp[0:2][7:0] = wordArray[1:3][3][7:0];
+
+    genvar j;
+    for (j=0; j<3, j++) begin
+        assign initialTemp[j][7:0] = wordArray[j+1][3][7:0];
+    end
+
     assign initialTemp[3][7:0] = wordArray[0][3][7:0];
 
     subword sw(clk, reset, enable, initialTemp, ifTemp);
 
     assign finalTemp = ifTemp ^ roundConst;
-    assign wordArray[0:3][4][7:0] = wordArray[0:3][0][7:0] ^ finalTemp;
+
+    genvar x;
+    for (x=0; x<4, x++) begin
+        assign wordArray[x][4][7:0] = wordArray[x][0][7:0] ^ finalTemp;
+    end
+    // assign wordArray[0:3][4][7:0] = wordArray[0:3][0][7:0] ^ finalTemp;
 
     // 3x else
 
     assign wordArray[0:3][5][7:0] = wordArray[0:3][1][7:0] ^ wordArray[0:3][4][7:0];
     assign wordArray[0:3][6][7:0] = wordArray[0:3][2][7:0] ^ wordArray[0:3][5][7:0];
     assign wordArray[0:3][7][7:0] = wordArray[0:3][3][7:0] ^ wordArray[0:3][6][7:0];
+
+    genvar y, z;
+    for (y=0; y<3, y++) begin
+        for (z=0; z<4, z++) begin
+            assign wordArray[z][y+5][7:0] = wordArray[z][y+1][7:0] ^ wordArray[z][y+4][7:0];
+        end
+    end
 
     state_to_output #(8) so(wordArray, word);
 

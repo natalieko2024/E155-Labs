@@ -30,6 +30,11 @@ module shiftrows(input  logic [127:0] a,
 
     input_to_state #(4) sr(a, initialState);
 
+    assign finalState[0][0][7:0] = initialState[0][0][7:0];
+    assign finalState[0][1][7:0] = initialState[0][1][7:0];
+    assign finalState[0][2][7:0] = initialState[0][2][7:0];
+    assign finalState[0][3][7:0] = initialState[0][3][7:0];
+
     assign finalState[1][0][7:0] = initialState[1][1][7:0];
     assign finalState[1][1][7:0] = initialState[1][2][7:0];
     assign finalState[1][2][7:0] = initialState[1][3][7:0];
