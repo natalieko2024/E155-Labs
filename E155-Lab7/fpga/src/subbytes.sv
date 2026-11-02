@@ -5,6 +5,7 @@ module subbytes(input logic clk, reset, enable,
     logic [3:0] count;
     logic [0:3][0:3][7:0] inputArray, outputArray;
     logic [2:0] row, col, nextRow, nextCol;
+	logic [7:0] in, out;
 
     input_to_state #(4) is(a, inputArray);
 

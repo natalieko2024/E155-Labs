@@ -5,6 +5,7 @@ module subwords(input logic clk, reset, enable,
     logic [1:0] count;
     logic [0:3][0:3][7:0] inputArray, outputArray;
     logic [1:0] row, nextRow;
+	logic [7:0] in, out;
 
     input_to_state #(4) is(a, inputArray);
 

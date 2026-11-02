@@ -90,7 +90,7 @@ module aes_core(input  logic         clk,
     counter #(5, 20) cycleCounter(clk, load, 1'b1, cycleCount);
     counter #(4, 10) roundCounter(clk, load, (cycleCount == 19), roundCount);
 
-    controlenables enables(cycleCount, clk, load, subByteEnable, shiftRowEnable, mixColEnable, addRoundKeyEnable, keyExpEnable, newStateEnable, countEnable);
+    controlenables enables(clk, load, cycleCount, subByteEnable, shiftRowEnable, mixColEnable, addRoundKeyEnable, keyExpEnable, newStateEnable, countEnable);
 
     subbytes subBytes(clk, load, subByteEnable, state, subByteOut);
 
