@@ -107,6 +107,6 @@ module keyexpansion(input clk, reset, enable,
 
     end
 
-    state_to_output #(8) so(wordArray, word);
+    state_to_output #(44) so(wordArray, word);
 
 endmodule
