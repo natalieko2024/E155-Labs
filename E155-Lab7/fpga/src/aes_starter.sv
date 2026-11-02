@@ -109,6 +109,22 @@ module aes_core(input  logic         clk,
 
     addroundkey addRoundKey(mixColsFlopped, roundKey, encodedState);
 
+    always_comb begin
+            case(roundCount)
+                4'h0: roundKey = expandedKey[1279:1152];
+                4'h1: roundKey = expandedKey[1151:1024];
+                4'h2: roundKey = expandedKey[1023:896];
+                4'h3: roundKey = expandedKey[895:768];
+                4'h4: roundKey = expandedKey[767:640];
+                4'h5: roundKey = expandedKey[639:512];
+                4'h6: roundKey = expandedKey[511:384];
+                4'h7: roundKey = expandedKey[383:256];
+                4'h8: roundKey = expandedKey[255:128];
+                4'h9: roundKey = expandedKey[127:0];
+                default roundKey = expandedKey[127:0];
+            endcase
+        end
+
     keyexpansion expandKey(clk, load, keyExpEnable, key, roundCount, expandedKey);
 	
     // flopEN #(128) arff(clk, load, newStateEnable, encodedState, nextState);
