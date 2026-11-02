@@ -5,7 +5,7 @@ module keyexpansion(input clk, reset, enable,
     // 8 words per round so 256
 
     logic [0:3][0:3][7:0] keyArray;
-    logic [0:3][0:7][7:0] wordArray;
+    logic [0:3][0:43][7:0] wordArray;
     logic [0:3][7:0] initialTemp, ifTemp, finalTemp;
     logic [0:3][0:9][7:0] roundConst;
 
