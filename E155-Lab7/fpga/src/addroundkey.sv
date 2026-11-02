@@ -1,10 +1,10 @@
-module addroundkey(input logic [127:0] a,
-                    input logic [0:3][7:0] word,
+module addroundkey(input logic [127:0] a, word,
                     output logic [127:0] y);
 
-    logic [0:3][0:3][7:0] initialState, finalState;
+    logic [0:3][0:3][7:0] initialState, finalState, decodedWord;
 
     input_to_state #(4) is(a, initialState);
+    input_to_state #(4) is(word, decodedWord);
 
     // finalState[0:3][0][7:0] = initialState[0:3][0][7:0] ^ word;
     // finalState[0:3][1][7:0] = initialState[0:3][1][7:0] ^ word;
@@ -15,7 +15,7 @@ module addroundkey(input logic [127:0] a,
 
     for (i=0; i<4; i++) begin
         for (k=0; k<4; k++) begin
-            assign finalState[k][i][7:0] = initialState[k][i][7:0] ^ word[k];
+            assign finalState[i][k][7:0] = initialState[i][k][7:0] ^ decodedWord[i][k][7:0];
         end
     end
 

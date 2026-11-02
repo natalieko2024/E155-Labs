@@ -1,5 +1,5 @@
-module controlenables(input logic [4:0] count,
-                    input logic clk, reset,
+module controlenables(input logic clk, reset,
+                    input logic [4:0] count,
                     output logic subByteEnable, shiftRowEnable, mixColEnable, addRoundKeyEnable, keyExpEnable, newStateEnable, countEnable);
 
     always_ff @(posedge clk, reset) begin
