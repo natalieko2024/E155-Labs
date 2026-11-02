@@ -33,7 +33,7 @@ module subbytes(input logic clk, reset, enable,
         endcase
     end
 
-    always_ff @(posedge clk, reset) begin
+    always_ff @(posedge clk, posedge reset) begin
         if (reset) begin
             row <= 2'b00;
             col <= 2'b00;

@@ -43,7 +43,7 @@ module subwords(input logic clk, reset, enable,
         endcase
     end
 
-    sbox convert(inputArray, outputArray);
+    sbox convert(in, out);
 
     state_to_output #(4) so(outputArray, y);
 
