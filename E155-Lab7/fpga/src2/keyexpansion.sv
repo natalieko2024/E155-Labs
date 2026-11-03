@@ -1,7 +1,7 @@
 module keyExpansion(input logic clk,
                     input logic [3:0] round,
                     input logic [127:0] roundKey,
-                    input logic [127:0] newRoundKey);
+                    output logic [127:0] newRoundKey);
 
     // AES 5.2
     // Nk=4, Nr=10

@@ -1,16 +1,12 @@
 <RadiantSimulationProject language="1" name="lab7_nk" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
-    <Source include="none" langstandard="System Verilog" path="../src/addroundkey.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/aes_core_tb.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/aes_starter.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/controlenables.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/counter.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/flopEN.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/input_to_state.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/keyexpansion.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/shiftrows.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/state_to_output.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/subbytes.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="../src/subwords.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/addroundkey.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/aes_core_tb.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/aes_starter.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/input_to_state.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/keyexpansion.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/shiftrows.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/state_to_output.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/subbytes.sv" type="VERILOG" worklib="work"/>
     <SimLib value="pmi_work ovi_ice40up"/>
     <GlbInc value=""/>
     <Macro value=""/>

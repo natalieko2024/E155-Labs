@@ -80,22 +80,28 @@ module aes_core(input  logic         clk,
                 output logic [127:0] cyphertext);
 
     // TODO: Your code goes here
-    // FSM
+    
     typedef enum logic [1:0] {START, DELAY, CONTINUE, DONE} statetype;
     statetype state, nextState;
+	logic [3:0] round;
+    logic [127:0] in, out;
+    logic [127:0] subBytesOut, shiftRowsOut, mixColsOut, addRoundKeyOut, roundKeyMux;
+    logic [127:0] oldKey, newKey, selectedKey;
+	
+	// FSM
 
     always_ff @(posedge clk) begin
-        if (loading) begin
+        if (load) begin
             round <= 0;
             in <= plaintext;
             oldKey <= key;
-            state <= FIRST;
+            state <= START;
         end
         else if ((state == DELAY) || (state == DONE)) begin
             state <= nextState;
         end
         else begin
-            round <= round + 1;
+            round <= round + 4'b1;
             in <= out;
             oldKey <= selectedKey;
             state <= nextState;
@@ -113,14 +119,10 @@ module aes_core(input  logic         clk,
     end
 
     // datapath
-    logic [3:0] round;
-    logic [127:0] in, out;
-    logic [127:0] subBytesOut, shiftRowsOut, mixColsOut, addRoundKeyOut, roundKeyMux;
-    logic [127:0] oldKey, newKey, selectedKey;
 
     subBytes sb(clk, in, subBytesOut);
     shiftRows sr(subBytesOut, shiftRowsOut);
-    mixColumns mc(shiftRowsOut, mixColsOut);
+    mixcolumns mc(shiftRowsOut, mixColsOut);
     keyExpansion ke(clk, round, oldKey, newKey);
     addRoundKey ark(roundKeyMux, selectedKey, addRoundKeyOut);
 
@@ -139,7 +141,7 @@ module aes_core(input  logic         clk,
     end
 
     // output logic
-    assign done = (state = DONE);
+    assign done = (state == DONE);
     assign cyphertext = out;
 
 endmodule
@@ -158,7 +160,7 @@ module sbox(input  logic [7:0] a,
   // This module is combinational and will be inferred using LUTs (logic cells)
   logic [7:0] sbox[0:255];
 
-  initial   $readmemh("sbox.txt", sbox);
+  initial   $readmemh("C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/sbox.txt", sbox);
   assign y = sbox[a];
 endmodule
 
@@ -177,7 +179,7 @@ module sbox_sync(
   // This module is synchronous and will be inferred using BRAMs (Block RAMs)
   logic [7:0] sbox [0:255];
 
-  initial   $readmemh("sbox.txt", sbox);
+  initial   $readmemh("C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/sbox.txt", sbox);
 	
 	// Synchronous version
 	always_ff @(posedge clk) begin
