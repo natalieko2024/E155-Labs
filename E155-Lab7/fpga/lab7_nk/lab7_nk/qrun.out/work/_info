@@ -1,0 +1,488 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk
+vaddroundkey
+Z2 2C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/addroundkey.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_core_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/controlenables.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/counter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/flopEN.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/input_to_state.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/keyexpansion.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/shiftrows.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/state_to_output.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subbytes.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subwords.sv
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z4 !s110 1793596603
+!i10b 1
+!s100 M=_fYCj1X@Tki:cfA:@`30
+I_MlzEaV?dVGelJPi^d>dB1
+S1
+R1
+w1793584441
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/addroundkey.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/addroundkey.sv
+!i122 0
+L0 1 24
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z7 !s108 1793596603.000000
+Z8 !s107 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subwords.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subbytes.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/state_to_output.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/shiftrows.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/keyexpansion.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/input_to_state.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/flopEN.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/counter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/controlenables.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_core_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/addroundkey.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/addroundkey.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_core_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/controlenables.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/counter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/flopEN.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/input_to_state.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/keyexpansion.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/shiftrows.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/state_to_output.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subbytes.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subwords.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
+!i113 0
+Z10 o-L work -sv -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0 defaultOptions 1085333592
+vaes
+R2
+R3
+R4
+!i10b 1
+!s100 L6acinb=hk1C<LjM@oR4V2
+I^iXaWH[h]T:z8?:IeUDIg1
+S1
+R1
+Z12 w1793585700
+Z13 8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv
+Z14 FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv
+!i122 0
+L0 6 12
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vaes_core
+R2
+R3
+R4
+!i10b 1
+!s100 e6TVG8[kHH11[@3`;jF:20
+I?`PRU1hzZjSkIj=zbUYXX2
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 75 68
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vaes_spi
+R2
+R3
+R4
+!i10b 1
+!s100 <Li9?55zzR@I>CcR;93nH1
+I[1]9HbJdKEMVNhSl8ROU_1
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 26 29
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vcontrolenables
+R2
+R3
+R4
+!i10b 1
+!s100 GILB<b>YZ[J1kz^6JXH]H3
+IJWGd4[f81=lj_oLBkVYbO2
+S1
+R1
+w1793584466
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/controlenables.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/controlenables.sv
+!i122 0
+L0 1 28
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vcounter
+R2
+R3
+R4
+!i10b 1
+!s100 @;fOD1`lW55:U17oRONHQ2
+IFDDIK2CKdKmGKZaHk^P`O3
+S1
+R1
+w1793596037
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/counter.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/counter.sv
+!i122 0
+L0 4 34
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vflopEN
+R2
+R3
+R4
+!i10b 1
+!s100 ghijSX8_3>=NOb59;J@g>3
+IzKU2Bbf_>onz9KGi^Vz<m0
+S1
+R1
+w1793585452
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/flopEN.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/flopEN.sv
+!i122 0
+L0 4 10
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+nflop@e@n
+vgaloismult
+R2
+R3
+R4
+!i10b 1
+!s100 Z@ZEdH6aiFgkRhG6b7n<b3
+In@jV;RM3YS^4[jjHIf]Im1
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 235 8
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vinput_to_state
+R2
+R3
+R4
+!i10b 1
+!s100 Q7KX[l?81?XK@8nJo`P450
+IJO>jQ5hPT3<b@7V2jh>?R3
+S1
+R1
+w1792640798
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/input_to_state.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/input_to_state.sv
+!i122 0
+L0 29 33
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vkeyexpansion
+R2
+R3
+R4
+!i10b 1
+!s100 bkc3@CczNEzQZ7z3jee6=3
+IMYTOVRnQTf20`h5PG>z9f0
+S1
+R1
+w1793596209
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/keyexpansion.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/keyexpansion.sv
+!i122 0
+L0 1 112
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vmixcolumn
+R2
+R3
+R4
+!i10b 1
+!s100 G?[iF2i`<6>IT7lZ;Wj7:1
+IS<HghG915i0JWVbY:O2Qb0
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 208 19
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vmixcolumns
+R2
+R3
+R4
+!i10b 1
+!s100 ^zG][d=P_UGoeD^e2TDgg1
+I9hm1400W8H]jG:hh5_38V0
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 192 8
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vsbox
+R2
+R3
+R4
+!i10b 1
+!s100 g]YI1PaQ@EaYhc1ni4m=i2
+I]n2dCYK:UAYlmRF3J1BA>1
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 151 10
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vsbox_sync
+R2
+R3
+R4
+!i10b 1
+!s100 =j3QMOn;kfCPB^9PB>jHn3
+I4D3W:e?DTaQGAYUeTgf[00
+S1
+R1
+R12
+R13
+R14
+!i122 0
+L0 168 16
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vshiftrows
+R2
+R3
+R4
+!i10b 1
+!s100 oN?^I2L0_;kFm>F4Cj87X2
+Ii;[dRg9zb?nQBhiIfP`df0
+S1
+R1
+Z15 w1792639833
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/shiftrows.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/shiftrows.sv
+!i122 0
+L0 26 30
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vstate_to_output
+R2
+R3
+R4
+!i10b 1
+!s100 igA3C@_2<oH_HAGTg<79A3
+I72H[ZzYVO7>CU:<i2Ci?G0
+S1
+R1
+w1792641247
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/state_to_output.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/state_to_output.sv
+!i122 0
+L0 14 36
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vsubbytes
+R2
+R3
+R4
+!i10b 1
+!s100 <ZFL5aL7YK1ae]Y^ZEQc11
+IAFlMnS7S59oEYcS`M3L3P1
+S1
+R1
+w1793596062
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subbytes.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subbytes.sv
+!i122 0
+L0 1 75
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vsubwords
+R2
+R3
+R4
+!i10b 1
+!s100 h76ibfn1X1]`;LmXioQMo0
+I[TO[<8Ndk7>:081;3Ri350
+S1
+R1
+w1793585398
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subwords.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/subwords.sv
+!i122 0
+L0 1 50
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vtestbench_aes_core
+R2
+R3
+R4
+!i10b 1
+!s100 FIO7h3@d^kFng7_gbKhj30
+I:a^:;9a5g[c:`Nj]O64Zc2
+S1
+R1
+R15
+8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_core_tb.sv
+FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_core_tb.sv
+!i122 0
+L0 11 42
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11

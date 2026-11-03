@@ -1,0 +1,3 @@
+testbench_aes_core,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_core_tb.sv
+aes,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv
+sbox_sync,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src/aes_starter.sv

@@ -10,7 +10,7 @@ module counter #(parameter WIDTH = 23, MAX = 5000000)( input logic clk,
 	// Using 23 bits because 0.5*10^7 can be stored in 24 bits
 	//logic [WIDTH-1:0] counter = 0;
 	// Maximum value to count up to is 0.5*10^7, not 10^7 because one clock cycle is both the rise and fall
-	logic [WIDTH-1:0] max_count;
+	logic [WIDTH:0] max_count;
 	assign max_count = MAX;
 	
 	// Counter logic
