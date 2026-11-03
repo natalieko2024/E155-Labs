@@ -13,7 +13,7 @@ Z1 dC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk
 vaddRoundKey
 Z2 2C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/addroundkey.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_core_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1793707482
+Z4 !s110 1793707813
 !i10b 1
 !s100 ^GSM2B1_J_j]1T=EQ:9912
 I@<Ii3:iNWC[PF<c7J^Tha1
@@ -29,7 +29,7 @@ Z7 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z8 !s108 1793707482.000000
+Z8 !s108 1793707813.000000
 Z9 !s107 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_core_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/addroundkey.sv|
 Z10 !s90 -reportprogress|300|-L|work|-sv|-L|pmi_work|-L|ovi_ice40up|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/addroundkey.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_core_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv|C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-csession=incr|
 !i113 0
@@ -191,15 +191,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 m8>bPJli7;@aEdl2^CH[20
-I^Ec23@6NXQ>o?:SN5S9k13
+!s100 ;8XB0eKo^`ZLfVMgK4oJe1
+IXU`OL`9Hj[I838NDja<zf1
 S1
 R1
-w1793704214
+w1793707749
 8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv
 FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv
 !i122 0
-L0 1 47
+L0 1 46
 R6
 R7
 r1
@@ -291,10 +291,10 @@ Tqrun_opt
 !i145 1
 !i144 0
 R4
-VNDAT0;V9?GRIk353HnK<W2
+VmQCJlBdB0:gDeecK=S@XZ1
 04 18 4 work testbench_aes_core fast 0
 R0
-!s12f OEM25U47 
+!s12f OEM25U49 
 !s12b OEM100
 !s124 OEM100
 !s135 nogc
@@ -458,15 +458,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 b]J3D[hhli83oR3VX2`AM3
-Iiz^77[5D@OUZbjG2KVTB^1
+!s100 :2G6>jg9?T[[ogV]@7HGB0
+I;23Kfm20;i?TB2X5]i51L2
 S1
 R1
-w1793707411
+w1793707524
 8C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv
 FC:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv
 !i122 0
-L0 1 55
+L0 1 31
 R6
 R7
 r1

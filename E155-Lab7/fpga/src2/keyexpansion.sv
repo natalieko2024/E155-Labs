@@ -6,23 +6,22 @@ module keyExpansion(input logic clk,
     // AES 5.2
     // Nk=4, Nr=10
 
-    logic [7:0] roundConst;
-    logic [31:0] subW;
+    logic [31:0] roundConst, subW;
 
     // Finding w[0]
     always_comb begin
         case(round)
-            4'd1: roundConst = 8'h1;
-            4'd2: roundConst = 8'h2;
-            4'd3: roundConst = 8'h4;
-            4'd4: roundConst = 8'h8;
-            4'd5: roundConst = 8'h10;
-            4'd6: roundConst = 8'h20;
-            4'd7: roundConst = 8'h40;
-            4'd8: roundConst = 8'h80;
-            4'd9: roundConst = 8'h1b;
-            4'd10: roundConst = 8'h36;
-            default: roundConst = 8'h0;
+            4'd1: roundConst = 32'h01000000;	// HAVE TO ADD 0s OR the XOR DOESNT WORK
+            4'd2: roundConst = 32'h02000000;
+            4'd3: roundConst = 32'h04000000;
+            4'd4: roundConst = 32'h08000000;
+            4'd5: roundConst = 32'h10000000;
+            4'd6: roundConst = 32'h20000000;
+            4'd7: roundConst = 32'h40000000;
+            4'd8: roundConst = 32'h80000000;
+            4'd9: roundConst = 32'h1b000000;
+            4'd10: roundConst = 32'h36000000;
+            default: roundConst = 32'h0000000;
         endcase
     end
 
