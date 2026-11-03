@@ -13,7 +13,7 @@ module shiftrows_tb();
     integer       tests, errors;
 
     // device under test
-    shiftrows dut(.a(a), .y(y));
+    shiftRows dut(.a(a), .y(y));
 
     // byte at row r, column c of a packed state (see the packing in shiftrows.sv)
     function logic [7:0] state_byte(input logic [127:0] s, input integer r, input integer c);

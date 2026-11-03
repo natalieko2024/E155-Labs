@@ -6,3 +6,7 @@
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows.sv=verilog,work,System Verilog"
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv=verilog,work,System Verilog"
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv=verilog,work,System Verilog"
+"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state_tb.sv=verilog,work,System Verilog"
+"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv=verilog,work,System Verilog"
+"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv=verilog,work,System Verilog"
+"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv=verilog,work,System Verilog"

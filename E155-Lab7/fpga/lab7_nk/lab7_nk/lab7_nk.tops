@@ -1,3 +1,7 @@
 testbench_aes_core,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_core_tb.sv
 aes,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv
 sbox,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv
+input_to_state_tb,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state_tb.sv
+mixcolumns_tb,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv
+state_to_output_tb,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv
+shiftrows_tb,/,C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv

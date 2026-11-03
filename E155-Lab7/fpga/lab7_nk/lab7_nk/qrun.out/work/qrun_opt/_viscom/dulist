@@ -1,12 +1,12 @@
+1 9 sbox_sync 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 20 0
+1 8 subBytes 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 72 0
 1 14 input_to_state 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 332 0
-1 9 sbox_sync 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 131072 0 20 0
 1 15 state_to_output 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 332 0
-1 8 subBytes 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 78 0
-1 9 shiftRows 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 92 0
+1 9 shiftRows 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 131072 0 92 0
 1 10 galoismult 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 15 0
 1 9 mixcolumn 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 106 0
 1 10 mixcolumns 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 16 0
 1 12 keyExpansion 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 84 0
 1 11 addRoundKey 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 10 0
-1 8 aes_core 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 172 0
+1 8 aes_core 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 181 0
 1 18 testbench_aes_core 4 fast 87 C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/qrun.out/work 0 0 0 0 61 0
