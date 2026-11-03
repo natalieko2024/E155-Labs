@@ -5,6 +5,7 @@
 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/addroundkey.sv" 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_core_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_spi_tb.sv" 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv" 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state.sv" 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv" 
@@ -25,7 +26,7 @@
 -end
 
 -gui
--top testbench_aes_core
+-top testbench_aes_spi
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end

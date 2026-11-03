@@ -1,6 +1,7 @@
 <RadiantSimulationProject language="1" name="lab7_nk" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
     <Source include="none" langstandard="System Verilog" path="../src2/addroundkey.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../src2/aes_core_tb.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../src2/aes_spi_tb.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../src2/aes_starter.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../src2/input_to_state.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="../src2/keyexpansion.sv" type="VERILOG" worklib="work"/>
@@ -15,5 +16,5 @@
     <GlbInc value=""/>
     <Macro value=""/>
     <Udo value=""/>
-    <TopModule instance="" language="VERILOG" name="testbench_aes_core"/>
+    <TopModule instance="" language="VERILOG" name="testbench_aes_spi"/>
 </RadiantSimulationProject>

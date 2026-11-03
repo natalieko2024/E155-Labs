@@ -698,3 +698,188 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # Errors: 0, Warnings: 4
 # 
 vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/lab7_nk/lab7_nk/lab7_nk.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 04:15:05 on Nov 03,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/addroundkey.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_core_tb.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_spi_tb.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aes_starter.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/keyexpansion.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/subbytes.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/input_to_state_tb.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module addRoundKey
+# 
+# -- Compiling module testbench_aes_core
+# 
+# -- Compiling module testbench_aes_spi
+# 
+# -- Compiling module aes
+# 
+# -- Compiling module aes_spi
+# 
+# -- Compiling module aes_core
+# 
+# -- Compiling module sbox
+# 
+# -- Compiling module sbox_sync
+# 
+# -- Compiling module mixcolumns
+# 
+# -- Compiling module mixcolumn
+# 
+# -- Compiling module galoismult
+# 
+# -- Compiling module input_to_state
+# 
+# -- Compiling module keyExpansion
+# 
+# -- Compiling module shiftRows
+# 
+# -- Compiling module state_to_output
+# 
+# ** Warning: C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv(14): (vlog-13314) Defaulting port 'a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# -- Compiling module subBytes
+# 
+# -- Compiling module input_to_state_tb
+# 
+# -- Compiling module mixcolumns_tb
+# 
+# -- Compiling module state_to_output_tb
+# 
+# -- Compiling module shiftrows_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	testbench_aes_core
+# 
+# 	testbench_aes_spi
+# 
+# 	sbox
+# 
+# 	input_to_state_tb
+# 
+# 	mixcolumns_tb
+# 
+# 	state_to_output_tb
+# 
+# 	shiftrows_tb
+# 
+# End time: 04:15:05 on Nov 03,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 1
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 04:15:05 on Nov 03,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up testbench_aes_spi -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	testbench_aes_spi
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module testbench_aes_spi
+# 
+# -- Loading module aes
+# 
+# -- Loading module aes_spi
+# 
+# -- Loading module aes_core
+# 
+# -- Loading module subBytes
+# 
+# -- Loading module input_to_state
+# 
+# -- Loading module sbox_sync
+# 
+# -- Loading module state_to_output
+# 
+# -- Loading module shiftRows
+# 
+# -- Loading module mixcolumns
+# 
+# -- Loading module mixcolumn
+# 
+# -- Loading module galoismult
+# 
+# -- Loading module keyExpansion
+# 
+# -- Loading module addRoundKey
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 14 design-units (inlining 0/53 module instances):
+# 
+# -- Optimizing module input_to_state(fast)
+# 
+# -- Optimizing module state_to_output(fast)
+# 
+# ** Warning: C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/state_to_output.sv(14): (vopt-13314) Defaulting port 'a' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# -- Optimizing module aes_core(fast)
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "aes_core(fast)".
+# 
+# -- Optimizing module testbench_aes_spi(fast)
+# 
+# -- Optimizing module mixcolumn(fast)
+# 
+# -- Optimizing module shiftRows(fast)
+# 
+# -- Optimizing module keyExpansion(fast)
+# 
+# -- Optimizing module subBytes(fast)
+# 
+# -- Optimizing module aes_spi(fast)
+# 
+# -- Optimizing module aes(fast)
+# 
+# -- Optimizing module sbox_sync(fast)
+# 
+# -- Optimizing module mixcolumns(fast)
+# 
+# -- Optimizing module galoismult(fast)
+# 
+# -- Optimizing module addRoundKey(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 04:15:06 on Nov 03,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 4
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
