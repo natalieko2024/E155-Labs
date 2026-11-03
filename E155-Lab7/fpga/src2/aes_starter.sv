@@ -128,18 +128,31 @@ module aes_core(input  logic         clk,
 
     // MUXes
     // MUX1 (controls roundKeyMux -> state input into addRoundKey)
-    // MUX2 (controls selectedKey -> key input into addRoundKey)
-    // MUX3 (controls out -> text)
     always_comb begin
         case(state)
-            START: begin roundKeyMux = plaintext; selectedKey = key; end
-            DELAY: begin out = in; end
-            CONTINUE: begin roundKeyMux = mixColsOut; end
-            DONE: begin roundKeyMux = shiftRowsOut; end
-            default: begin roundKeyMux = mixColsOut; selectedKey = newKey; out = addRoundKeyOut; end
+            START: roundKeyMux = plaintext;
+            CONTINUE: roundKeyMux = mixColsOut;
+            DONE: roundKeyMux = shiftRowsOut;
+            default: roundKeyMux = mixColsOut;
         endcase
     end
 
+    // MUX2 (controls selectedKey -> key input into addRoundKey)
+    always_comb begin
+        case(state)
+            START: selectedKey = key;
+            default: selectedKey = newKey;
+        endcase
+    end
+
+    // MUX3 (controls out -> text)
+    always_comb begin
+        case(state)
+            DELAY: out = in;
+            default: out = addRoundKeyOut;
+        endcase
+    end
+    
     // output logic
     assign done = (state == DONE);
     assign cyphertext = out;
