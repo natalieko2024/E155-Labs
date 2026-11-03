@@ -16,6 +16,7 @@
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/mixcolumns_tb.sv" 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/output_to_state_tb.sv" 
 "C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/shiftrows_tb.sv" 
+"C:/Users/nko/Documents/GitHub/E155-LabsNew/E155-Lab7/fpga/src2/aesFSM.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -26,7 +27,7 @@
 -end
 
 -gui
--top testbench_aes_spi
+-top testbench_aes_core
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end

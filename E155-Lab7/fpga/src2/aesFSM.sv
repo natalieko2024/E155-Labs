@@ -1,7 +1,7 @@
 module aesFSM(input  logic         clk, 
               input  logic         load,
               input  logic [127:0] key, plaintext, out, selectedKey,
-              output statetype     state,
+              output logic [1:0] stateD,
               output logic [3:0] round,
               output logic [127:0] in, oldKey);
 
@@ -28,11 +28,11 @@ module aesFSM(input  logic         clk,
 
     always_comb begin
         case(state)
-            START: nextState = DELAY;
-            DELAY: nextState = (round >= 4'd10) ? DONE : CONTINUE;
-            CONTINUE: nextState = DELAY;
-            DONE: nextState = DONE;
-            default: nextState = START;
+            START: begin nextState = DELAY; stateD = 2'b00; end
+            DELAY: begin nextState = (round >= 4'd10) ? DONE : CONTINUE; stateD = 2'b01; end
+            CONTINUE: begin nextState = DELAY; stateD = 2'b10;  end
+            DONE: begin nextState = DONE; stateD = 2'b11; end
+            default: begin nextState = START;  stateD = 2'b00;  end
         endcase
     end
 

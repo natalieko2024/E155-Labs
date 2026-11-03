@@ -84,12 +84,22 @@ module aes_core(input  logic         clk,
     typedef enum logic [1:0] {START, DELAY, CONTINUE, DONE} statetype;
     statetype state;
 
+	logic [1:0] stateD;
     logic [3:0] round;
     logic [127:0] in, out;
     logic [127:0] subBytesOut, shiftRowsOut, mixColsOut, addRoundKeyOut, roundKeyMux;
     logic [127:0] oldKey, newKey, selectedKey;
 
-    aesFSM fsm(clk, load, key, plaintext, out, selectedKey, state, round, in, oldKey);
+    aesFSM fsm(clk, load, key, plaintext, out, selectedKey, stateD, round, in, oldKey);
+	
+	always_comb begin
+		case(stateD)
+			2'b00: state = START;
+			2'b01: state = DELAY;
+			2'b10: state = CONTINUE;
+			2'b11: state = DONE;
+		endcase
+	end
 
     // datapath
 
