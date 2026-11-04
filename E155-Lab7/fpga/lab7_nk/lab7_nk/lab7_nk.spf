@@ -17,5 +17,5 @@
     <GlbInc value=""/>
     <Macro value=""/>
     <Udo value=""/>
-    <TopModule instance="" language="VERILOG" name="testbench_aes_core"/>
+    <TopModule instance="" language="VERILOG" name="testbench_aes_spi"/>
 </RadiantSimulationProject>

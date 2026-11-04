@@ -27,7 +27,7 @@
 -end
 
 -gui
--top testbench_aes_core
+-top testbench_aes_spi
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end
